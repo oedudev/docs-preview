@@ -15,7 +15,7 @@ Motivos:
 
 - **Consistência visual**: garante que todos os títulos, descrições e legendas tenham o mesmo estilo em todo o sistema.
 - **Escalabilidade**: se precisar mudar a fonte ou cor de um estilo, basta alterar no átomo.
-- **Semântica**: organiza melhor o uso de elementos HTML (`&lt;h1>`, `&lt;h2>`, `` etc.).
+- **Semântica**: organiza melhor o uso de elementos HTML (``, ``, `` etc.).
 - **Reutilização**: evita repetição de CSS.
 
 Vamos ver um exemplo de como criar atomos de texto para o sistema
@@ -61,7 +61,7 @@ Centralizar tokens de cor, fontes e tamanhos em **variáveis globais** (`:root {
 Sempre usar os **átomos de tipografia** — nunca escrever `...
 
 ` diretamente em organismos.  
-Manter a semântica HTML correta (`Heading` gera `&lt;h1>`, `&lt;h2>`, etc.; `Text` gera ``).  
+Manter a semântica HTML correta (`Heading` gera ``, ``, etc.; `Text` gera ``).  
 Revisar periodicamente se novos padrões de texto realmente precisam virar **átomos separados** ou podem ser variantes dos existentes.
 
 ## **2.** **Padrão de nomenclatura CSS (BEM)**
@@ -89,7 +89,7 @@ Podemos observar essas inconsistências nas imagens abaixo:
     - **Modificador:** variação ou estado, ex.: `card__title--highlighted`
 2. **Revisar componentes existentes** e, quando possível, refatorar para aderir ao padrão BEM.
 3. **Evitar estilos inline**: toda regra de estilo deve ser definida em classes, seguindo a convenção BEM.
-4. **Padronizar o uso de CSS**: &lt;u>***Devemos remover o tailwind do projeto e utilizar somente css ou scss***&lt;/u>.
+4. **Padronizar o uso de CSS**: <u>***Devemos remover o tailwind do projeto e utilizar somente css ou scss***</u>.
 5. Garantir que todos os **novos desenvolvimentos sigam o padrão BEM** e a padronização de CSS, mantendo consistência em todo o sistema.
 
 ***Observação:** *o padrão BEM está definido na documentação interna do sistema de design e deve ser seguido obrigatoriamente para todos os componentes reutilizáveis.**
@@ -186,7 +186,7 @@ Podemos observar alguns exemplos nas imagens abaixo:
 
 **Diretriz**
 
-Todos os **JWTs (JSON Web Tokens)** utilizados no sistema **devem conter data de expiração (**`&lt;strong class="editor-theme-bold editor-theme-code">exp&lt;/strong>`**)**. Tokens sem expiração representam um risco de segurança, pois podem ser utilizados indefinidamente em caso de vazamento.
+Todos os **JWTs (JSON Web Tokens)** utilizados no sistema **devem conter data de expiração (**`exp`**)**. Tokens sem expiração representam um risco de segurança, pois podem ser utilizados indefinidamente em caso de vazamento.
 
 **Padrão de uso**
 

@@ -5,7 +5,7 @@
 
 O Atomic Design é uma metodologia de criação de interfaces que organiza os componentes em diferentes níveis de complexidade, inspirada na estrutura da natureza (átomos → moléculas → organismos → templates → páginas).
 
-![](assets/introducao-ao-atomic-design-no-hsoares-1.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-1.png)
 
 A ideia central é criar componentes reutilizáveis e padronizados que podem ser combinados para formar estruturas mais complexas sem perder consistência. Isso traz benefícios como: Escalabilidade, Reutilização, Padronização e Facilidade de manutenção e evolução.
 
@@ -24,27 +24,27 @@ Nas imagens que acompanham este documento, os elementos estão destacados pelas 
 - **Laranja:** Organismo
 - **Vermelho:** Página
 
-![](assets/introducao-ao-atomic-design-no-hsoares-2.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-2.png)
 
 Observe com maior detalhe o formulário, já que a lógica aplicada a ele será a mesma para os outros componentes.
 
-![](assets/introducao-ao-atomic-design-no-hsoares-3.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-3.png)
 
 Pode-se observar que ele é construído a partir de moléculas, que são componentes formados pela combinação de um **input** e um átomo. Já os demais **inputs** e **selects** não destacados também são considerados organismos.
 
 Atomo: 
 
-![](assets/introducao-ao-atomic-design-no-hsoares-4.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-4.png)
 
 Molecula:
 
-![](assets/introducao-ao-atomic-design-no-hsoares-5.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-5.png)
 
 ## **3. Exemplo prático – Tela de Fiança Locatícia**
 
 Imagine que nossa pagina vai ser construída a partir de diferentes “blocos”, onde não precisamos utilizar somente nessa página podemos usar esses blocos em qualquer parte do sistema, mudando somente os dados que enviamos.
 
-![](assets/introducao-ao-atomic-design-no-hsoares-6.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-6.png)
 
 ### **3.1 Átomos**
 
@@ -94,7 +94,7 @@ As páginas são a aplicação real dos templates com conteúdo específico.
 
 Veja a seguir um exemplo de como montar a página com os componentes criados.
 
-![](assets/introducao-ao-atomic-design-no-hsoares-7.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-7.png)
 
 ## **4. Boas práticas de dados**
 
@@ -102,17 +102,17 @@ Um ponto essencial no uso do Atomic Design é a separação de responsabilidades
 
 - **Página:** responsável por buscar e enviar dados (requisições à API).
 
- ![](assets/introducao-ao-atomic-design-no-hsoares-8.png)
+ ![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-8.png)
 
 - **Template:** recebe dados da página via **props** e os distribui para seus filhos.
 
-![](assets/introducao-ao-atomic-design-no-hsoares-9.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-9.png)
 
 - **Organismos e moléculas:** apenas exibem os dados recebidos ou disparam eventos para a página quando necessário.
 
-![](assets/introducao-ao-atomic-design-no-hsoares-10.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-10.png)
 
-![](assets/introducao-ao-atomic-design-no-hsoares-11.png)
+![](/docs-preview/img/introducao-ao-atomic-design-no-hsoares-11.png)
 
 Dessa forma, garantimos que os componentes sejam **desacoplados e reutilizáveis**, mantendo a lógica de negócios sempre no nível da página.
 

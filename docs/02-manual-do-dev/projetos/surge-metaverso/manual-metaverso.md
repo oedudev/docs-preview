@@ -4,11 +4,11 @@
 **Link para o Manual do Metaverso:** [Link do Drive](https://drive.google.com/drive/u/0/folders/1Iih5J7d6LAY6B84IYKh-WDcnM76Vc87P)  
 **(Acessar com o e-mail @digitalsys.com)**
 
-# &lt;u>**ADMINISTRADOR**&lt;/u>
+# <u>**ADMINISTRADOR**</u>
 
 Para acessar o sistema, basta clicar no seguinte link e fazer o login com as credenciais correspondentes:
 
-[&lt;u>https://metaverso-dev.digitalsys.app/backoffice/admin&lt;/u>](https://metaverso-dev.digitalsys.app/backoffice/admin)
+[<u>https://metaverso-dev.digitalsys.app/backoffice/admin</u>](https://metaverso-dev.digitalsys.app/backoffice/admin)
 
 Deste modo, será apresentado a parte interna do sistema, contendo todas as funcionalidades necessárias para criar e visualizar **Cursos, Especialidades, Histórico de E-mails, Pontos de vista** de diferentes câmeras, **Procedimentos, Profissionais e Usuários** cadastrados. Além disso, será possível ter acesso aos detalhes de ações realizadas recentemente, contendo data e horário, responsável pela atualização e alterações feitas.
 
@@ -17,7 +17,7 @@ Deste modo, será apresentado a parte interna do sistema, contendo todas as func
 
 Ao selecionar “Usuários” no menu lateral, uma nova tela será exibida, contendo opções de filtragem para fácil procura e uma tabela de apresentação com as principais informações de cada usuário. Cada linha é clicável para que seja possível ter acesso a mais detalhes, bem como adicionar E-mail, Nome, Sobrenome, Data de nascimento, Nacionalidade, País, Localidade, Telefone e Permissões de acesso.
 
-![](assets/manual-metaverso-1.png)
+![](/docs-preview/img/manual-metaverso-1.png)
 
 ***Lembre-se sempre de salvar as informações clicando nos botões localizados no lado direito da tela, como mostrado na imagem acima.***
 
@@ -27,7 +27,7 @@ Em “Cursos” no menu lateral será possível dar início a criação de novos
 
  Para criar um novo curso, basta clicar em “Adicionar Curso” no canto superior direito da tela.
 
-![](assets/manual-metaverso-2.png)
+![](/docs-preview/img/manual-metaverso-2.png)
 
 1. **Geral**
 
@@ -35,13 +35,13 @@ Na primeira aba “Geral”, adicione, então, as informações necessárias com
 
 É possível notar ícones ao lado de alguns campos a serem preenchidos: **lápis amarelo, “+” verde e um olho azul** (como apresentado na imagem abaixo). Estes ícones servem como atalhos para editar, criar e visualizar informações daquele campo em específico, ou seja, em “Cirurgião”, o lápis editará os cirurgiões cadastrados, o “+” adicionará um novo cirurgião e o olho listará todos.
 
-![](assets/manual-metaverso-3.png)
+![](/docs-preview/img/manual-metaverso-3.png)
 
 2. **Etapas do curso**
 
 Na segunda aba, “Etapas do Curso” será possível adicionar os vídeos referentes àquele curso que está sendo criado. Para isso, comece criando as diferentes etapas adicionando Título, Resumo e Ordem.
 
-![](assets/manual-metaverso-4.png)
+![](/docs-preview/img/manual-metaverso-4.png)
 
    
 
@@ -49,9 +49,9 @@ Entretanto, ao chegar no local “Ver vídeos”, uma mensagem estará presente:
 
 Muito além de somente adicionar o vídeo, haverá a opção de escolher o Ponto de Vista da câmera que fez a filmagem e adicionar Capítulos dos Vídeos. 
 
-![](assets/manual-metaverso-5.png)
+![](/docs-preview/img/manual-metaverso-5.png)
 
-![](assets/manual-metaverso-6.png)
+![](/docs-preview/img/manual-metaverso-6.png)
 
 Esse último é uma ferramenta que irá **marcar cada momento do vídeo**, por exemplo: ao adicionar o capítulo “Incisão pequena” no tempo 5 de ordem 1, isso ficará marcado no vídeo no momento 00:05 segundos como primeiro capítulo de nome “Incisão pequena”, tornando possível que um espectador olhe essa marcação na listagem lateral e pule para esse momento, ou para outros capítulos, conforme desejado durante seu estudo.
 
@@ -93,19 +93,19 @@ Para adicionar um item novo, basta sempre clicar no botão azul no canto direito
 
 Ao selecionar determinado item de uma tabela será possível visualizar e também editar as informações correspondentes, além de ter acesso ao histórico completo daquele item.
 
-![](assets/manual-metaverso-7.png)
+![](/docs-preview/img/manual-metaverso-7.png)
 
 3. **Remover**
 
 Para remover um item, dois caminhos podem ser seguidos, seja seguindo o fluxo anterior e clicando no botão vermelho “Apagar”, ou então na apresentação de cada uma das telas, bastando selecionar o item que se deseja remover, escolhendo esta ação no dropdown e clicando no botão azul “Ir” para finalizar.
 
-![](assets/manual-metaverso-8.png)
+![](/docs-preview/img/manual-metaverso-8.png)
 
-# &lt;u>**SISTEMA DE CURSOS**&lt;/u>
+# <u>**SISTEMA DE CURSOS**</u>
 
 Para acessar o sistema, basta clicar no seguinte link e fazer o login com as credenciais correspondentes:
 
-[&lt;u>https://metaverso-dev.digitalsys.app/buscar-treinamentos&lt;/u>](https://metaverso-dev.digitalsys.app/buscar-treinamentos)
+[<u>https://metaverso-dev.digitalsys.app/buscar-treinamentos</u>](https://metaverso-dev.digitalsys.app/buscar-treinamentos)
 
  Assim, o sistema será apresentado para o usuário e será possível acessar as funcionalidades do projeto. 
 
@@ -117,7 +117,7 @@ A tela apresentada é parte integrante do sistema hospitalar virtual no metavers
 
 No canto superior esquerdo da tela, há dois botões destacados, marcados como "2D" e "3D". Esses botões permitem ao usuário alternar entre duas formas de visualização do conteúdo. O modo 2D oferece uma interface tradicional em duas dimensões, ideal para consultas rápidas e uma navegação simples. Já o modo 3D leva a experiência para um ambiente imersivo.
 
-![](assets/manual-metaverso-9.png)
+![](/docs-preview/img/manual-metaverso-9.png)
 
 2. **Filtros de Busca**
 
@@ -135,7 +135,7 @@ Um campo de texto, este permite a inserção do nome ou palavra-chave do procedi
 
 Um seletor que oferece uma lista de especialidades médicas. Ao selecionar uma especialidade, o sistema filtra os procedimentos relacionados à área médica escolhida.
 
-![](assets/manual-metaverso-10.png)
+![](/docs-preview/img/manual-metaverso-10.png)
 
 3. #### **Tabela de Dados**
 
@@ -169,7 +169,7 @@ Apresenta o número total de visualizações que o conteúdo do procedimento rec
 
 Exibe a média das avaliações atribuídas pelos usuários ao conteúdo relacionado ao procedimento. 
 
-![](assets/manual-metaverso-11.png)
+![](/docs-preview/img/manual-metaverso-11.png)
 
 4. #### **Barra de Ferramentas e Rodapé**
 
@@ -191,7 +191,7 @@ Permite que o usuário abra uma janela de comunicação direta para dúvidas ou 
 
 &lt;&lt;&lt;em desenvolvimento&gt;&gt;&gt;
 
-![](assets/manual-metaverso-12.png)
+![](/docs-preview/img/manual-metaverso-12.png)
 
 5. #### **Detalhamento Expandido na Tabela**
 
@@ -213,7 +213,7 @@ Um link interativo, "Ver equipe médica", oferece acesso a informações detalha
 
 A seção "Importância" é um espaço reservado para categorizar ou destacar a relevância do procedimento no contexto geral de treinamento ou prática médica
 
-![](assets/manual-metaverso-13.png)
+![](/docs-preview/img/manual-metaverso-13.png)
 
 6. #### **Elemento de Vídeo e Botão "Começar"**
 
@@ -221,25 +221,25 @@ Ao lado direito da seção expandida, um player de vídeo exibe uma miniatura re
 
 Abaixo do player, há um botão destacado com o texto "Começar". Este botão serve como um ponto de interação direta, permitindo que o usuário inicie imediatamente o conteúdo do vídeo ou acesse uma sequência de materiais associados ao procedimento. Esse elemento torna a experiência mais prática e intuitiva, eliminando a necessidade de múltiplos cliques para acessar os recursos.
 
-![](assets/manual-metaverso-14.png)
+![](/docs-preview/img/manual-metaverso-14.png)
 
 2. #### **PLAYER DE VÍDEO**
 
 A interface exibe um vídeo instrutivo sobre um procedimento cirúrgico, com elementos visuais que simulam um ambiente hospitalar realista. No centro da tela, encontra-se o vídeo principal, que ocupa a maior parte do espaço para proporcionar uma visualização clara e detalhada do conteúdo educacional. O título do procedimento é destacado sobre o vídeo, reforçando o tema abordado.
 
-![](assets/manual-metaverso-15.png)
+![](/docs-preview/img/manual-metaverso-15.png)
 
 1. **Navegação de Conteúdo**
 
 No canto superior esquerdo, há um menu de navegação que organiza o conteúdo em seções ou etapas, permitindo que o usuário acesse partes específicas do procedimento, como "anestesia" ou "incisão pequena". Isso facilita o aprendizado segmentado e direcionado.
 
-![](assets/manual-metaverso-16.png)
+![](/docs-preview/img/manual-metaverso-16.png)
 
 2. **Controles básicos de vídeo**
 
 Os controles básicos de vídeo, como play/pausa e ajuste de velocidade, estão posicionados na parte inferior, permitindo o gerenciamento do conteúdo conforme a necessidade do usuário. 
 
-![](assets/manual-metaverso-17.png)
+![](/docs-preview/img/manual-metaverso-17.png)
 
 3. **Ícones Laterais**
 
@@ -257,8 +257,8 @@ Ao ser selecionado, ele pode exibir explicações adicionais, dicas práticas, p
 
 As imagens podem incluir diagramas anatômicos, capturas de tela ampliadas, ilustrações ou outras representações visuais que complementam o aprendizado.
 
-![](assets/manual-metaverso-18.png)![](assets/manual-metaverso-19.png)
+![](/docs-preview/img/manual-metaverso-18.png)![](/docs-preview/img/manual-metaverso-19.png)
 
-![](assets/manual-metaverso-20.png)
+![](/docs-preview/img/manual-metaverso-20.png)
 
-![](assets/manual-metaverso-21.png)
+![](/docs-preview/img/manual-metaverso-21.png)

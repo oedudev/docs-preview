@@ -1,7 +1,7 @@
 
 # Banco de Dados
 
-### &lt;u>**BANCO DE DADOS DE DESENVOLVIMENTO**&lt;/u>
+### <u>**BANCO DE DADOS DE DESENVOLVIMENTO**</u>
 
   
 **Servidor Postgresql**: pgs-dev-02.cluster-c02bgzmaw6gs.sa-east-1.rds.amazonaws.com  
@@ -9,14 +9,14 @@
 **Schema** : dbesusurgencia  
   
   
-&lt;u>Usuário da aplicação&lt;/u>
+<u>Usuário da aplicação</u>
 
 **LOGIN** : desusurgenciaweb
 
 **PASSWORD** X1vbhd31EPzj
 
   
-&lt;u>Usuário de manutenção&lt;/u>
+<u>Usuário de manutenção</u>
 
 **LOGIN** : desusurgencia
 
@@ -24,7 +24,7 @@
 
 ###   
   
-&lt;u>**BANCO DE DADOS DE TREINAMENTO**&lt;/u>
+<u>**BANCO DE DADOS DE TREINAMENTO**</u>
 
 **Servidor Postgresql (escrita)**: pgs-dev-02.cluster-c02bgzmaw6gs.sa-east-1.rds.amazonaws.com
 
@@ -35,14 +35,14 @@
 **Schema** : dbesusurgencia  
   
   
-&lt;u>Usuário da aplicação&lt;/u>
+<u>Usuário da aplicação</u>
 
 **LOGIN** : tesusurgenciaweb
 
 **PASSWORD** PaHa1L5xQBlZicgUisEp
 
   
-&lt;u>Usuário de manutenção&lt;/u>
+<u>Usuário de manutenção</u>
 
 **LOGIN** : tesusurgencia
 

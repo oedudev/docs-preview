@@ -12,7 +12,7 @@ No desenvolvimento de aplicações que consomem APIs, problemas de **overfetch**
 
 Um caso crítico a ser evitado é a necessidade de **várias requisições para completar uma única ação**, como buscar dados já conhecidos apenas para poder enviá-los em outra chamada.
 
-&lt;u>***Este documento define boas práticas para evitar esses problemas.***&lt;/u>
+<u>***Este documento define boas práticas para evitar esses problemas.***</u>
 
 ### **2. Definições**
 
@@ -152,7 +152,7 @@ POST /orders/{id}/deliver
 
 ##### **4. Resumo**
 
- &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;/colgroup>     **Rota Genérica (Enum)**
+ <colgroup><col></col><col></col><col></col></colgroup>     **Rota Genérica (Enum)**
 
   **Rotas Específicas**
 

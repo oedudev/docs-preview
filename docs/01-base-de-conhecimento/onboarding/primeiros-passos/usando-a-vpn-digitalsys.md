@@ -13,7 +13,7 @@
 ##### **Instalando a aplicação no seu Desktop:**
 
 1. Acesse o link: &lt;[https://client.pritunl.com/](https://client.pritunl.com/ "Pritunl")&gt;
-2. Percorra o site até encontrar o download correto para seu sistema operacional:[![image.png](assets/migrated-images/c71929-1ZlcVJoKbG5122BQ-image.png)
+2. Percorra o site até encontrar o download correto para seu sistema operacional:[![image.png](/docs-preview/img/usando-a-vpn-digitalsys-1.png)](../../../assets/migrated-images/c71929-1ZlcVJoKbG5122BQ-image.png)
 3. Execute e instale a aplicação
-4. Abra o **Pritunl** e importe o arquivo ".**tar**", enviado pelo membro da **Digitalsys** que realizou seu cadastro:[![1.png](assets/migrated-images/315f1f-gLMG1PIx2NiRjvcm-1.png)
-5. Conecte-se no VPN com a senha exibida no Google Authenticator, sem espaços (Ex: ABCDEF):[![2.png](assets/migrated-images/aabeb9-xFWTAvdnDvvivSt6-2.png)
+4. Abra o **Pritunl** e importe o arquivo ".**tar**", enviado pelo membro da **Digitalsys** que realizou seu cadastro:[![1.png](/docs-preview/img/usando-a-vpn-digitalsys-2.png)](../../../assets/migrated-images/315f1f-gLMG1PIx2NiRjvcm-1.png)
+5. Conecte-se no VPN com a senha exibida no Google Authenticator, sem espaços (Ex: ABCDEF):[![2.png](/docs-preview/img/usando-a-vpn-digitalsys-3.png)](../../../assets/migrated-images/aabeb9-xFWTAvdnDvvivSt6-2.png)

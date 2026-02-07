@@ -14,7 +14,7 @@ Componente de campo de entrada de dados que pode ser configurado via props para 
 
 Props disponíveis:
 
- &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;/colgroup>   Prop
+ <colgroup><col></col><col></col><col></col></colgroup>   Prop
 
   Tipo
 
@@ -50,7 +50,7 @@ Props disponíveis:
 
     
 
-[![image.png](assets/documentacao-front-end-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
+[![image.png](/docs-preview/img/documentacao-front-end-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
 
 #### **1.2 Componente: Button model 1**
 
@@ -59,7 +59,7 @@ Props disponíveis:
 **Descrição:**  
 Componente de Botão que pode ser configurado via props para se adequar a diferentes contextos do projeto.
 
- &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;col style="width: 320px;">&lt;/col>&lt;/colgroup>     Tipo
+ <colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup>     Tipo
 
   Descrição
 
@@ -83,7 +83,7 @@ Componente de Botão que pode ser configurado via props para se adequar a difere
 
     
 
-[![image.png](assets/documentacao-front-end-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
+[![image.png](/docs-preview/img/documentacao-front-end-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
 
 #### **2. Requisições nos componentes**
 

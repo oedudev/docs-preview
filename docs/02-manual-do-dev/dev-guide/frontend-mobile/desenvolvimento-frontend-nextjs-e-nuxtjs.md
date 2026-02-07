@@ -38,7 +38,7 @@
 
 - **Lazy loading:** Utilize o lazy loading para componentes e imagens pesadas.
 - **Code splitting:** Aproveite o suporte nativo de code splitting para otimizar o carregamento das páginas.
-- **Imagem otimizada:** Use o componente `&lt;nuxt-img>` (NuxtJS) ou o `&lt;Image />` do Next.js para servir imagens otimizadas.
+- **Imagem otimizada:** Use o componente `<nuxt-img>` (NuxtJS) ou o `` do Next.js para servir imagens otimizadas.
 
 #### 6. **Boas Práticas de SEO**
 
@@ -56,7 +56,7 @@
 
 #### 8. **Boas Práticas de Testes**
 
-- &lt;s>**Testes Unitários:**&lt;/s>&lt;s> Crie testes para componentes utilizando frameworks como &lt;/s>`Jest`&lt;s> ou &lt;/s>`Testing Library`&lt;s>.&lt;/s>
+- <s>**Testes Unitários:**</s><s> Crie testes para componentes utilizando frameworks como </s>`Jest`<s> ou </s>`Testing Library`<s>.</s>
 - **Testes de Integração:** Para projetos em Nuxt, use o Cypress para testar fluxos de navegação. Para Next.js, também pode-se usar o Cypress ou o Playwright.
 
 #### 9. **Versionamento e Git**

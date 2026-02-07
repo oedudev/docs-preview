@@ -14,7 +14,7 @@ Componente de campo de entrada de dados que pode ser configurado via props para 
 
 Props disponíveis:
 
- &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;/colgroup>   Prop
+ <colgroup><col></col><col></col><col></col></colgroup>   Prop
 
   Tipo
 
@@ -59,7 +59,7 @@ Props disponíveis:
 **Descrição:**  
 Componente de Botão que pode ser configurado via props para se adequar a diferentes contextos do projeto.
 
- &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;col style="width: 320px;">&lt;/col>&lt;/colgroup>     Tipo
+ <colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup>     Tipo
 
   Descrição
 

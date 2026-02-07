@@ -43,7 +43,7 @@ Controlador de entrada (Ingress Controller) baseado no NGINX, responsável por g
 Após a criação do Cluster você deve baixar o arquivo de configuração do cluster (kubeconfig), abrir este arquivo, copiar o seu conteudo e obter o base64 desse conteudo, conforme exemplo abaixo:
 
 ```bash
-echo -n "&lt;insira o conteudo do kubeconfig>" | base64
+echo -n "" | base64
 ```
 
 Em seguida, copie este conteúdo e cole na variável de ambiente **"KUBE\_CONFIG"** do projeto **infra-kubernetes**, conforme a imagem abaixo:
@@ -100,7 +100,7 @@ Busque pelo cluster que você quer configurar e permita o acesso.
 Agora, com o cluster configurado, você já pode realizar o deploy dos seus projetos neste novo cluster.
 
 ```bash
-echo -n "&lt;insira o conteudo do kubeconfig>" | base64
+echo -n "" | base64
 ```
 
 Em seguida você deve alterar a variável de ambiente no Github Actions de acordo com o projeto que você quer incluir no Cluster.

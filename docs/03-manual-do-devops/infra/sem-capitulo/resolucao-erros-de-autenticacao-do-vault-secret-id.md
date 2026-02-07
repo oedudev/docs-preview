@@ -54,7 +54,7 @@ bash
  # Exibir policies (para ver se já existe a policy)
  vault policy list
  
- # Exibir roles (para pegar os valores posteriores, provavelmente é &lt;nome-do-projeto>-&lt;ambiente>-role)
+ # Exibir roles (para pegar os valores posteriores, provavelmente é <nome-do-projeto>-<ambiente>-role)
  vault list auth/approle/role
 ```
 
@@ -63,7 +63,7 @@ bash
 bash
 
 ```bash
-vault read auth/approle/role/&lt;role-name>/secret-id-ttl
+vault read auth/approle/role/<role-name>/secret-id-ttl
 ```
 
 3. **Ajuste o TTL se necessário:**
@@ -71,7 +71,7 @@ vault read auth/approle/role/&lt;role-name>/secret-id-ttl
 bash
 
 ```bash
-vault write auth/approle/role/&lt;role-name> secret_id_ttl=&lt;novo-valor>
+vault write auth/approle/role/<role-name> secret_id_ttl=<novo-valor>
 ```
 
 4. **Gere um novo Secret ID (se o atual expirou):**
@@ -79,7 +79,7 @@ vault write auth/approle/role/&lt;role-name> secret_id_ttl=&lt;novo-valor>
 bash
 
 ```bash
-vault write -f auth/approle/role/&lt;role-name>/secret-id
+vault write -f auth/approle/role/<role-name>/secret-id
 ```
 
 5. Se necessário, atualize o **VAULT\_APPROLE\_SECRETID** do ambiente mudado no GitHub Actions com o novo valor do **secret\_id.**

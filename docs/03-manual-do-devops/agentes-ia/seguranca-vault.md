@@ -7,7 +7,7 @@ A segurança dos agentes e runners depende da centralização de credenciais no 
 1.  **Origem (Vault):**
     *   Endereço: `http://137.184.157.36:8200` (Acesso via VPC interna `10.116.0.30` recomendado).
     *   Engine: KV v2 (`kv/`).
-    *   Caminho Padrão: `kv/data/agents/&lt;nome-do-agente>`.
+    *   Caminho Padrão: `kv/data/agents/<nome-do-agente>`.
 
 2.  **Ponte (External Secrets Operator - ESO):**
     *   O ESO roda no cluster K8s.

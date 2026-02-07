@@ -22,15 +22,15 @@ Na **HomePage** foram identificadas diversas requests durante a renderização, 
 
 network da homePage
 
-![](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-1.png)
+![](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-1.png)
 
 #### **Requests UserID**
 
-#### **3.1 Ocorrência 1 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
+#### **3.1 Ocorrência 1 – Recuperação de** `user_id`**
 
 **Local:** Função
 
-![](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-2.png)   
+![](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-2.png)   
 **Descrição:**
 
 - Recupera o token do `localStorage`.
@@ -50,11 +50,11 @@ network da homePage
 - Utilizar a rota `/shared/possible-values` para incluir o retorno do nome do usuário e id autenticado.
 - Dessa forma, evitamos múltiplas requests e eliminamos a necessidade de buscar todos os usuários apenas para identificar o logado.
 
-#### **3.2 Ocorrência 2 – Variável** `&lt;strong class="editor-theme-bold editor-theme-code">userId&lt;/strong>` **não utilizada**
+#### **3.2 Ocorrência 2 – Variável** `userId` **não utilizada**
 
 **Local:** Função:
 
-![](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-3.png)  
+![](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-3.png)  
 **Descrição:**
 
 - O sistema realiza uma request para buscar o `user_id`.
@@ -69,11 +69,11 @@ network da homePage
 
 - Remover a request e a variável, já que o valor não é utilizado.
 
-#### **3.3 Ocorrência 3 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
+#### **3.3 Ocorrência 3 – Recuperação de** `user_id`**
 
 **Local:** Função (composables/usePhoneSystemService.ts):
 
-![](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-4.png)  
+![](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-4.png)  
 **Descrição:**
 
 - O sistema realiza uma request para buscar o `user_id`.
@@ -88,7 +88,7 @@ network da homePage
 
 - Remover a request, no backend existe uma função para pegar o id do usuario pelo token da request.
 
-&lt;u>obs: Essa ocorrência ira existir em todos as paginas que utilizam o componente &lt;/u>&lt;u>**callSystem**&lt;/u>&lt;u> pode ser resolvida posteriormente&lt;/u>
+<u>obs: Essa ocorrência ira existir em todos as paginas que utilizam o componente </u><u>**callSystem**</u><u> pode ser resolvida posteriormente</u>
 
 #### **Requests User**
 
@@ -111,13 +111,13 @@ network da homePage
 - Reutilizar a solução implementada via `/shared/possible-values`, retornando diretamente o nome do usuário autenticado.
 - Assim, elimina-se a necessidade dessa chamada extra.
 
-#### **3.5 Ocorrência 5 – Request e Processamento de usuários em** `&lt;strong class="editor-theme-bold editor-theme-code">fetchOptions&lt;/strong>`**
+#### **3.5 Ocorrência 5 – Request e Processamento de usuários em** `fetchOptions`**
 
 **Local:** Função `fetchOptions` processo/request utilizado para popular o campo ***Enviar para***
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/rNIJdscMwvTrQQdn-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/rNIJdscMwvTrQQdn-image.png)
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HSN7zydx91yrWeAi-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HSN7zydx91yrWeAi-image.png)
 
 **Descrição:**
 
@@ -186,7 +186,7 @@ network da homePage
 
 **Local:** Rota `GET /incident/mask` Rota utilizada para popular o campo ***Relacionar ocorrência existente***
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ho0MtIUGxNOsroJ0-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ho0MtIUGxNOsroJ0-image.png)
 
 **Descrição:**
 
@@ -224,7 +224,7 @@ network da homePage
 - Remover os campos `employee` e `open_incident` do retorno da rota.
 - Garantir que a rota entregue **somente os elementos realmente utilizados** para popular a página.
 
-obs: a remoção de employee deve ser feita depois da implementação/correção da &lt;u>**Ocorrência 2**&lt;/u>
+obs: a remoção de employee deve ser feita depois da implementação/correção da <u>**Ocorrência 2**</u>
 
 #### **3.9 Ocorrência 9 – Problema com Requests repetidas**
 
@@ -243,7 +243,7 @@ obs: a remoção de employee deve ser feita depois da implementação/correção
 - **Requisições duplicadas** aumentam o consumo de rede e tornam a navegação mais lenta.
 - O frontend perde eficiência ao não reutilizar os dados já disponíveis no estado da página.
 
-**Obs: Esse comportamento já foi apontado como um problema recorrente na documentação** [**Documentação Front-End... | Ajuda DigitalSys**](https://ajuda.digitalsys.com.br/books/manual-do-desenvolvedor/page/documentacao-front-end-atomic-design) &lt;u>**2. Requisições nos componentes.**&lt;/u>
+**Obs: Esse comportamento já foi apontado como um problema recorrente na documentação** [**Documentação Front-End... | Ajuda DigitalSys**](https://ajuda.digitalsys.com.br/books/manual-do-desenvolvedor/page/documentacao-front-end-atomic-design) <u>**2. Requisições nos componentes.**</u>
 
 **Solução proposta:**
 
@@ -278,7 +278,7 @@ obs: a remoção de employee deve ser feita depois da implementação/correção
 Durante a renderização e navegação dentro da página **TARM**, foram identificadas diversas requisições executadas de forma redundante.  
 Todas as requests são disparadas assim que a página é carregada e também sempre que o usuário interage com determinados componentes ou filtros, ocasionando chamadas repetidas às mesmas rotas e resultando em **overfetch**, uso desnecessário de banda e aumento no tempo de resposta da interface.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/HI2TPzRdFPSFKck1-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/HI2TPzRdFPSFKck1-image.png)
 
 **Problema:**
 
@@ -302,15 +302,15 @@ obs: mesmo problema relatado em Medico Regulador **4.5 Ocorrência 5 – Requisi
 
 Na **RegulationMenu** foram identificadas diversas requests durante a renderização, algumas delas inclusive **repetidas**, resultando em problemas de **overfetch** e **uso desnecessário de rede**.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iUVbKGiCgafMm227-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iUVbKGiCgafMm227-image.png)
 
 #### **Requests UserID**
 
-#### **4.1 Ocorrência 1 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
+#### **4.1 Ocorrência 1 – Recuperação de** `user_id`**
 
 **Local:** Função
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/ImsUBo8u28CGbjLa-image.png)**Local:**
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/ImsUBo8u28CGbjLa-image.png)**Local:**
 
 - Função `loadUserId`
 - Função `getUserIdByToken`
@@ -353,7 +353,7 @@ Aplicar a mesma estratégia de correção definida para as ocorrências anterior
 **Obs:**  
 Esta ocorrência não exige uma nova solução técnica, mas sim a **aplicação da mesma refatoração já descrita nas Ocorrências 2 e 4**. Ambas as requisições tem a mesma correção da **Ocorrência 2 e Ocorrência 4 do médico regulador.**
 
-#### **4.3 Ocorrência 3 – Requisições desnecessárias** `&lt;strong class="editor-theme-bold editor-theme-code">/user/{id}&lt;/strong>` **e** `&lt;strong class="editor-theme-bold editor-theme-code">/employee/user_id/{id}&lt;/strong>`**
+#### **4.3 Ocorrência 3 – Requisições desnecessárias** `/user/{id}` **e** `/employee/user_id/{id}`**
 
 **Local:**  
 Pontos do sistema Médico Regulador onde são feitas consultas individuais ao usuário logado.
@@ -380,9 +380,9 @@ Foram identificadas três requisições distintas sendo executadas ao acessar o 
 - `GET /mobile-unit/incident/362`
 - `GET /incident/prank-calls/(43)%2099806-8708`
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i6PKd6GttlJkO1nd-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i6PKd6GttlJkO1nd-image.png)
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QN3NEyZsKBqgLYij-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QN3NEyZsKBqgLYij-image.png)
 
 Essas chamadas ocorrem simultaneamente, trazendo informações sobre o mesmo incidente ou dados complementares que poderiam ser obtidos em uma única resposta consolidada. Além disso, sempre que o usuário clica novamente em uma ocorrência já aberta, as mesmas requisições são executadas novamente, mesmo com os dados já carregados, resultando em consumo desnecessário de rede e processamento.
 
@@ -393,7 +393,7 @@ Na **OccurrenceView** foram identificadas diversas requests durante a renderiza�
 **Descrição:**  
 Durante a renderização da página OccurrenceView, foram identificadas diversas requisições executadas simultaneamente, incluindo chamadas repetidas e algumas desnecessárias, conforme registrado na inspeção de rede. Todas essas requests são disparadas assim que a página é carregada, ocasionando **overfetch** e uso excessivo de rede.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-13.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i3XCtSGCadBpCzS9-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-13.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i3XCtSGCadBpCzS9-image.png)
 
 Além disso, há requisições voltadas apenas para recuperar o ID ou nome do usuário logado, informação que já está disponível de forma centralizada e não precisa ser buscada novamente.
 
@@ -420,11 +420,11 @@ Todas as requests são disparadas assim que a página é carregada e também **s
 
 A análise de rede mostra repetição de chamadas para as mesmas rotas a cada troca de aba ou formulário, conforme evidenciado na captura de rede. Esse comportamento gera **overfetch**, uso desnecessário de banda e aumento no tempo de resposta da interface.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-14.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tFvjaIzSoDukGvDo-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-14.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tFvjaIzSoDukGvDo-image.png)
 
 A imagem abaixo é referente as requisições do fluxo de clicar em cada aba somente uma vez. 
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-15.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QRStDPnUoiGhr3W1-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-15.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QRStDPnUoiGhr3W1-image.png)
 
 **Problema:**
 
@@ -448,9 +448,9 @@ Isso faz com que, ao montar o componente e sempre que o **watch** é acionado, o
 
 Esse comportamento é recorrente ao entrar na página e também ao alterar parâmetros observados pelo **watch**, mesmo quando as informações já foram previamente carregadas.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-16.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/PPkTbfSqTjIVPhqM-image.png)[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-17.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/r1xiKaRXwVN9af7C-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-16.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/PPkTbfSqTjIVPhqM-image.png)[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-17.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/r1xiKaRXwVN9af7C-image.png)
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-18.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/oAzftgBM6sbbuk7M-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-18.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/oAzftgBM6sbbuk7M-image.png)
 
 **Problema:**
 
@@ -465,7 +465,7 @@ Esse comportamento é recorrente ao entrar na página e também ao alterar parâ
 
 #### **4.7 Ocorrência 7 – Requisições redundantes na UnitSelection**
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-19.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/hByFZcFQnusNIzwR-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-19.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/hByFZcFQnusNIzwR-image.png)
 
 **Local:**  
 Componente/página **UnitSelection**
@@ -549,7 +549,7 @@ Já a rota **/health-unit** retorna um **JSON com aproximadamente 7.458 objetos*
 
 Na **FleetOperations.vue** foram identificadas diversas requests durante a renderização, resultando em problemas de **overfetch** e **uso desnecessário de rede**.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-20.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/UrTj4b5qECfmTpHS-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-20.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/UrTj4b5qECfmTpHS-image.png)
 
 Algumas dessas ocorrências já haviam sido relatadas em outros módulos, como **Médico Regulador** e **TARM**. Um exemplo são as buscas nas rotas `user` e `possible-values`.
 
@@ -565,7 +565,7 @@ Ao selecionar uma ocorrência na tabela, é feita uma requisição para a rota `
 
 Além disso, atualmente a rota retorna um JSON completo com todos os detalhes da ocorrência, muitos dos quais não são necessários para o **Operador de Frota**, resultando em carregamento e processamento excessivo no frontend.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-21.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/pGPeYFgADxvgP3lW-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-21.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/pGPeYFgADxvgP3lW-image.png)
 
 **Problema:**
 
@@ -583,7 +583,7 @@ Além disso, atualmente a rota retorna um JSON completo com todos os detalhes da
 **Local:**  
 Componente/página FleetOperations.vue → Formulário de Ocorrência → Campo “Transferir para”
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-22.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/C0ZLNj8wBsdbo8Ge-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-22.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/C0ZLNj8wBsdbo8Ge-image.png)
 
 **Rotas envolvidas:**  
 GET /employee/search?query={termo}
@@ -615,7 +615,7 @@ O problema se agrava ao selecionar uma ocorrência que **já possui veículo des
 
 Além disso, ao **selecionar um checklist**, o mesmo comportamento se repete, indicando que há **falta de controle na lógica de carregamento de dados** e ausência de reaproveitamento das informações já obtidas.
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-23.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tuImrPX15q5ImKkP-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-23.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tuImrPX15q5ImKkP-image.png)
 
 **Problema:**
 
@@ -645,7 +645,7 @@ Na página **ManageFleet**, foram identificados problemas relacionados à ausên
 
 A rota `/mobile-unit-type` atualmente retorna **todos os tipos de unidade móvel**, e o frontend realiza a filtragem manual para exibir apenas os ativos. Esse comportamento deveria ser tratado diretamente no backend, por meio de um parâmetro, conforme já implementado em outras rotas:
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-24.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/Gas4nomlBzJUlFaw-image.png)
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-24.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/Gas4nomlBzJUlFaw-image.png)
 
 Além disso, foram identificadas duas rotas distintas para obtenção de unidades móveis
 
@@ -682,7 +682,7 @@ GET /unallocated
 GET /unallocated?page={n}&amp;page\_size={n}  
 GET /unallocated?include\_self={true|false}
 
-[![image.png](assets/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-25.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iJ4UDlsvLUdOPUWx-image.png)**Descrição:**  
+[![image.png](/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-25.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iJ4UDlsvLUdOPUWx-image.png)**Descrição:**  
 Na página **Team**, foram identificadas falhas relacionadas à ausência de filtragem no backend e à repetição de requisições para as rotas de **unallocated**.
 
 A rota `/professional-type` atualmente retorna todos os tipos de profissionais, e o frontend realiza a filtragem manual para exibir apenas os ativos. Esse comportamento deve ser tratado diretamente no backend, utilizando o parâmetro `?active_only=true`, conforme já adotado em outras rotas.
