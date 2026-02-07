@@ -47,7 +47,7 @@ Button.vue -&gt; Atom
 
 **UsersPage:** Aqui fica a responsabilidade de buscar os dados na API e controlar estado**.**
 
-![](../../../assets/migrated-images/30070a-GXlmHnLHmSEvdaSC-embedded-image-svm3mier.png)
+![](assets/migrated-images/30070a-GXlmHnLHmSEvdaSC-embedded-image-svm3mier.png)
 
 No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por componentes ou elementos. Então vamos utilizar para emitir eventos para o componente filho.
 
@@ -57,37 +57,37 @@ No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por 
 
 **UserTemplate:** Recebe props da Page e emite eventos para a Page e usa SearchField, que é uma molécula, passando query e repassando eventos.
 
-[![image.png](../../../assets/migrated-images/1c576e-BnErKoKpFdPTpBOA-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/BnErKoKpFdPTpBOA-image.png)
+[![image.png](assets/migrated-images/1c576e-BnErKoKpFdPTpBOA-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/BnErKoKpFdPTpBOA-image.png)
 
 **defineEmits(\["update:query", "search"\]):** No Vue 3 (com &lt;script setup&gt;), defineEmits é usado para declarar os eventos que o componente pode emitir para o pai.
 
-<colgroup><col></col><col></col></colgroup>
+ <colgroup><col></col><col></col></colgroup>   Evento
 
-#### Evento
+  Função
 
-#### Função
+    `update:query`
 
-- `update:query`
+  Indica que o valor da query mudou (por exemplo, quando o usuário digita algo)
 
-- Indica que o valor da query mudou (por exemplo, quando o usuário digita algo)
+    `search`
 
-- `search`
+  Indica que o usuário quer iniciar a busca
 
-- Indica que o usuário quer iniciar a busca
+    
 
 **SearchField:** recebe modelValue e reemite update:modelValue/search.
 
-[![image.png](../../../assets/migrated-images/f8413d-YPvcbCi1l4BAvgDB-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/YPvcbCi1l4BAvgDB-image.png)
+[![image.png](assets/migrated-images/f8413d-YPvcbCi1l4BAvgDB-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/YPvcbCi1l4BAvgDB-image.png)
 
 **Input/Button:** somente UI e eventos nativos.
 
-[![image.png](../../../assets/migrated-images/3d304c-gtuW8P8PFbZB1zu0-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/gtuW8P8PFbZB1zu0-image.png)
+[![image.png](assets/migrated-images/3d304c-gtuW8P8PFbZB1zu0-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/gtuW8P8PFbZB1zu0-image.png)
 
 #### 3. Fluxo de ponta a ponta (do clique até os dados)
 
 Podemos observar na imagem que os eventos sempre sobem até o componente Page, enquanto os dados têm sua origem na própria Page e descem para os demais componentes.
 
-[![image.png](../../../assets/migrated-images/96c4cc-M1RmVi6xP5XBhyFK-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/M1RmVi6xP5XBhyFK-image.png)
+[![image.png](assets/migrated-images/96c4cc-M1RmVi6xP5XBhyFK-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/M1RmVi6xP5XBhyFK-image.png)
 
 **Regra de ouro:**
 

@@ -14,41 +14,41 @@ Componente de campo de entrada de dados que pode ser configurado via props para 
 
 Props disponíveis:
 
-<colgroup><col></col><col></col><col></col></colgroup>
+ <colgroup><col></col><col></col><col></col></colgroup>   Prop
 
-#### Prop
+  Tipo
 
-#### Tipo
+  Descrição
 
-#### Descrição
+    `label`
 
-- `label`
+  string
 
-- string
+  Texto exibido acima do campo como label.
 
-- Texto exibido acima do campo como label.
+    `placeholder`
 
-- `placeholder`
+  string
 
-- string
+  Texto de sugestão dentro do campo.
 
-- Texto de sugestão dentro do campo.
+    `icone`
 
-- `icone`
+  string
 
-- string
+  Ícone exibido à esquerda do campo.
 
-- Ícone exibido à esquerda do campo.
+    `type`
 
-- `type`
+  string
 
-- string
-
-- Tipo de input. Se for 
+  Tipo de input. Se for 
 
 `"password"`
 
 , o campo se comporta como senha e exibe ícone à direita para mostrar/ocultar o valor.
+
+    
 
 [![image.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/3lJ5VZG3hGTlab9p-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
 
@@ -59,31 +59,29 @@ Props disponíveis:
 **Descrição:**  
 Componente de Botão que pode ser configurado via props para se adequar a diferentes contextos do projeto.
 
-<colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup>
+ <colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup>     Tipo
 
-#### 
+  Descrição
 
-#### Tipo
+    `label`
 
-#### Descrição
+  string
 
-- `label`
+  Texto exibido no centro do botão.
 
-- string
+    `icone`
 
-- Texto exibido no centro do botão.
+  string
 
-- `icone`
+  Ícone exibido à esquerda do campo.
 
-- string
+    `disabled`
 
-- Ícone exibido à esquerda do campo.
+  boolean
 
-- `disabled`
+  Variável booleana para desabilitar/habilitar botão
 
-- boolean
-
-- Variável booleana para desabilitar/habilitar botão
+    
 
 [![image.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/jleCTabRZF2eJ9XW-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
 

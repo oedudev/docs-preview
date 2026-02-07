@@ -63,85 +63,85 @@ sonar.organization=digitalsys
 - Caso o projeto analisado seja monorepo, **além do arquivo de propriedades da raiz,** cada módulo deve conter seu próprio `sonar-project.properties`, alterando entre eles o sonar.projectKey para o informado no seu repositório próprio do SonarCloud
 - No arquivo de propriedades do SonarCloud também podem ser definidas algumas configurações, as mais utilizadas são:
 
-<colgroup><col style="width: 262px;"></col><col style="width: 356px;"></col><col style="width: 417px;"></col></colgroup>
+ <colgroup><col style="width: 262px;"></col><col style="width: 356px;"></col><col style="width: 417px;"></col></colgroup>   **COMANDO**
 
-- **COMANDO**
+  **DESCRIÇÃO**
 
-- **DESCRIÇÃO**
+  **EXEMPLO**
 
-- **EXEMPLO**
+    `sonar.projectKey`
 
-- `sonar.projectKey`
+  Identificador único do projeto no SonarCloud
 
-- Identificador único do projeto no SonarCloud
+  `sonar.projectKey=my_project_key`
 
-- `sonar.projectKey=my_project_key`
+    `sonar.organization`
 
-- `sonar.organization`
+  Nome da organização no SonarCloud
 
-- Nome da organização no SonarCloud
+  `sonar.organization=my_organization`
 
-- `sonar.organization=my_organization`
+    `sonar.sources`
 
-- `sonar.sources`
+  Diretório(s) onde o código-fonte está localizado. Pode ser múltiplo, separado por vírgulas
 
-- Diretório(s) onde o código-fonte está localizado. Pode ser múltiplo, separado por vírgulas
+  `sonar.sources=src`
 
-- `sonar.sources=src`
+    `sonar.tests`
 
-- `sonar.tests`
+  Diretório(s) onde os testes estão localizados. Pode ser múltiplo, separado por vírgulas
 
-- Diretório(s) onde os testes estão localizados. Pode ser múltiplo, separado por vírgulas
+  `sonar.tests=tests`
 
-- `sonar.tests=tests`
+    `sonar.language`
 
-- `sonar.language`
+  Linguagem de programação principal do projeto
 
-- Linguagem de programação principal do projeto
+  `sonar.language=java`
 
-- `sonar.language=java`
+    `sonar.exclusions`
 
-- `sonar.exclusions`
+  Arquivos ou diretórios a serem excluídos da análise
 
-- Arquivos ou diretórios a serem excluídos da análise
+  `sonar.exclusions=**/*.xml`
 
-- `sonar.exclusions=**/*.xml`
+    `sonar.inclusions`
 
-- `sonar.inclusions`
+  Especifica quais arquivos ou diretórios incluir na análise, se for diferente dos padrões
 
-- Especifica quais arquivos ou diretórios incluir na análise, se for diferente dos padrões
+  `sonar.inclusions=src/**/*.java`
 
-- `sonar.inclusions=src/**/*.java`
+    `sonar.tests.inclusions`
 
-- `sonar.tests.inclusions`
+  Especifica quais arquivos de teste incluir na análise
 
-- Especifica quais arquivos de teste incluir na análise
+  `sonar.tests.inclusions=tests/**/*.java`
 
-- `sonar.tests.inclusions=tests/**/*.java`
+    `sonar.test.exclusions`
 
-- `sonar.test.exclusions`
+  Arquivos ou diretórios de teste a serem excluídos da análise
 
-- Arquivos ou diretórios de teste a serem excluídos da análise
+  `sonar.test.exclusions=tests/helpers/**`
 
-- `sonar.test.exclusions=tests/helpers/**`
+    `sonar.coverage.exclusions`
 
-- `sonar.coverage.exclusions`
+  Arquivos ou diretórios a serem excluídos da análise de cobertura de código
 
-- Arquivos ou diretórios a serem excluídos da análise de cobertura de código
+  `sonar.coverage.exclusions=src/main/resources`
 
-- `sonar.coverage.exclusions=src/main/resources`
+    sonar.go.coverage.reportPaths
 
-- sonar.go.coverage.reportPaths
+  Caminho para o arquivo do relatório de cobertura de testes para projetos em Golang
 
-- Caminho para o arquivo do relatório de cobertura de testes para projetos em Golang
+  `sonar.go.coverage.reportPaths=reports/*coverage*.out`
 
-- `sonar.go.coverage.reportPaths=reports/*coverage*.out`
+    `sonar.python.coverage.reportPaths`
 
-- `sonar.python.coverage.reportPaths`
+  Caminho para o arquivo do relatório de cobertura de testes para projetos em Python
 
-- Caminho para o arquivo do relatório de cobertura de testes para projetos em Python
+  `sonar.python.coverage.reportPaths=reports/*coverage*.out`
 
-- `sonar.python.coverage.reportPaths=reports/*coverage*.out`
+    
 
 Mais comandos podem ser encontrados na [Documentação do SonarCloud](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/analysis-parameters/)
 

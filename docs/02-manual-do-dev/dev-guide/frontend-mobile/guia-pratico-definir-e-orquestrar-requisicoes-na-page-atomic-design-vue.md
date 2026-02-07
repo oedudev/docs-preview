@@ -61,19 +61,19 @@ No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por 
 
 **defineEmits(\["update:query", "search"\]):** No Vue 3 (com &lt;script setup&gt;), defineEmits é usado para declarar os eventos que o componente pode emitir para o pai.
 
-<colgroup><col></col><col></col></colgroup>
+ <colgroup><col></col><col></col></colgroup>   Evento
 
-#### Evento
+  Função
 
-#### Função
+    `update:query`
 
-- `update:query`
+  Indica que o valor da query mudou (por exemplo, quando o usuário digita algo)
 
-- Indica que o valor da query mudou (por exemplo, quando o usuário digita algo)
+    `search`
 
-- `search`
+  Indica que o usuário quer iniciar a busca
 
-- Indica que o usuário quer iniciar a busca
+    
 
 **SearchField:** recebe modelValue e reemite update:modelValue/search.
 

@@ -26,38 +26,7 @@ O projeto foi migrado de Go para uma arquitetura moderna baseada em Python e Jav
 
 O código está organizado como um monorepo para facilitar a gestão de dependências e deploys unificados:
 
-  
-####  
- 
-#### Diretório
- 
-#### Propósito
- 
-   
- 
-- `backend/django`
- 
-- Núcleo da API, regras de negócio e persistência de dados.
- 
- 
- 
-- `ui/web/app`
- 
-- Aplicação web para usuários finais e adminstradores.
- 
- 
- 
-- `infra/`
- 
-- Manifestos Kubernetes (Helm) e pipelines Skaffold.
- 
- 
- 
-- `conductor/`
- 
-- Registro de decisões de arquitetura (ADRs) e histórico de migração.
- 
-  
+        Diretório   Propósito           `backend/django`   Núcleo da API, regras de negócio e persistência de dados.       `ui/web/app`   Aplicação web para usuários finais e adminstradores.       `infra/`   Manifestos Kubernetes (Helm) e pipelines Skaffold.       `conductor/`   Registro de decisões de arquitetura (ADRs) e histórico de migração.       
 
 ## Como Executar (Desenvolvimento)
 

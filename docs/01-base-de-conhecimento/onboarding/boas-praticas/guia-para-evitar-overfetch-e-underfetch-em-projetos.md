@@ -152,35 +152,33 @@ POST /orders/{id}/deliver
 
 ##### **4. Resumo**
 
-<colgroup><col></col><col></col><col></col></colgroup>
+ <colgroup><col></col><col></col><col></col></colgroup>     **Rota Genérica (Enum)**
 
-#### 
+  **Rotas Específicas**
 
-#### **Rota Genérica (Enum)**
+    **Escalabilidade**
 
-#### **Rotas Específicas**
+  Alta (fácil adicionar novos status)
 
-- **Escalabilidade**
+  Baixa (cada status precisa de rota)
 
-- Alta (fácil adicionar novos status)
+    **Clareza Semântica**
 
-- Baixa (cada status precisa de rota)
+  Média (precisa validar transições)
 
-- **Clareza Semântica**
+  Alta (ação explícita na URL)
 
-- Média (precisa validar transições)
+    **Manutenção**
 
-- Alta (ação explícita na URL)
+  Mais simples
 
-- **Manutenção**
+  Mais complexa
 
-- Mais simples
+    **Casos ideais**
 
-- Mais complexa
+  Workflows simples e previsíveis
 
-- **Casos ideais**
+  Workflows complexos, com side-effects diferentes
 
-- Workflows simples e previsíveis
-
-- Workflows complexos, com side-effects diferentes
+    
 
