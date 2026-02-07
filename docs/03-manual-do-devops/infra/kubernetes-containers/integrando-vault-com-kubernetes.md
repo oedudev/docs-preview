@@ -30,10 +30,10 @@ Dito isso, as etapas são:
 
 ```bash
 ## 2. Criar um arquivo de policy com a nomenclatura "nome-da-policy.hcl" e estutura abaixo
-  path "kv/data/apps/<ambiente>/<projeto>/*" {
+  path "kv/data/apps/<ambiente>//*" {
     capabilities = ["read", "list"]
   }
-  path "kv/metadata/apps/<ambiente>/<projeto>/*" {
+  path "kv/metadata/apps/<ambiente>//*" {
     capabilities = ["list"]
   }
 ```

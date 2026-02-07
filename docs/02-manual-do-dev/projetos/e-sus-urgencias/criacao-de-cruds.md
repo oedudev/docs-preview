@@ -235,9 +235,9 @@ import { TeamModule } from './team/team.module';
     TypeOrmModule.forRoot({
       type: <type>,
       host: process.env.DB_HOST || <host>,
-      port: parseInt(process.env.DB_PORT) || <port>,
+      port: parseInt(process.env.DB_PORT) || ,
       username: process.env.DB_USER || <username>,
-      password: process.env.DB_PASSWORD || <pass>,
+      password: process.env.DB_PASSWORD || ,
       database: process.env.DB_NAME || <databaseName>,
       entities: [Item, Ambulance, Profile, CallSource, CallType, JobTitle, Occurrence, Team],
       synchronize: true,

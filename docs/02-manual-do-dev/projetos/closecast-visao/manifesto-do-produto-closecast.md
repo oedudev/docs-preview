@@ -3,7 +3,7 @@
 
 # CloseCast: O Manifesto do Produto
 
-<p class="callout info">**Nome do Projeto:** Internamente conhecido como **DIS** (DigitalSys Influencer System). Comercialmente, somos **CloseCast**.</p>
+**Nome do Projeto:** Internamente conhecido como **DIS** (DigitalSys Influencer System). Comercialmente, somos **CloseCast**.
 
 ## 🎯 A Visão
 

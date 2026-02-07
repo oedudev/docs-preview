@@ -3,7 +3,7 @@
 
 # DIS - DigitalSys Influencer System
 
-<div id="bkmrk-%E2%84%B9%EF%B8%8F-nota-de-nomenclat" style="background-color: #e8f4f8; border-left: 5px solid #2077b2; padding: 15px; margin-bottom: 20px;">#### ℹ️ Nota de Nomenclatura (Linguagem Ubíqua)
+#### ℹ️ Nota de Nomenclatura (Linguagem Ubíqua)
 
 Para manter a consistência na comunicação, esteja ciente da dualidade de nomes:
 
@@ -12,7 +12,7 @@ Para manter a consistência na comunicação, esteja ciente da dualidade de nome
  
 Embora o código e a infraestrutura usem `DIS`, telas e materiais de produto podem referenciar `CloseCast`. Tratamos como sinônimos até o lançamento oficial.
 
- </div>Este documento detalha o funcionamento técnico do projeto DIS, um monorepo que centraliza a gestão de influenciadores da DigitalSys.
+ Este documento detalha o funcionamento técnico do projeto DIS, um monorepo que centraliza a gestão de influenciadores da DigitalSys.
 
 ## Visão Geral da Arquitetura
 
@@ -26,7 +26,42 @@ O projeto foi migrado de Go para uma arquitetura moderna baseada em Python e Jav
 
 O código está organizado como um monorepo para facilitar a gestão de dependências e deploys unificados:
 
- <table class="table table-bordered" id="bkmrk-diret%C3%B3rio-prop%C3%B3sito-"> <thead> <tr> <th>Diretório</th> <th>Propósito</th> </tr> </thead> <tbody> <tr> <td>`backend/django`</td> <td>Núcleo da API, regras de negócio e persistência de dados.</td> </tr> <tr> <td>`ui/web/app`</td> <td>Aplicação web para usuários finais e adminstradores.</td> </tr> <tr> <td>`infra/`</td> <td>Manifestos Kubernetes (Helm) e pipelines Skaffold.</td> </tr> <tr> <td>`conductor/`</td> <td>Registro de decisões de arquitetura (ADRs) e histórico de migração.</td> </tr> </tbody> </table>
+ 
+<table class="table table-bordered" id="bkmrk-diret%C3%B3rio-prop%C3%B3sito-"> 
+<thead> 
+<tr> 
+<th>Diretório</th>
+ 
+<th>Propósito</th>
+ </tr>
+ </thead>
+ 
+<tbody> 
+<tr> 
+<td>`backend/django`</td>
+ 
+<td>Núcleo da API, regras de negócio e persistência de dados.</td>
+ </tr>
+ 
+<tr> 
+<td>`ui/web/app`</td>
+ 
+<td>Aplicação web para usuários finais e adminstradores.</td>
+ </tr>
+ 
+<tr> 
+<td>`infra/`</td>
+ 
+<td>Manifestos Kubernetes (Helm) e pipelines Skaffold.</td>
+ </tr>
+ 
+<tr> 
+<td>`conductor/`</td>
+ 
+<td>Registro de decisões de arquitetura (ADRs) e histórico de migração.</td>
+ </tr>
+ </tbody>
+ </table>
 
 ## Como Executar (Desenvolvimento)
 

@@ -35,6 +35,6 @@ obs: Cada usuário é separado por linha:
 
 ##### **Realizando o envio do código QR e arquivo "*****.tar*****" para o usuário:**
 
-<p class="callout warning">Finalizando o processo de criação, **é necessário repassar o código** ***QR e arquivo ".tar"*** equivalente ao portador do novo usuário criado:[![3.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/scaled-1680-/GCA3uaSxov3iSmhR-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/GCA3uaSxov3iSmhR-3.png)</p>
+Finalizando o processo de criação, **é necessário repassar o código** ***QR e arquivo ".tar"*** equivalente ao portador do novo usuário criado:[![3.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/scaled-1680-/GCA3uaSxov3iSmhR-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/GCA3uaSxov3iSmhR-3.png)
 
 Ao receber essas informações, a pessoa deverá usar o cliente usando as instruções contidas [AQUI](https://ajuda.digitalsys.com.br/books/manual-do-novo-funcionario/page/usando-a-vpn-digitalsys "Usando a VPN DigitalSys")

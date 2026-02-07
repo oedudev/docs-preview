@@ -5,11 +5,11 @@
 
 Por padrão, os tokens de API do Bookstack herdam as permissões do usuário que os criou. Para criar um token seguro para integrações (ex: outros bots que apenas consomem conteúdo), siga este procedimento.
 
-<div class="callout warning" id="bkmrk-%E2%9A%A0%EF%B8%8F-regra-de-ouro-ape">#### ⚠️ Regra de Ouro
+#### ⚠️ Regra de Ouro
 
 **Apenas o Clóvis (Bot Bibliotecário) deve ter permissão de escrita na documentação.** Todos os outros bots e integrações devem usar tokens Read-Only.
 
-</div>---
+---
 
 ## Passo 1: Criar um Papel (Role) Restritivo
 

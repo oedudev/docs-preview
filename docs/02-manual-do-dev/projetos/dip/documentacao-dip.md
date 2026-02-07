@@ -172,20 +172,21 @@ O arquivo docker-compose.yml é responsável por orquestrar os containers do bac
 
 O Docker Compose permite rodar os containers juntos ou individualmente.
 
-<p class="callout info">**Subir todos os containers (backend, banco e frontend)**:  
- docker-compose up -d</p>
+**Subir todos os containers (backend, banco e frontend)**:  
+ docker-compose up -d
 
-<p class="callout info">**Parar todos os containers**:  
- docker-compose down</p>
+**Parar todos os containers**:  
+ docker-compose down
 
-<p class="callout info">**Subir apenas o backend**:  
- docker-compose up -d backend</p>
+**Subir apenas o backend**:  
+ docker-compose up -d backend
 
-<p class="callout info">**Subir apenas o banco de dados**:  
- docker-compose up -d mongodb</p>
+**Subir apenas o banco de dados**:  
+ docker-compose up -d mongodb
 
-<p class="callout info">**Parar apenas o backend**:  
- docker-compose down backend</p>
+**Parar apenas o backend**:  
+ docker-compose down backend
 
-<p class="callout info">**Parar apenas o banco de dados**:  
- docker-compose down mongodb</p>
+**Parar apenas o banco de dados**:  
+ docker-compose down mongodb
+

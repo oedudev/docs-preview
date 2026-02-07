@@ -15,7 +15,7 @@ Motivos:
 
 - **Consistência visual**: garante que todos os títulos, descrições e legendas tenham o mesmo estilo em todo o sistema.
 - **Escalabilidade**: se precisar mudar a fonte ou cor de um estilo, basta alterar no átomo.
-- **Semântica**: organiza melhor o uso de elementos HTML (`<h1>`, `<h2>`, `<p>` etc.).
+- **Semântica**: organiza melhor o uso de elementos HTML (`<h1>`, `<h2>`, `` etc.).
 - **Reutilização**: evita repetição de CSS.
 
 Vamos ver um exemplo de como criar atomos de texto para o sistema
@@ -58,8 +58,10 @@ Exemplo de Uso:
 ##### **Boas práticas**
 
 Centralizar tokens de cor, fontes e tamanhos em **variáveis globais** (`:root { --font-size-md: 16px; }`).  
-Sempre usar os **átomos de tipografia** — nunca escrever `<p class="title">...</p>` diretamente em organismos.  
-Manter a semântica HTML correta (`Heading` gera `<h1>`, `<h2>`, etc.; `Text` gera `<p>`).  
+Sempre usar os **átomos de tipografia** — nunca escrever `...
+
+` diretamente em organismos.  
+Manter a semântica HTML correta (`Heading` gera `<h1>`, `<h2>`, etc.; `Text` gera ``).  
 Revisar periodicamente se novos padrões de texto realmente precisam virar **átomos separados** ou podem ser variantes dos existentes.
 
 ## **2.** **Padrão de nomenclatura CSS (BEM)**

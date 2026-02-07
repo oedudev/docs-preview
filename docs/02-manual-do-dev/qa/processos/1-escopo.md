@@ -1,18 +1,19 @@
 
 # 1. Escopo
 
-<p class="callout info"> **Este plano abrange todos os cards que entram na fila de QA e inclui:**</p>
+ **Este plano abrange todos os cards que entram na fila de QA e inclui:**
 
-<p class="callout info">Acompanhamento do fluxo no Linear</p>
+Acompanhamento do fluxo no Linear
 
-<p class="callout info">Criação de cards filhos (In QA e To Fix)</p>
+Criação de cards filhos (In QA e To Fix)
 
-<p class="callout info">Execução dos testes</p>
+Execução dos testes
 
-<p class="callout info">Evidências e documentação</p>
+Evidências e documentação
 
-<p class="callout info">Retorno ao desenvolvimento quando necessário</p>
+Retorno ao desenvolvimento quando necessário
 
-<p class="callout info">Encerramento dos cards e transição para regressivo</p>
+Encerramento dos cards e transição para regressivo
 
-<p class="callout info">Criação de casos de teste no TestLink</p>
+Criação de casos de teste no TestLink
+

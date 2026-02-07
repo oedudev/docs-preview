@@ -59,7 +59,7 @@
 
 /payment    → Pagamento
 
-<p class="callout info">O pagamento vai saber pelo o que está sendo pago através de um carrinho que vai ser salvo através de um stateManager, como o ZuStand.</p>
+O pagamento vai saber pelo o que está sendo pago através de um carrinho que vai ser salvo através de um stateManager, como o ZuStand.
 
 #### Solicitações de alteração nos vídeos
 
@@ -69,7 +69,7 @@
 
 /caress/:id     → Tela do Mimo.
 
-<p class="callout info">Se estiver logado como criador que recebeu o mimo, mostra a tela de mimo recebido, se como o usuário, mostra a tela de mimo enviado.</p>
+Se estiver logado como criador que recebeu o mimo, mostra a tela de mimo recebido, se como o usuário, mostra a tela de mimo enviado.
 
 #### Denúncia
 

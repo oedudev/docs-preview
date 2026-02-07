@@ -63,85 +63,191 @@ sonar.organization=digitalsys
 - Caso o projeto analisado seja monorepo, **além do arquivo de propriedades da raiz,** cada módulo deve conter seu próprio `sonar-project.properties`, alterando entre eles o sonar.projectKey para o informado no seu repositório próprio do SonarCloud
 - No arquivo de propriedades do SonarCloud também podem ser definidas algumas configurações, as mais utilizadas são:
 
-<table id="bkmrk-comandodescri%C3%87%C3%83oexem"><colgroup><col style="width: 262px;"></col><col style="width: 356px;"></col><col style="width: 417px;"></col></colgroup><tbody><tr><td>**COMANDO**
+<table id="bkmrk-comandodescri%C3%87%C3%83oexem"><colgroup><col style="width: 262px;"></col><col style="width: 356px;"></col><col style="width: 417px;"></col></colgroup>
+<tbody>
+<tr>
+<td>**COMANDO**
 
-</td><td>**DESCRIÇÃO**
+</td>
 
-</td><td>**EXEMPLO**
+<td>**DESCRIÇÃO**
 
-</td></tr><tr><td>`sonar.projectKey`
+</td>
 
-</td><td>Identificador único do projeto no SonarCloud
+<td>**EXEMPLO**
 
-</td><td>`sonar.projectKey=my_project_key`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.organization`
+<tr>
+<td>`sonar.projectKey`
 
-</td><td>Nome da organização no SonarCloud
+</td>
 
-</td><td>`sonar.organization=my_organization`
+<td>Identificador único do projeto no SonarCloud
 
-</td></tr><tr><td>`sonar.sources`
+</td>
 
-</td><td>Diretório(s) onde o código-fonte está localizado. Pode ser múltiplo, separado por vírgulas
+<td>`sonar.projectKey=my_project_key`
 
-</td><td>`sonar.sources=src`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.tests`
+<tr>
+<td>`sonar.organization`
 
-</td><td>Diretório(s) onde os testes estão localizados. Pode ser múltiplo, separado por vírgulas
+</td>
 
-</td><td>`sonar.tests=tests`
+<td>Nome da organização no SonarCloud
 
-</td></tr><tr><td>`sonar.language`
+</td>
 
-</td><td>Linguagem de programação principal do projeto
+<td>`sonar.organization=my_organization`
 
-</td><td>`sonar.language=java`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.exclusions`
+<tr>
+<td>`sonar.sources`
 
-</td><td>Arquivos ou diretórios a serem excluídos da análise
+</td>
 
-</td><td>`sonar.exclusions=**/*.xml`
+<td>Diretório(s) onde o código-fonte está localizado. Pode ser múltiplo, separado por vírgulas
 
-</td></tr><tr><td>`sonar.inclusions`
+</td>
 
-</td><td>Especifica quais arquivos ou diretórios incluir na análise, se for diferente dos padrões
+<td>`sonar.sources=src`
 
-</td><td>`sonar.inclusions=src/**/*.java`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.tests.inclusions`
+<tr>
+<td>`sonar.tests`
 
-</td><td>Especifica quais arquivos de teste incluir na análise
+</td>
 
-</td><td>`sonar.tests.inclusions=tests/**/*.java`
+<td>Diretório(s) onde os testes estão localizados. Pode ser múltiplo, separado por vírgulas
 
-</td></tr><tr><td>`sonar.test.exclusions`
+</td>
 
-</td><td>Arquivos ou diretórios de teste a serem excluídos da análise
+<td>`sonar.tests=tests`
 
-</td><td>`sonar.test.exclusions=tests/helpers/**`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.coverage.exclusions`
+<tr>
+<td>`sonar.language`
 
-</td><td>Arquivos ou diretórios a serem excluídos da análise de cobertura de código
+</td>
 
-</td><td>`sonar.coverage.exclusions=src/main/resources`
+<td>Linguagem de programação principal do projeto
 
-</td></tr><tr style="height: 10px;"><td>sonar.go.coverage.reportPaths
+</td>
 
-</td><td>Caminho para o arquivo do relatório de cobertura de testes para projetos em Golang
+<td>`sonar.language=java`
 
-</td><td>`sonar.go.coverage.reportPaths=reports/*coverage*.out`
+</td>
+</tr>
 
-</td></tr><tr><td>`sonar.python.coverage.reportPaths`
+<tr>
+<td>`sonar.exclusions`
 
-</td><td>Caminho para o arquivo do relatório de cobertura de testes para projetos em Python
+</td>
 
-</td><td>`sonar.python.coverage.reportPaths=reports/*coverage*.out`
+<td>Arquivos ou diretórios a serem excluídos da análise
 
-</td></tr></tbody></table>
+</td>
+
+<td>`sonar.exclusions=**/*.xml`
+
+</td>
+</tr>
+
+<tr>
+<td>`sonar.inclusions`
+
+</td>
+
+<td>Especifica quais arquivos ou diretórios incluir na análise, se for diferente dos padrões
+
+</td>
+
+<td>`sonar.inclusions=src/**/*.java`
+
+</td>
+</tr>
+
+<tr>
+<td>`sonar.tests.inclusions`
+
+</td>
+
+<td>Especifica quais arquivos de teste incluir na análise
+
+</td>
+
+<td>`sonar.tests.inclusions=tests/**/*.java`
+
+</td>
+</tr>
+
+<tr>
+<td>`sonar.test.exclusions`
+
+</td>
+
+<td>Arquivos ou diretórios de teste a serem excluídos da análise
+
+</td>
+
+<td>`sonar.test.exclusions=tests/helpers/**`
+
+</td>
+</tr>
+
+<tr>
+<td>`sonar.coverage.exclusions`
+
+</td>
+
+<td>Arquivos ou diretórios a serem excluídos da análise de cobertura de código
+
+</td>
+
+<td>`sonar.coverage.exclusions=src/main/resources`
+
+</td>
+</tr>
+
+<tr style="height: 10px;">
+<td>sonar.go.coverage.reportPaths
+
+</td>
+
+<td>Caminho para o arquivo do relatório de cobertura de testes para projetos em Golang
+
+</td>
+
+<td>`sonar.go.coverage.reportPaths=reports/*coverage*.out`
+
+</td>
+</tr>
+
+<tr>
+<td>`sonar.python.coverage.reportPaths`
+
+</td>
+
+<td>Caminho para o arquivo do relatório de cobertura de testes para projetos em Python
+
+</td>
+
+<td>`sonar.python.coverage.reportPaths=reports/*coverage*.out`
+
+</td>
+</tr>
+</tbody>
+</table>
 
 Mais comandos podem ser encontrados na [Documentação do SonarCloud](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/analysis-parameters/)
 

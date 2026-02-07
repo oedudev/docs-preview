@@ -152,33 +152,75 @@ POST /orders/{id}/deliver
 
 ##### **4. Resumo**
 
-<table class="align-center" id="bkmrk-rota-gen%C3%A9rica-%28enum%29"><colgroup><col></col><col></col><col></col></colgroup><tbody><tr><th class="align-center"></th><th class="align-center">**Rota Genérica (Enum)**
+<table class="align-center" id="bkmrk-rota-gen%C3%A9rica-%28enum%29"><colgroup><col></col><col></col><col></col></colgroup>
+<tbody>
+<tr>
+<th class="align-center"></th>
 
-</th><th class="align-center">**Rotas Específicas**
+<th class="align-center">**Rota Genérica (Enum)**
 
-</th></tr><tr><td class="align-center">**Escalabilidade**
+</th>
 
-</td><td class="align-center">Alta (fácil adicionar novos status)
+<th class="align-center">**Rotas Específicas**
 
-</td><td class="align-center">Baixa (cada status precisa de rota)
+</th>
+</tr>
 
-</td></tr><tr><td class="align-center">**Clareza Semântica**
+<tr>
+<td class="align-center">**Escalabilidade**
 
-</td><td class="align-center">Média (precisa validar transições)
+</td>
 
-</td><td class="align-center">Alta (ação explícita na URL)
+<td class="align-center">Alta (fácil adicionar novos status)
 
-</td></tr><tr><td class="align-center">**Manutenção**
+</td>
 
-</td><td class="align-center">Mais simples
+<td class="align-center">Baixa (cada status precisa de rota)
 
-</td><td class="align-center">Mais complexa
+</td>
+</tr>
 
-</td></tr><tr><td class="align-center">**Casos ideais**
+<tr>
+<td class="align-center">**Clareza Semântica**
 
-</td><td class="align-center">Workflows simples e previsíveis
+</td>
 
-</td><td class="align-center">Workflows complexos, com side-effects diferentes
+<td class="align-center">Média (precisa validar transições)
 
-</td></tr></tbody></table>
+</td>
+
+<td class="align-center">Alta (ação explícita na URL)
+
+</td>
+</tr>
+
+<tr>
+<td class="align-center">**Manutenção**
+
+</td>
+
+<td class="align-center">Mais simples
+
+</td>
+
+<td class="align-center">Mais complexa
+
+</td>
+</tr>
+
+<tr>
+<td class="align-center">**Casos ideais**
+
+</td>
+
+<td class="align-center">Workflows simples e previsíveis
+
+</td>
+
+<td class="align-center">Workflows complexos, com side-effects diferentes
+
+</td>
+</tr>
+</tbody>
+</table>
 

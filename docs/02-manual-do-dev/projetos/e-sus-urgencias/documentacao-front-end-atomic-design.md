@@ -14,41 +14,83 @@ Componente de campo de entrada de dados que pode ser configurado via props para 
 
 Props disponíveis:
 
-<table id="bkmrk-proptipodescri%C3%A7%C3%A3olab"><colgroup><col></col><col></col><col></col></colgroup><tbody><tr><th>Prop
+<table id="bkmrk-proptipodescri%C3%A7%C3%A3olab"><colgroup><col></col><col></col><col></col></colgroup>
+<tbody>
+<tr>
+<th>Prop
 
-</th><th>Tipo
+</th>
 
-</th><th>Descrição
+<th>Tipo
 
-</th></tr><tr><td>`label`
+</th>
 
-</td><td>string
+<th>Descrição
 
-</td><td>Texto exibido acima do campo como label.
+</th>
+</tr>
 
-</td></tr><tr><td>`placeholder`
+<tr>
+<td>`label`
 
-</td><td>string
+</td>
 
-</td><td>Texto de sugestão dentro do campo.
+<td>string
 
-</td></tr><tr><td>`icone`
+</td>
 
-</td><td>string
+<td>Texto exibido acima do campo como label.
 
-</td><td>Ícone exibido à esquerda do campo.
+</td>
+</tr>
 
-</td></tr><tr><td>`type`
+<tr>
+<td>`placeholder`
 
-</td><td>string
+</td>
 
-</td><td>Tipo de input. Se for 
+<td>string
+
+</td>
+
+<td>Texto de sugestão dentro do campo.
+
+</td>
+</tr>
+
+<tr>
+<td>`icone`
+
+</td>
+
+<td>string
+
+</td>
+
+<td>Ícone exibido à esquerda do campo.
+
+</td>
+</tr>
+
+<tr>
+<td>`type`
+
+</td>
+
+<td>string
+
+</td>
+
+<td>Tipo de input. Se for 
 
 `"password"`
 
 , o campo se comporta como senha e exibe ícone à direita para mostrar/ocultar o valor.
 
-</td></tr></tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
 
 [![image.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/3lJ5VZG3hGTlab9p-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
 
@@ -59,29 +101,63 @@ Props disponíveis:
 **Descrição:**  
 Componente de Botão que pode ser configurado via props para se adequar a diferentes contextos do projeto.
 
-<table id="bkmrk-tipodescri%C3%A7%C3%A3olabelst"><colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup><tbody><tr><th></th><th>Tipo
+<table id="bkmrk-tipodescri%C3%A7%C3%A3olabelst"><colgroup><col></col><col></col><col style="width: 320px;"></col></colgroup>
+<tbody>
+<tr>
+<th></th>
 
-</th><th>Descrição
+<th>Tipo
 
-</th></tr><tr><td>`label`
+</th>
 
-</td><td>string
+<th>Descrição
 
-</td><td>Texto exibido no centro do botão.
+</th>
+</tr>
 
-</td></tr><tr><td>`icone`
+<tr>
+<td>`label`
 
-</td><td>string
+</td>
 
-</td><td>Ícone exibido à esquerda do campo.
+<td>string
 
-</td></tr><tr><td>`disabled`
+</td>
 
-</td><td>boolean
+<td>Texto exibido no centro do botão.
 
-</td><td>Variável booleana para desabilitar/habilitar botão
+</td>
+</tr>
 
-</td></tr></tbody></table>
+<tr>
+<td>`icone`
+
+</td>
+
+<td>string
+
+</td>
+
+<td>Ícone exibido à esquerda do campo.
+
+</td>
+</tr>
+
+<tr>
+<td>`disabled`
+
+</td>
+
+<td>boolean
+
+</td>
+
+<td>Variável booleana para desabilitar/habilitar botão
+
+</td>
+</tr>
+</tbody>
+</table>
 
 [![image.png](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/jleCTabRZF2eJ9XW-image.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
 
