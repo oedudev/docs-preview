@@ -26,42 +26,38 @@ O projeto foi migrado de Go para uma arquitetura moderna baseada em Python e Jav
 
 O código está organizado como um monorepo para facilitar a gestão de dependências e deploys unificados:
 
+  
+####  
  
-<table class="table table-bordered" id="bkmrk-diret%C3%B3rio-prop%C3%B3sito-"> 
-<thead> 
-<tr> 
-<th>Diretório</th>
+#### Diretório
  
-<th>Propósito</th>
- </tr>
- </thead>
+#### Propósito
  
-<tbody> 
-<tr> 
-<td>`backend/django`</td>
+   
  
-<td>Núcleo da API, regras de negócio e persistência de dados.</td>
- </tr>
+- `backend/django`
  
-<tr> 
-<td>`ui/web/app`</td>
+- Núcleo da API, regras de negócio e persistência de dados.
  
-<td>Aplicação web para usuários finais e adminstradores.</td>
- </tr>
  
-<tr> 
-<td>`infra/`</td>
  
-<td>Manifestos Kubernetes (Helm) e pipelines Skaffold.</td>
- </tr>
+- `ui/web/app`
  
-<tr> 
-<td>`conductor/`</td>
+- Aplicação web para usuários finais e adminstradores.
  
-<td>Registro de decisões de arquitetura (ADRs) e histórico de migração.</td>
- </tr>
- </tbody>
- </table>
+ 
+ 
+- `infra/`
+ 
+- Manifestos Kubernetes (Helm) e pipelines Skaffold.
+ 
+ 
+ 
+- `conductor/`
+ 
+- Registro de decisões de arquitetura (ADRs) e histórico de migração.
+ 
+  
 
 ## Como Executar (Desenvolvimento)
 

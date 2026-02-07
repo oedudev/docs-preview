@@ -16,425 +16,375 @@ Abaixo segue a lista detalhada de máquinas, incluindo endereços IP, especifica
 
 ### Servidores e Aplicações
 
-<table id="bkmrk-nomeipcpuram-totalra">
-<thead>
-<tr>
-<th>Nome</th>
+#### 
 
-<th>IP</th>
+#### Nome
 
-<th>CPU</th>
+#### IP
 
-<th>RAM Total</th>
+#### CPU
 
-<th>RAM Uso</th>
+#### RAM Total
 
-<th>Disco Total</th>
+#### RAM Uso
 
-<th>Disco Uso</th>
+#### Disco Total
 
-<th>OS</th>
+#### Disco Uso
 
-<th>Status</th>
-</tr>
-</thead>
+#### OS
 
-<tbody>
-<tr>
-<td>**BookStack**</td>
+#### Status
 
-<td>`157.230.91.101`</td>
+- **BookStack**
 
-<td>1 vCPU</td>
+- `157.230.91.101`
 
-<td>0.4 GB</td>
+- 1 vCPU
 
-<td>0.2 GB</td>
+- 0.4 GB
 
-<td>8.6 GB</td>
+- 0.2 GB
 
-<td>⚠️ **56%**</td>
+- 8.6 GB
 
-<td>Ubuntu 25.04</td>
+- ⚠️ **56%**
 
-<td>✅</td>
-</tr>
+- Ubuntu 25.04
 
-<tr>
-<td>**Mailhog**</td>
+- ✅
 
-<td>`167.71.31.99`</td>
+- **Mailhog**
 
-<td>1 vCPU</td>
+- `167.71.31.99`
 
-<td>0.4 GB</td>
+- 1 vCPU
 
-<td>0.3 GB</td>
+- 0.4 GB
 
-<td>8.6 GB</td>
+- 0.3 GB
 
-<td>✅ Resolvido\*</td>
+- 8.6 GB
 
-<td>Ubuntu 25.04</td>
+- ✅ Resolvido\*
 
-<td>✅</td>
-</tr>
+- Ubuntu 25.04
 
-<tr>
-<td>**Moltbot Cláudio**</td>
+- ✅
 
-<td>`24.144.122.141`</td>
+- **Moltbot Cláudio**
 
-<td>4 vCPU</td>
+- `24.144.122.141`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>1.0 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 1.0 GB
 
-<td>22%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 22%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Moltbot Clécio**</td>
+- ✅
 
-<td>`64.227.6.71`</td>
+- **Moltbot Clécio**
 
-<td>4 vCPU</td>
+- `64.227.6.71`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>1.0 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 1.0 GB
 
-<td>9%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 9%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Moltbot Clóvis**</td>
+- ✅
 
-<td>`157.230.233.52`</td>
+- **Moltbot Clóvis**
 
-<td>2 vCPU</td>
+- `157.230.233.52`
 
-<td>3.8 GB</td>
+- 2 vCPU
 
-<td>0.8 GB</td>
+- 3.8 GB
 
-<td>24 GB</td>
+- 0.8 GB
 
-<td>31%</td>
+- 24 GB
 
-<td>Ubuntu 24.04</td>
+- 31%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**N8n**</td>
+- ✅
 
-<td>`167.71.27.169`</td>
+- **N8n**
 
-<td>1 vCPU</td>
+- `167.71.27.169`
 
-<td>0.9 GB</td>
+- 1 vCPU
 
-<td>0.6 GB</td>
+- 0.9 GB
 
-<td>24 GB</td>
+- 0.6 GB
 
-<td>25%</td>
+- 24 GB
 
-<td>Ubuntu 24.04</td>
+- 25%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**OSTicket**</td>
+- ✅
 
-<td>`198.199.66.32`</td>
+- **OSTicket**
 
-<td>1 vCPU</td>
+- `198.199.66.32`
 
-<td>1.9 GB</td>
+- 1 vCPU
 
-<td>0.9 GB</td>
+- 1.9 GB
 
-<td>24 GB</td>
+- 0.9 GB
 
-<td>21%</td>
+- 24 GB
 
-<td>Ubuntu 25.04</td>
+- 21%
 
-<td>✅</td>
-</tr>
+- Ubuntu 25.04
 
-<tr>
-<td>**Outside Network**</td>
+- ✅
 
-<td>`134.122.127.121`</td>
+- **Outside Network**
 
-<td>1 vCPU</td>
+- `134.122.127.121`
 
-<td>0.9 GB</td>
+- 1 vCPU
 
-<td>0.4 GB</td>
+- 0.9 GB
 
-<td>24 GB</td>
+- 0.4 GB
 
-<td>10%</td>
+- 24 GB
 
-<td>Ubuntu 24.04</td>
+- 10%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Pritunl**</td>
+- ✅
 
-<td>`157.230.7.129`</td>
+- **Pritunl**
 
-<td>1 vCPU</td>
+- `157.230.7.129`
 
-<td>0.9 GB</td>
+- 1 vCPU
 
-<td>0.5 GB</td>
+- 0.9 GB
 
-<td>25 GB</td>
+- 0.5 GB
 
-<td>30%</td>
+- 25 GB
 
-<td>Ubuntu 22.04</td>
+- 30%
 
-<td>✅</td>
-</tr>
+- Ubuntu 22.04
 
-<tr>
-<td>**RabbitMQ**</td>
+- ✅
 
-<td>`206.189.206.66`</td>
+- **RabbitMQ**
 
-<td>1 vCPU</td>
+- `206.189.206.66`
 
-<td>1.9 GB</td>
+- 1 vCPU
 
-<td>0.5 GB</td>
+- 1.9 GB
 
-<td>48 GB</td>
+- 0.5 GB
 
-<td>8%</td>
+- 48 GB
 
-<td>Ubuntu 24.04</td>
+- 8%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Runner 142**</td>
+- ✅
 
-<td>`142.93.8.39`</td>
+- **Runner 142**
 
-<td>4 vCPU</td>
+- `142.93.8.39`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>1.1 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 1.1 GB
 
-<td>17%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 17%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Runner 162**</td>
+- ✅
 
-<td>`162.243.166.74`</td>
+- **Runner 162**
 
-<td>4 vCPU</td>
+- `162.243.166.74`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>1.1 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 1.1 GB
 
-<td>16%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 16%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Runner 165**</td>
+- ✅
 
-<td>`165.227.202.28`</td>
+- **Runner 165**
 
-<td>4 vCPU</td>
+- `165.227.202.28`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>0.9 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 0.9 GB
 
-<td>16%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 16%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**Runner 167**</td>
+- ✅
 
-<td>`167.99.151.135`</td>
+- **Runner 167**
 
-<td>4 vCPU</td>
+- `167.99.151.135`
 
-<td>7.8 GB</td>
+- 4 vCPU
 
-<td>1.2 GB</td>
+- 7.8 GB
 
-<td>154 GB</td>
+- 1.2 GB
 
-<td>16%</td>
+- 154 GB
 
-<td>Ubuntu 24.04</td>
+- 16%
 
-<td>✅</td>
-</tr>
+- Ubuntu 24.04
 
-<tr>
-<td>**TestLink**</td>
+- ✅
 
-<td>`104.248.51.15`</td>
+- **TestLink**
 
-<td>2 vCPU</td>
+- `104.248.51.15`
 
-<td>3.8 GB</td>
+- 2 vCPU
 
-<td>0.5 GB</td>
+- 3.8 GB
 
-<td>79 GB</td>
+- 0.5 GB
 
-<td>8%</td>
+- 79 GB
 
-<td>Debian 12</td>
+- 8%
 
-<td>✅</td>
-</tr>
+- Debian 12
 
-<tr>
-<td>**Vault**</td>
+- ✅
 
-<td>`137.184.157.36`</td>
+- **Vault**
 
-<td>1 vCPU</td>
+- `137.184.157.36`
 
-<td>0.9 GB</td>
+- 1 vCPU
 
-<td>0.3 GB</td>
+- 0.9 GB
 
-<td>25 GB</td>
+- 0.3 GB
 
-<td>29%</td>
+- 25 GB
 
-<td>Ubuntu 22.04</td>
+- 29%
 
-<td>✅</td>
-</tr>
-</tbody>
-</table>
+- Ubuntu 22.04
+
+- ✅
 
 *\*Nota: O alerta de 95% de uso de disco no Mailhog foi reportado e resolvido em 31/01/2026.*
 
 ### Kubernetes Cluster (Nodes)
 
-<table id="bkmrk-nomeipcpuram-totalra-1">
-<thead>
-<tr>
-<th>Nome</th>
+#### 
 
-<th>IP</th>
+#### Nome
 
-<th>CPU</th>
+#### IP
 
-<th>RAM Total</th>
+#### CPU
 
-<th>RAM Uso</th>
+#### RAM Total
 
-<th>OS</th>
+#### RAM Uso
 
-<th>Status</th>
-</tr>
-</thead>
+#### OS
 
-<tbody>
-<tr>
-<td>**K8s Node 1**</td>
+#### Status
 
-<td>`161.35.115.69`</td>
+- **K8s Node 1**
 
-<td>8 vCPU</td>
+- `161.35.115.69`
 
-<td>15.6 GB</td>
+- 8 vCPU
 
-<td>7.5 GB (54%)</td>
+- 15.6 GB
 
-<td>Debian 12</td>
+- 7.5 GB (54%)
 
-<td>✅</td>
-</tr>
+- Debian 12
 
-<tr>
-<td>**K8s Node 2**</td>
+- ✅
 
-<td>`157.230.2.112`</td>
+- **K8s Node 2**
 
-<td>8 vCPU</td>
+- `157.230.2.112`
 
-<td>15.6 GB</td>
+- 8 vCPU
 
-<td>7.4 GB (54%)</td>
+- 15.6 GB
 
-<td>Debian 12</td>
+- 7.4 GB (54%)
 
-<td>✅</td>
-</tr>
+- Debian 12
 
-<tr>
-<td>**K8s Node 3**</td>
+- ✅
 
-<td>`137.184.142.70`</td>
+- **K8s Node 3**
 
-<td>8 vCPU</td>
+- `137.184.142.70`
 
-<td>15.6 GB</td>
+- 8 vCPU
 
-<td>8.2 GB (60%)</td>
+- 15.6 GB
 
-<td>Debian 12</td>
+- 8.2 GB (60%)
 
-<td>✅</td>
-</tr>
-</tbody>
-</table>
+- Debian 12
+
+- ✅
 
 ## Observações
 
