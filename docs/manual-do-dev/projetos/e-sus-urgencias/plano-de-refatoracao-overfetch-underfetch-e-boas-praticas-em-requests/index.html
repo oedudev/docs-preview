@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests | DigitalSys Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://oedudev.github.io/docs-preview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://oedudev.github.io/docs-preview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests | DigitalSys Docs"><meta data-rh="true" name="description" content="1. Objetivo"><meta data-rh="true" property="og:description" content="1. Objetivo"><link data-rh="true" rel="icon" href="/docs-preview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests"><link data-rh="true" rel="alternate" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests" hreflang="en"><link data-rh="true" rel="alternate" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests","item":"https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests"}]}</script><link rel="alternate" type="application/rss+xml" href="/docs-preview/blog/rss.xml" title="DigitalSys Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/docs-preview/blog/atom.xml" title="DigitalSys Docs Atom Feed"><link rel="stylesheet" href="/docs-preview/assets/css/styles.c51ffe61.css">
+<script src="/docs-preview/assets/js/runtime~main.01e36fd0.js" defer="defer"></script>
+<script src="/docs-preview/assets/js/main.8ee1a138.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-preview/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-preview/"><div class="navbar__logo"><img src="/docs-preview/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-preview/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">My Site</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs-preview/docs/base-de-conhecimento/onboarding/boas-praticas/boas-praticas-de-codigo">Tutorial</a><a class="navbar__item navbar__link" href="/docs-preview/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs-preview/docs/base-de-conhecimento/onboarding/boas-praticas/boas-praticas-de-codigo"><span title="base-de-conhecimento" class="categoryLinkLabel_W154">base-de-conhecimento</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-preview/docs/intro"><span title="Tutorial Intro" class="linkLabel_WmDU">Tutorial Intro</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs-preview/docs/manual-do-dev/ai-agents/manual-bots"><span title="manual-do-dev" class="categoryLinkLabel_W154">manual-do-dev</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/ai-agents/manual-bots"><span title="ai-agents" class="categoryLinkLabel_W154">ai-agents</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/dev-guide/backend-db/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus"><span title="dev-guide" class="categoryLinkLabel_W154">dev-guide</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/analytics/analytics-dashboard"><span title="projetos" class="categoryLinkLabel_W154">projetos</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/analytics/analytics-dashboard"><span title="analytics" class="categoryLinkLabel_W154">analytics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast/banco-de-dados-Q3y"><span title="closecast" class="categoryLinkLabel_W154">closecast</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast-funcional/banco-de-dados-Q3y"><span title="closecast-funcional" class="categoryLinkLabel_W154">closecast-funcional</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast-visao/manifesto-do-produto-closecast"><span title="closecast-visao" class="categoryLinkLabel_W154">closecast-visao</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/dip/callback"><span title="dip" class="categoryLinkLabel_W154">dip</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/dsrecruiter/bdd-candidato"><span title="dsrecruiter" class="categoryLinkLabel_W154">dsrecruiter</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/atualizar-ambiente-do-e-sus-datasus"><span title="e-sus-urgencias" class="categoryLinkLabel_W154">e-sus-urgencias</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/atualizar-ambiente-do-e-sus-datasus"><span title="Atualizar ambiente do E-SUS (DataSUS)" class="linkLabel_WmDU">Atualizar ambiente do E-SUS (DataSUS)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/banco-de-dados"><span title="Banco de Dados" class="linkLabel_WmDU">Banco de Dados</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/bdd-sessao"><span title="BDD Sessão" class="linkLabel_WmDU">BDD Sessão</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/casos-de-uso-dfo"><span title="Casos de Uso" class="linkLabel_WmDU">Casos de Uso</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus"><span title="Como executar scripts DML nos ambientes do e-SUS (DataSUS)" class="linkLabel_WmDU">Como executar scripts DML nos ambientes do e-SUS (DataSUS)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/criacao-de-cruds"><span title="Criação de CRUDs" class="linkLabel_WmDU">Criação de CRUDs</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/documentacao-front-end-atomic-design"><span title="Documentação Front-End - Atomic Design" class="linkLabel_WmDU">Documentação Front-End - Atomic Design</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/documentacao"><span title="Documentação" class="linkLabel_WmDU">Documentação</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/guia-para-gerar-o-apk-do-projeto-app-socorrista"><span title="Guia para Gerar o APK do Projeto (app-socorrista)" class="linkLabel_WmDU">Guia para Gerar o APK do Projeto (app-socorrista)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/integracao-com-o-sistema-de-telefonia-digitro"><span title="Integração com o sistema de Telefonia (Digitro)" class="linkLabel_WmDU">Integração com o sistema de Telefonia (Digitro)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/links-de-acesso"><span title="Links de acesso" class="linkLabel_WmDU">Links de acesso</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/metodologia-de-administracao-de-dados-mad"><span title="Metodologia de Administração de Dados (MAD)" class="linkLabel_WmDU">Metodologia de Administração de Dados (MAD)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests"><span title="Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests" class="linkLabel_WmDU">Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/solicitando-acesso-as-ferramentas-datasus"><span title="Solicitando acesso às ferramentas (DataSUS)" class="linkLabel_WmDU">Solicitando acesso às ferramentas (DataSUS)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/testes-de-mutacao-stryker"><span title="Testes de mutação - Stryker" class="linkLabel_WmDU">Testes de mutação - Stryker</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/ultimos-scripts-sql-executados-por-ambiente-no-datasus"><span title="Últimos Scripts SQL Executados por Ambiente no DataSUS" class="linkLabel_WmDU">Últimos Scripts SQL Executados por Ambiente no DataSUS</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/gda/bdd-app-aluno"><span title="gda" class="categoryLinkLabel_W154">gda</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/casos-de-uso"><span title="hsoares" class="categoryLinkLabel_W154">hsoares</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/statis/acompanhamento-incrementos"><span title="statis" class="categoryLinkLabel_W154">statis</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/surge/documentacao-de-atualizacao-de-ambiente"><span title="surge" class="categoryLinkLabel_W154">surge</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/surge-metaverso/documentacao-de-atualizacao-de-ambiente"><span title="surge-metaverso" class="categoryLinkLabel_W154">surge-metaverso</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/upluxo/bbd-tela-qr-code-informacoes-do-hospital"><span title="upluxo" class="categoryLinkLabel_W154">upluxo</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/qa/processos/escopo"><span title="qa" class="categoryLinkLabel_W154">qa</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/troubleshooting/frontend-build/sveltekit-erro-de-build-no-docker-adapter-mismatch"><span title="troubleshooting" class="categoryLinkLabel_W154">troubleshooting</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/docs-preview/docs/category/tutorial---basics"><span title="Tutorial - Basics" class="categoryLinkLabel_W154">Tutorial - Basics</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs-preview/docs/manual-do-devops/agentes-ia/arquitetura"><span title="manual-do-devops" class="categoryLinkLabel_W154">manual-do-devops</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/docs-preview/docs/category/tutorial---extras"><span title="Tutorial - Extras" class="categoryLinkLabel_W154">Tutorial - Extras</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-preview/docs/boas-praticas-limpo"><span title="Boas Práticas de Código" class="linkLabel_WmDU">Boas Práticas de Código</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-preview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">manual-do-dev</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">projetos</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">e-sus-urgencias</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Plano de Refatoração – Overfetch, Underfetch e Boas Práticas em Requests</h1></header>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-objetivo"><strong>1. Objetivo</strong><a href="#1-objetivo" class="hash-link" aria-label="Direct link to 1-objetivo" title="Direct link to 1-objetivo" translate="no">​</a></h3>
+<p>Este documento tem como objetivo identificar, no projeto, todos os pontos em que ocorrem problemas relacionados a <strong>overfetch</strong>, <strong>underfetch</strong> e outras falhas ou vulnerabilidades no consumo de <strong>requests</strong>.</p>
+<p>A partir desse diagnóstico, será elaborado um <strong>plano de refatoração</strong> com propostas de correção alinhadas às boas práticas já estabelecidas na equipe.</p>
+<p>Para referência, consulte também o material: <a href="https://ajuda.digitalsys.com.br/books/manual-do-novo-funcionario/page/guia-para-evitar-overfetch-e-underfetch-em-projetos" target="_blank" rel="noopener noreferrer" class="">Guia para Evitar Overf... | Ajuda DigitalSys</a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-critérios-de-análise"><strong>2. Critérios de Análise</strong><a href="#2-critérios-de-análise" class="hash-link" aria-label="Direct link to 2-critérios-de-análise" title="Direct link to 2-critérios-de-análise" translate="no">​</a></h3>
+<p>Durante a revisão, foram considerados casos como:</p>
+<ul>
+<li class=""><strong>Overfetch:</strong> endpoints que retornam mais dados do que o necessário para a tela/funcionalidade.</li>
+<li class=""><strong>Underfetch:</strong> endpoints que obrigam o frontend a realizar múltiplas requisições para montar uma tela ou completar uma ação.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-ocorrências-identificadas-página-home-tarm"><strong>3. Ocorrências Identificadas Página Home (TARM)</strong><a href="#3-ocorrências-identificadas-página-home-tarm" class="hash-link" aria-label="Direct link to 3-ocorrências-identificadas-página-home-tarm" title="Direct link to 3-ocorrências-identificadas-página-home-tarm" translate="no">​</a></h3>
+<p>Na <strong>HomePage</strong> foram identificadas diversas requests durante a renderização, algumas delas inclusive <strong>repetidas</strong>, resultando em problemas de <strong>overfetch</strong> e <strong>uso desnecessário de rede</strong>.</p>
+<p>network da homePage</p>
+<p><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-1.png" alt="" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="requests-userid"><strong>Requests UserID</strong><a href="#requests-userid" class="hash-link" aria-label="Direct link to requests-userid" title="Direct link to requests-userid" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="31-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong"><strong>3.1 Ocorrência 1 – Recuperação de</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;user_id&amp;lt;/strong&gt;</code>**<a href="#31-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" class="hash-link" aria-label="Direct link to 31-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" title="Direct link to 31-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" translate="no">​</a></h4>
+<p><strong>Local:</strong> Função</p>
+<p><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-2.png" alt="" class="img_ev3q"><br>
+<strong>Descrição:</strong></p>
+<ul>
+<li class="">Recupera o token do <code>localStorage</code>.</li>
+<li class="">Decodifica o token com <code>getUserIdByToken</code>.</li>
+<li class="">Faz uma chamada a <code>getUsers()</code> para obter todos os usuários.</li>
+<li class="">Executa um <code>.find()</code> para localizar o usuário pelo <code>user_id</code>.</li>
+<li class="">Atualiza variáveis reativas (<code>responsibleTarm</code>, <code>currentUserName</code>) com o nome do usuário.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Uma chamada completa para <code>getUsers()</code> é feita apenas para recuperar dados do usuário logado.</li>
+<li class="">Esse comportamento gera <strong>overfetch</strong>, pois carrega todos os usuários desnecessariamente.</li>
+<li class="">Além disso, já existe no backend a capacidade de identificar o usuário a partir do token da requisição.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Utilizar a rota <code>/shared/possible-values</code> para incluir o retorno do nome do usuário e id autenticado.</li>
+<li class="">Dessa forma, evitamos múltiplas requests e eliminamos a necessidade de buscar todos os usuários apenas para identificar o logado.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="32-ocorrência-2--variável-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-não-utilizada"><strong>3.2 Ocorrência 2 – Variável</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;userId&amp;lt;/strong&gt;</code> <strong>não utilizada</strong><a href="#32-ocorrência-2--variável-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-não-utilizada" class="hash-link" aria-label="Direct link to 32-ocorrência-2--variável-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-não-utilizada" title="Direct link to 32-ocorrência-2--variável-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-não-utilizada" translate="no">​</a></h4>
+<p><strong>Local:</strong> Função:</p>
+<p><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-3.png" alt="" class="img_ev3q"><br>
+<strong>Descrição:</strong></p>
+<ul>
+<li class="">O sistema realiza uma request para buscar o <code>user_id</code>.</li>
+<li class="">O valor é armazenado em uma variável (<code>userId</code>) que não é utilizada posteriormente.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Request desnecessária.</li>
+<li class="">Consumo de recurso sem efeito prático no sistema.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover a request e a variável, já que o valor não é utilizado.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="33-ocorrência-3--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong"><strong>3.3 Ocorrência 3 – Recuperação de</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;user_id&amp;lt;/strong&gt;</code>**<a href="#33-ocorrência-3--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" class="hash-link" aria-label="Direct link to 33-ocorrência-3--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" title="Direct link to 33-ocorrência-3--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" translate="no">​</a></h4>
+<p><strong>Local:</strong> Função (composables/usePhoneSystemService.ts):</p>
+<p><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-4.png" alt="" class="img_ev3q"><br>
+<strong>Descrição:</strong></p>
+<ul>
+<li class="">O sistema realiza uma request para buscar o <code>user_id</code>.</li>
+<li class="">O valor é utilizado em uma nova request (<code>getPhoneCredentials</code>).</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Request desnecessária.</li>
+<li class="">Consumo de recurso sem efeito prático no sistema.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover a request, no backend existe uma função para pegar o id do usuario pelo token da request.</li>
+</ul>
+<p>&lt;u&gt;obs: Essa ocorrência ira existir em todos as paginas que utilizam o componente &lt;/u&gt;&lt;u&gt;<strong>callSystem</strong>&lt;/u&gt;&lt;u&gt; pode ser resolvida posteriormente&lt;/u&gt;</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="requests-user"><strong>Requests User</strong><a href="#requests-user" class="hash-link" aria-label="Direct link to requests-user" title="Direct link to requests-user" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="34-ocorrência-4--recuperação-de-nome-do-usuário-logado"><strong>3.4 Ocorrência 4 – Recuperação de nome do usuário logado</strong><a href="#34-ocorrência-4--recuperação-de-nome-do-usuário-logado" class="hash-link" aria-label="Direct link to 34-ocorrência-4--recuperação-de-nome-do-usuário-logado" title="Direct link to 34-ocorrência-4--recuperação-de-nome-do-usuário-logado" translate="no">​</a></h4>
+<p><strong>Local:</strong> Funções que utilizam <code>getUsers()</code> apenas para obter o usuário autenticado.</p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">O frontend realiza uma chamada completa para <code>getUsers()</code>.</li>
+<li class="">Usa o retorno apenas para identificar o nome do usuário logado.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Overfetch</strong>: todos os usuários são carregados sem necessidade.</li>
+<li class="">Requisições redundantes, já que esse caso foi mapeado e será resolvido na <strong>Ocorrência 1 do modulo UserID</strong>.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Reutilizar a solução implementada via <code>/shared/possible-values</code>, retornando diretamente o nome do usuário autenticado.</li>
+<li class="">Assim, elimina-se a necessidade dessa chamada extra.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="35-ocorrência-5--request-e-processamento-de-usuários-em-ltstrong-classeditor-theme-bold-editor-theme-codefetchoptionsltstrong"><strong>3.5 Ocorrência 5 – Request e Processamento de usuários em</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;fetchOptions&amp;lt;/strong&gt;</code>**<a href="#35-ocorrência-5--request-e-processamento-de-usuários-em-ltstrong-classeditor-theme-bold-editor-theme-codefetchoptionsltstrong" class="hash-link" aria-label="Direct link to 35-ocorrência-5--request-e-processamento-de-usuários-em-ltstrong-classeditor-theme-bold-editor-theme-codefetchoptionsltstrong" title="Direct link to 35-ocorrência-5--request-e-processamento-de-usuários-em-ltstrong-classeditor-theme-bold-editor-theme-codefetchoptionsltstrong" translate="no">​</a></h4>
+<p><strong>Local:</strong> Função <code>fetchOptions</code> processo/request utilizado para popular o campo <em><strong>Enviar para</strong></em></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/rNIJdscMwvTrQQdn-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-5.png" alt="image.png" class="img_ev3q"></a></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HSN7zydx91yrWeAi-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-6.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">O sistema realiza uma request para buscar o <code>user</code>.</li>
+<li class="">A rota retorna um volume muito grande de dados (todos os usuários).</li>
+<li class="">Função processAvailableEmployees recebe os dados de <code>getUsers()</code>.</li>
+<li class="">Filtra usuários com <code>status = ativo</code> e <code>profile = médico regulador</code>.</li>
+<li class="">Cria objetos <code>{ key: id, label: nome }</code>.</li>
+<li class="">Ordena alfabeticamente.</li>
+<li class="">O frontend carrega a lista completa e aplica filtros conforme o usuário digita.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Overfetch</strong>: todos os usuários são retornados e filtrados no frontend.</li>
+<li class="">Carga de dados excessiva e perda de performance.</li>
+<li class="">O frontend executa lógica de negócio que deveria estar no backend.</li>
+<li class="">A lógica de filtro está no frontend, tornando o sistema mais lento e pesado.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Implementar busca incremental no backend.</li>
+<li class="">Ao digitar, o frontend deve disparar uma request com debounce (ex.: 300–500ms) para retornar apenas os usuários compatíveis com o termo buscado.</li>
+<li class="">A resposta deve conter <strong>apenas os campos necessários</strong> para uso no frontend (ex.: <code>id</code>, <code>descriptive_name</code>).</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="36-ocorrência-6--exposição-indevida-de-login-de-usuário"><strong>3.6 Ocorrência 6 – Exposição indevida de login de usuário</strong><a href="#36-ocorrência-6--exposição-indevida-de-login-de-usuário" class="hash-link" aria-label="Direct link to 36-ocorrência-6--exposição-indevida-de-login-de-usuário" title="Direct link to 36-ocorrência-6--exposição-indevida-de-login-de-usuário" translate="no">​</a></h4>
+<p><strong>Local:</strong> Rota <code>GET /user</code></p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">O endpoint retorna informações do usuário, incluindo o campo <code>name</code>, que contém o login utilizado para autenticação.</li>
+<li class="">Atualmente, qualquer usuário do sistema consegue acessar essa rota e visualizar o login de outros usuários.</li>
+<li class="">Exemplo de resposta:</li>
+</ul>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;id&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">2</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;descriptive_name&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;Marcio Sobral&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;status&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;ativo&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;name&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;admin.tarm&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;profile&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">&quot;id&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">2</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">&quot;title&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;TARM&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token property" style="color:#36acaa">&quot;text&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;Profile for Operador TARM&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">}</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;professional_type&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;team&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token null keyword" style="color:#00009f">null</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">O campo <code>name</code> expõe o login do usuário, que é uma informação sensível.</li>
+<li class="">Acesso a esse dado deveria ser restrito apenas a perfis <strong>administrativos</strong>.</li>
+<li class="">Usuários comuns não deveriam ter visibilidade do login interno de outros usuários.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Ajustar a rota para que o campo <code>name</code> não seja retornado para usuários comuns.</li>
+<li class="">Implementar <strong>controle de acesso por perfil</strong>: somente administradores podem visualizar logins de outros usuários.</li>
+<li class="">Avaliar a necessidade de mover ou anonimizar esse campo, expondo apenas o <code>descriptive_name</code> para não-admins.</li>
+</ul>
+<h4></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="37-ocorrência-7--filtro-de-incidentes-no-frontend"><strong>3.7 Ocorrência 7 – Filtro de incidentes no frontend</strong><a href="#37-ocorrência-7--filtro-de-incidentes-no-frontend" class="hash-link" aria-label="Direct link to 37-ocorrência-7--filtro-de-incidentes-no-frontend" title="Direct link to 37-ocorrência-7--filtro-de-incidentes-no-frontend" translate="no">​</a></h4>
+<p><strong>Local:</strong> Rota <code>GET /incident/mask</code> Rota utilizada para popular o campo <em><strong>Relacionar ocorrência existente</strong></em></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ho0MtIUGxNOsroJ0-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-7.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">A rota retorna uma lista extensa de incidentes.</li>
+<li class="">O frontend recebe todos os dados e filtra apenas quando o usuário digita.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Overfetch</strong> semelhante ao caso de usuários.</li>
+<li class="">Maior tempo de carregamento e consumo de memória no navegador.</li>
+<li class="">Risco de inconsistência caso a base cresça ainda mais.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Alterar a rota para suportar <strong>busca por termo</strong>.</li>
+<li class="">O frontend envia a string digitada pelo usuário (com debounce) e recebe apenas os incidentes que correspondem à busca.</li>
+<li class="">Limitar o retorno aos campos realmente utilizados pelo frontend.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="38-ocorrência-8--dados-desnecessários-no-retorno"><strong>3.8 Ocorrência 8 – Dados desnecessários no retorno</strong><a href="#38-ocorrência-8--dados-desnecessários-no-retorno" class="hash-link" aria-label="Direct link to 38-ocorrência-8--dados-desnecessários-no-retorno" title="Direct link to 38-ocorrência-8--dados-desnecessários-no-retorno" translate="no">​</a></h4>
+<p><strong>Local:</strong> Rota <code>GET /shared/possible-values</code></p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">A rota atualmente retorna diversos elementos, incluindo <code>employee</code> e <code>open_incident</code>.</li>
+<li class="">No frontend, esses dados <strong>não são/serão utilizados</strong> na construção da página.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Overfetch:</strong> envia dados desnecessários para o frontend, aumentando o tráfego e processamento.</li>
+<li class="">Dificulta manutenção futura e aumenta risco de inconsistência.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover os campos <code>employee</code> e <code>open_incident</code> do retorno da rota.</li>
+<li class="">Garantir que a rota entregue <strong>somente os elementos realmente utilizados</strong> para popular a página.</li>
+</ul>
+<p>obs: a remoção de employee deve ser feita depois da implementação/correção da &lt;u&gt;<strong>Ocorrência 2</strong>&lt;/u&gt;</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="39-ocorrência-9--problema-com-requests-repetidas"><strong>3.9 Ocorrência 9 – Problema com Requests repetidas</strong><a href="#39-ocorrência-9--problema-com-requests-repetidas" class="hash-link" aria-label="Direct link to 39-ocorrência-9--problema-com-requests-repetidas" title="Direct link to 39-ocorrência-9--problema-com-requests-repetidas" translate="no">​</a></h4>
+<p><strong>Local:</strong> Home (TARM)</p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">Ao editar/criar uma ocorrência criada pelo usuário <strong>TARM</strong>, ao navegar entre os formulários <strong>&quot;Dados básicos&quot;</strong>, <strong>&quot;Ocorrência&quot;</strong> e <strong>&quot;Paciente&quot;</strong>, o sistema executa repetidas requisições para:<!-- -->
+<ul>
+<li class=""><code>GET /shared/possible-values</code></li>
+<li class=""><code>GET /user</code></li>
+<li class=""><code>GET /incident/mask</code></li>
+</ul>
+</li>
+<li class="">O problema ocorre porque dentro dos <strong>componentes de formulário de edição</strong> existem chamadas desnecessárias para buscar dados que já haviam sido carregados quando a página foi construída.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Requisições duplicadas</strong> aumentam o consumo de rede e tornam a navegação mais lenta.</li>
+<li class="">O frontend perde eficiência ao não reutilizar os dados já disponíveis no estado da página.</li>
+</ul>
+<p><strong>Obs: Esse comportamento já foi apontado como um problema recorrente na documentação</strong> <a href="https://ajuda.digitalsys.com.br/books/manual-do-desenvolvedor/page/documentacao-front-end-atomic-design" target="_blank" rel="noopener noreferrer" class=""><strong>Documentação Front-End... | Ajuda DigitalSys</strong></a> &lt;u&gt;<strong>2. Requisições nos componentes.</strong>&lt;/u&gt;</p>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover requisições desnecessárias dos componentes de formulário.</li>
+<li class="">Consumir diretamente os dados que já foram carregados ao inicializar a página.</li>
+<li class="">Reforçar a prática de <strong>não disparar requests dentro de componentes</strong>.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="310-ocorrência-10--problema-com-polling"><strong>3.10 Ocorrência 10 – Problema com Polling</strong><a href="#310-ocorrência-10--problema-com-polling" class="hash-link" aria-label="Direct link to 310-ocorrência-10--problema-com-polling" title="Direct link to 310-ocorrência-10--problema-com-polling" translate="no">​</a></h4>
+<p><strong>Local:</strong> Formulário de Ocorrência</p>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">Ao clicar em editar uma ocorrência, o sistema utiliza <strong>polling</strong> para buscar atualizações constantes da ocorrência.</li>
+<li class="">Essa solução foi implementada como medida temporária devido ao prazo de entrega do projeto.</li>
+<li class="">Após clicar no botão <strong>Voltar</strong>, o sistema continua realizando requests para a ocorrência anterior, mesmo que o usuário já tenha saído do formulário.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Consumo desnecessário de rede e processamento.</li>
+<li class="">Possibilidade de inconsistências, já que o sistema continua atualizando dados que não estão mais sendo visualizados.</li>
+<li class="">Impacto negativo na performance geral da aplicação.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Corrigir o comportamento de polling para que seja interrompido ao sair do formulário.</li>
+<li class="">Substituir futuramente a estratégia de polling pela implementação de <strong>WebSockets</strong>, garantindo atualização em tempo real apenas quando necessário.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="311-ocorrência-11--requisições-redundantes-na-página-tarm"><strong>3.11 Ocorrência 11 – Requisições redundantes na página TARM</strong><a href="#311-ocorrência-11--requisições-redundantes-na-página-tarm" class="hash-link" aria-label="Direct link to 311-ocorrência-11--requisições-redundantes-na-página-tarm" title="Direct link to 311-ocorrência-11--requisições-redundantes-na-página-tarm" translate="no">​</a></h4>
+<p><strong>Descrição:</strong><br>
+<!-- -->Durante a renderização e navegação dentro da página <strong>TARM</strong>, foram identificadas diversas requisições executadas de forma redundante.<br>
+<!-- -->Todas as requests são disparadas assim que a página é carregada e também sempre que o usuário interage com determinados componentes ou filtros, ocasionando chamadas repetidas às mesmas rotas e resultando em <strong>overfetch</strong>, uso desnecessário de banda e aumento no tempo de resposta da interface.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/HI2TPzRdFPSFKck1-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-8.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução repetida de múltiplas requisições durante a renderização e navegação na página TARM.</li>
+<li class="">Falta de cache e reaproveitamento dos dados já carregados.</li>
+<li class="">Requisições desnecessárias para informações que não sofreram alteração.</li>
+<li class="">Impacto direto na performance geral e no tempo de carregamento dos componentes.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Consolidar todas as informações necessárias da página <strong>TARM</strong> em uma <strong>única requisição de inicialização</strong>, eliminando chamadas redundantes.</li>
+<li class="">Implementar <strong>mecanismos de cache ou armazenamento em estado global</strong> para evitar novas requisições ao interagir com filtros ou elementos que dependem dos mesmos dados.</li>
+<li class="">Revisar os watchers e eventos da página para garantir que as chamadas à API ocorram apenas quando houver efetiva mudança de parâmetros.</li>
+<li class="">Centralizar a obtenção dos dados compartilhados (ex.: informações do usuário logado, status e possíveis valores) em uma rota única como <code>/shared/possible-values</code>.</li>
+</ul>
+<p>obs: mesmo problema relatado em Medico Regulador <strong>4.5 Ocorrência 5 – Requisições redundantes na OccurrenceView</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-ocorrências-identificadas-médico-regulador-mr"><strong>4. Ocorrências Identificadas Médico Regulador (MR)</strong><a href="#4-ocorrências-identificadas-médico-regulador-mr" class="hash-link" aria-label="Direct link to 4-ocorrências-identificadas-médico-regulador-mr" title="Direct link to 4-ocorrências-identificadas-médico-regulador-mr" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-1"><a href="#-1" class="hash-link" aria-label="Direct link to -1" title="Direct link to -1" translate="no">​</a></h4>
+<p>Na <strong>RegulationMenu</strong> foram identificadas diversas requests durante a renderização, algumas delas inclusive <strong>repetidas</strong>, resultando em problemas de <strong>overfetch</strong> e <strong>uso desnecessário de rede</strong>.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iUVbKGiCgafMm227-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-9.png" alt="image.png" class="img_ev3q"></a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="requests-userid-1"><strong>Requests UserID</strong><a href="#requests-userid-1" class="hash-link" aria-label="Direct link to requests-userid-1" title="Direct link to requests-userid-1" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="41-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong"><strong>4.1 Ocorrência 1 – Recuperação de</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;user_id&amp;lt;/strong&gt;</code>**<a href="#41-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" class="hash-link" aria-label="Direct link to 41-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" title="Direct link to 41-ocorrência-1--recuperação-de-ltstrong-classeditor-theme-bold-editor-theme-codeuser_idltstrong" translate="no">​</a></h4>
+<p><strong>Local:</strong> Função</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/ImsUBo8u28CGbjLa-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-10.png" alt="image.png" class="img_ev3q"></a><strong>Local:</strong></p>
+<ul>
+<li class="">Função <code>loadUserId</code></li>
+<li class="">Função <code>getUserIdByToken</code></li>
+<li class="">Arquivo <code>usePhoneSystemService.ts</code></li>
+<li class="">Componente <code>banner-description-MR.vue</code></li>
+</ul>
+<p><strong>Descrição:</strong></p>
+<ul>
+<li class="">O sistema possui <strong>três pontos distintos</strong> onde o <code>user_id</code> é buscado ou processado de forma redundante.</li>
+<li class="">Essas implementações duplicam a mesma lógica em locais diferentes, dificultando manutenção e aumentando o risco de inconsistências.</li>
+</ul>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class=""><strong>Requests e funções duplicadas</strong> para recuperar o mesmo dado.</li>
+<li class="">Complexidade desnecessária para uma informação que já pode ser obtida diretamente a partir do token da requisição.</li>
+<li class="">Aumenta a chance de bugs e dificulta centralizar regras de autenticação/autorização.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover funções e variáveis redundantes nos arquivos citados.</li>
+<li class="">Caso seja necessário utilizar o <code>user_id</code> no frontend, expor essa informação diretamente em uma rota apropriada (ex.: <code>/shared/possible-values</code> já apontada) em vez de múltiplas funções repetidas.</li>
+</ul>
+<p>obs: As requisições para buscar o <code>id</code> do funcionário logado são desnecessárias. Sempre que for preciso acessar informações do usuário logado, esses dados devem ser atribuídos diretamente na rota <code>/shared/possible-values</code>. Além disso, nenhuma rota precisa mais receber o <code>id</code> do usuário manualmente, pois o backend já pode extrair essa informação do **token da request** de forma segura e padronizada.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="42-ocorrência-2--requisições-possible-values-e-user"><strong>4.2 Ocorrência 2 – Requisições possible-values e user</strong><a href="#42-ocorrência-2--requisições-possible-values-e-user" class="hash-link" aria-label="Direct link to 42-ocorrência-2--requisições-possible-values-e-user" title="Direct link to 42-ocorrência-2--requisições-possible-values-e-user" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Página Médico regulador.</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->As requisições <code>GET /shared/possible-values</code> e <code>GET /user</code> apresentam problemas já identificados nas <strong>Ocorrência 2</strong> e <strong>Ocorrência 4</strong> (Página Home (TARM)). Ambas trazem dados redundantes, em excesso e em pontos onde não são necessários, resultando em sobrecarga de requests e processamento desnecessário no front-end.</p>
+<p><strong>Solução proposta:</strong><br>
+<!-- -->Aplicar a mesma estratégia de correção definida para as ocorrências anteriores:</p>
+<ul>
+<li class="">Centralizar os dados necessários na rota <code>GET /shared/possible-values</code>, evitando duplicidade com <code>GET /user</code>.</li>
+<li class="">Restringir o retorno das rotas para apenas os campos realmente usados pelo front.</li>
+<li class="">Eliminar chamadas redundantes, reaproveitando os dados já carregados na página.</li>
+</ul>
+<p><strong>Obs:</strong><br>
+<!-- -->Esta ocorrência não exige uma nova solução técnica, mas sim a <strong>aplicação da mesma refatoração já descrita nas Ocorrências 2 e 4</strong>. Ambas as requisições tem a mesma correção da <strong>Ocorrência 2 e Ocorrência 4 do médico regulador.</strong></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="43-ocorrência-3--requisições-desnecessárias-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-e-ltstrong-classeditor-theme-bold-editor-theme-codeemployeeuser_ididltstrong"><strong>4.3 Ocorrência 3 – Requisições desnecessárias</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;/user/{id}&amp;lt;/strong&gt;</code> <strong>e</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;/employee/user_id/{id}&amp;lt;/strong&gt;</code>**<a href="#43-ocorrência-3--requisições-desnecessárias-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-e-ltstrong-classeditor-theme-bold-editor-theme-codeemployeeuser_ididltstrong" class="hash-link" aria-label="Direct link to 43-ocorrência-3--requisições-desnecessárias-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-e-ltstrong-classeditor-theme-bold-editor-theme-codeemployeeuser_ididltstrong" title="Direct link to 43-ocorrência-3--requisições-desnecessárias-ltstrong-classeditor-theme-bold-editor-theme-codeuseridltstrong-e-ltstrong-classeditor-theme-bold-editor-theme-codeemployeeuser_ididltstrong" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Pontos do sistema Médico Regulador onde são feitas consultas individuais ao usuário logado.</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->As rotas <code>GET /user/{id}</code> e <code>GET /employee/user_id/{id}</code> estão sendo chamadas passando o ID do usuário apenas para recuperar informações que não são relevantes ou já estão disponíveis em outras partes do sistema.<br>
+<!-- -->Esse comportamento gera requests redundantes e aumenta o tempo de carregamento das páginas.</p>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Remover o uso das rotas <code>GET /user/{id}</code> e <code>GET /employee/user_id/{id}</code>.</li>
+<li class="">Centralizar as informações do usuário logado diretamente no retorno da rota <code>GET /shared/possible-values</code>.</li>
+<li class="">Garantir que todas as páginas e componentes que necessitem de informações do usuário logado consumam exclusivamente essa rota.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-ocorrência-4--requisições-redundantes-de-incident"><strong>4.4 Ocorrência 4 – Requisições redundantes de incident</strong><a href="#44-ocorrência-4--requisições-redundantes-de-incident" class="hash-link" aria-label="Direct link to 44-ocorrência-4--requisições-redundantes-de-incident" title="Direct link to 44-ocorrência-4--requisições-redundantes-de-incident" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Página Médico Regulador (MR) – Detalhamento de Ocorrências</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Foram identificadas três requisições distintas sendo executadas ao acessar o detalhe de uma ocorrência:</p>
+<ul>
+<li class=""><code>GET /incident/362?include_history=true</code></li>
+<li class=""><code>GET /mobile-unit/incident/362</code></li>
+<li class=""><code>GET /incident/prank-calls/(43)%2099806-8708</code></li>
+</ul>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i6PKd6GttlJkO1nd-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-11.png" alt="image.png" class="img_ev3q"></a></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QN3NEyZsKBqgLYij-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-12.png" alt="image.png" class="img_ev3q"></a></p>
+<p>Essas chamadas ocorrem simultaneamente, trazendo informações sobre o mesmo incidente ou dados complementares que poderiam ser obtidos em uma única resposta consolidada. Além disso, sempre que o usuário clica novamente em uma ocorrência já aberta, as mesmas requisições são executadas novamente, mesmo com os dados já carregados, resultando em consumo desnecessário de rede e processamento.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="44-ocorrência-5-occurrence-view"><strong>4.4 Ocorrência 5</strong> <strong>Occurrence-view</strong><a href="#44-ocorrência-5-occurrence-view" class="hash-link" aria-label="Direct link to 44-ocorrência-5-occurrence-view" title="Direct link to 44-ocorrência-5-occurrence-view" translate="no">​</a></h4>
+<p>Na <strong>OccurrenceView</strong> foram identificadas diversas requests durante a renderização, algumas delas inclusive <strong>repetidas</strong>, resultando em problemas de <strong>overfetch</strong> e <strong>uso desnecessário de rede</strong>, todas as requisições são feitas ao entrar nessa pagina.</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Durante a renderização da página OccurrenceView, foram identificadas diversas requisições executadas simultaneamente, incluindo chamadas repetidas e algumas desnecessárias, conforme registrado na inspeção de rede. Todas essas requests são disparadas assim que a página é carregada, ocasionando <strong>overfetch</strong> e uso excessivo de rede.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/i3XCtSGCadBpCzS9-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-13.png" alt="image.png" class="img_ev3q"></a></p>
+<p>Além disso, há requisições voltadas apenas para recuperar o ID ou nome do usuário logado, informação que já está disponível de forma centralizada e não precisa ser buscada novamente.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução de múltiplas requisições redundantes na renderização inicial.</li>
+<li class="">Falta de controle de cache ou reutilização de dados já carregados.</li>
+<li class="">Requisições desnecessárias para dados do usuário logado, impactando desempenho.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Consolidar os dados necessários da OccurrenceView em <strong>uma única request</strong> de inicialização, eliminando duplicidades.</li>
+<li class="">Garantir que as informações do usuário logado (ex.: nome, ID) sejam obtidas a partir da rota <code>/shared/possible-values</code>, conforme definido nas ocorrências anteriores.</li>
+<li class="">Revisar os serviços de sincronização (<code>incident_sync</code>, <code>incident_type_sync</code>, etc.) para que sejam executados apenas quando realmente necessários.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="45-ocorrência-5--requisições-redundantes-na-occurrenceview"><strong>4.5 Ocorrência 5 – Requisições redundantes na OccurrenceView</strong><a href="#45-ocorrência-5--requisições-redundantes-na-occurrenceview" class="hash-link" aria-label="Direct link to 45-ocorrência-5--requisições-redundantes-na-occurrenceview" title="Direct link to 45-ocorrência-5--requisições-redundantes-na-occurrenceview" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página <strong>OccurrenceView</strong></p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Durante a renderização e navegação dentro da página <strong>OccurrenceView</strong>, foram identificadas diversas requisições executadas de forma redundante.<br>
+<!-- -->Todas as requests são disparadas assim que a página é carregada e também <strong>sempre que o usuário alterna entre os formulários internos</strong> (ex.: <strong>Dados Básicos</strong>, <strong>Ocorrência</strong>, <strong>Paciente</strong>, <strong>Regulação</strong> e <strong>Conclusão</strong>).</p>
+<p>A análise de rede mostra repetição de chamadas para as mesmas rotas a cada troca de aba ou formulário, conforme evidenciado na captura de rede. Esse comportamento gera <strong>overfetch</strong>, uso desnecessário de banda e aumento no tempo de resposta da interface.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tFvjaIzSoDukGvDo-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-14.png" alt="image.png" class="img_ev3q"></a></p>
+<p>A imagem abaixo é referente as requisições do fluxo de clicar em cada aba somente uma vez.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/QRStDPnUoiGhr3W1-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-15.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução repetida de múltiplas requisições mesmo em fluxo de navegação simples.</li>
+<li class="">Falta de cache e de reaproveitamento de dados entre as abas.</li>
+<li class="">Requisições desnecessárias para informações já carregadas (usuário logado e dados de incidente).</li>
+<li class="">Impacto direto na performance e tempo de carregamento das seções.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Consolidar todas as informações necessárias da <strong>OccurrenceView</strong> em <strong>uma única requisição de inicialização</strong>.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="46-unit-selection"><strong>4.6 unit-selection</strong><a href="#46-unit-selection" class="hash-link" aria-label="Direct link to 46-unit-selection" title="Direct link to 46-unit-selection" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página <strong>UnitSelection</strong></p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Na tela <strong>UnitSelection</strong>, foi identificado que as funções <strong>onMounted</strong> e <strong>fetchData</strong> (chamada dentro do <strong>watch</strong>) executam as mesmas requisições de forma redundante.<br>
+<!-- -->Isso faz com que, ao montar o componente e sempre que o <strong>watch</strong> é acionado, os mesmos dados sejam buscados novamente, gerando <strong>requisições duplicadas</strong> e consumo desnecessário de rede.</p>
+<p>Esse comportamento é recorrente ao entrar na página e também ao alterar parâmetros observados pelo <strong>watch</strong>, mesmo quando as informações já foram previamente carregadas.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/PPkTbfSqTjIVPhqM-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-16.png" alt="image.png" class="img_ev3q"></a><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/r1xiKaRXwVN9af7C-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-17.png" alt="image.png" class="img_ev3q"></a></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/oAzftgBM6sbbuk7M-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-18.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução de duas requisições idênticas (em <strong>onMounted</strong> e <strong>watch</strong>).</li>
+<li class="">Falta de controle para evitar chamadas repetidas.</li>
+<li class="">Impacto negativo no desempenho e tempo de carregamento da tela.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Unificar a lógica de carregamento de dados, mantendo apenas uma das abordagens (<strong>onMounted</strong> <strong>ou</strong> <strong>watch</strong>).</li>
+<li class="">Caso seja necessário atualizar os dados dinamicamente via <strong>watch</strong>, remover a chamada redundante em <strong>onMounted</strong>, garantindo que apenas o <strong>watch</strong> seja responsável pelo carregamento quando houver mudança real de parâmetros.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="47-ocorrência-7--requisições-redundantes-na-unitselection"><strong>4.7 Ocorrência 7 – Requisições redundantes na UnitSelection</strong><a href="#47-ocorrência-7--requisições-redundantes-na-unitselection" class="hash-link" aria-label="Direct link to 47-ocorrência-7--requisições-redundantes-na-unitselection" title="Direct link to 47-ocorrência-7--requisições-redundantes-na-unitselection" translate="no">​</a></h4>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/hByFZcFQnusNIzwR-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-19.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página <strong>UnitSelection</strong></p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Durante o carregamento da página <strong>UnitSelection</strong>, são realizadas três requisições para popular as informações iniciais:</p>
+<ul>
+<li class=""><code>GET /technical-decision/incident/{id}</code></li>
+<li class=""><code>GET /incident/{id}?include_history=false</code></li>
+<li class=""><code>GET /mobile-unit-type</code></li>
+</ul>
+<p>As duas primeiras rotas (<code>/technical-decision/incident/{id}</code> e <code>/incident/{id}?include_history=false</code>) retornam dados sobre o mesmo incidente, resultando em <strong>duplicidade de informação</strong> e <strong>requisições desnecessárias</strong>.<br>
+<!-- -->Essas chamadas poderiam ser consolidadas em uma única rota que trouxesse apenas os dados realmente necessários para popular a tela, incluindo as informações do paciente associadas ao veículo selecionado anteriormente.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução de requisições redundantes para o mesmo contexto de incidente.</li>
+<li class="">Uso ineficiente de rede e aumento do tempo de resposta.</li>
+<li class="">Dificuldade de manutenção devido à sobreposição de dados entre endpoints diferentes.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Manter apenas <strong>duas rotas essenciais</strong> para a página:<!-- -->
+<ol>
+<li class=""><code>/mobile-unit-type</code> – para carregar os tipos de viatura disponíveis.</li>
+<li class="">Uma nova rota unificada que retorne as informações do paciente e do veículo associado ao incidente selecionado (substituindo as chamadas para <code>/technical-decision/incident/{id}</code> e <code>/incident/{id}?include_history=false</code>).</li>
+</ol>
+</li>
+<li class="">Ajustar o backend para retornar somente os campos realmente utilizados pela interface, evitando sobrecarga de dados.</li>
+<li class="">Atualizar o frontend para consumir exclusivamente essas duas rotas, removendo chamadas redundantes e simplificando o fluxo de inicialização da tela.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="48-ocorrência-8--falta-de-filtragem-de-tipos-de-viaturas-na-rota-mobile-unit-type"><strong>4.8 Ocorrência 8 – Falta de filtragem de tipos de viaturas na rota</strong> <code>/mobile-unit-type</code><a href="#48-ocorrência-8--falta-de-filtragem-de-tipos-de-viaturas-na-rota-mobile-unit-type" class="hash-link" aria-label="Direct link to 48-ocorrência-8--falta-de-filtragem-de-tipos-de-viaturas-na-rota-mobile-unit-type" title="Direct link to 48-ocorrência-8--falta-de-filtragem-de-tipos-de-viaturas-na-rota-mobile-unit-type" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página <strong>UnitSelection</strong><br>
+<!-- -->Rota: <code>GET /mobile-unit-type</code></p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Atualmente, a rota <strong>/mobile-unit-type</strong> retorna todos os tipos de viaturas cadastrados no sistema, sem aplicar nenhum critério de filtragem quanto ao status (ativo/inativo).<br>
+<!-- -->Esse comportamento faz com que veículos inativos também sejam listados na tela <strong>UnitSelection</strong>, obrigando o front a realizar a filtragem.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Retorno de dados desnecessários (viaturas inativas).</li>
+<li class="">Aumento desnecessário no volume de dados trafegados.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Adicionar uma <strong>flag de filtragem</strong> na rota <code>/mobile-unit-type</code> para permitir o retorno apenas de tipos de veículos ativos (ex.: <code>GET /mobile-unit-type?active=true</code>). por padrão retorna todos para não gerar problemas com as rotas do admin</li>
+<li class="">Garantir que o frontend consuma essa flag, exibindo exclusivamente os tipos de viaturas disponíveis para uso operacional.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="49-ocorrência-9--retorno-excessivo-e-falta-de-filtragem-nas-rotas-da-aba-conclusão"><strong>4.9 Ocorrência 9 – Retorno excessivo e falta de filtragem nas rotas da aba Conclusão</strong><a href="#49-ocorrência-9--retorno-excessivo-e-falta-de-filtragem-nas-rotas-da-aba-conclusão" class="hash-link" aria-label="Direct link to 49-ocorrência-9--retorno-excessivo-e-falta-de-filtragem-nas-rotas-da-aba-conclusão" title="Direct link to 49-ocorrência-9--retorno-excessivo-e-falta-de-filtragem-nas-rotas-da-aba-conclusão" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página <strong>OccurrenceView</strong> → Aba <strong>Conclusão</strong><br>
+<!-- -->Rotas envolvidas:</p>
+<ul>
+<li class=""><code>GET /technical-decision-action</code></li>
+<li class=""><code>GET /intercurrence</code></li>
+<li class=""><code>GET /health-unit</code></li>
+</ul>
+<p><strong>Descrição:</strong><br>
+<!-- -->Na aba <strong>Conclusão</strong> do formulário, foram identificadas três rotas com problemas relacionados à ausência de filtragem e volume excessivo de dados retornados.</p>
+<p>As rotas <strong>/technical-decision-action</strong> e <strong>/intercurrence</strong> estão retornando registros <strong>excluídos ou inativos</strong>, exigindo que o frontend realize a filtragem manual para ocultá-los — comportamento que aumenta a complexidade da aplicação e o tempo de carregamento.</p>
+<p>Já a rota <strong>/health-unit</strong> retorna um <strong>JSON com aproximadamente 7.458 objetos</strong>, enviado integralmente a cada requisição, apenas para popular o campo <strong>“Destino Paciente”</strong>. Esse volume é desnecessário e causa lentidão perceptível na renderização e busca.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Falta de filtragem de registros ativos nas rotas <code>/technical-decision-action</code> e <code>/intercurrence</code>.</li>
+<li class="">Retorno de dados massivo na rota <code>/health-unit</code>.</li>
+<li class="">Processamento excessivo no frontend e impacto negativo no desempenho da aba Conclusão.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Aplicar filtro diretamente no backend para que as rotas <strong>/technical-decision-action</strong> e <strong>/intercurrence</strong> retornem apenas registros <strong>ativos</strong>, eliminando a necessidade de filtragem no frontend.</li>
+<li class="">Alterar a rota <strong>/health-unit</strong> para funcionar com <strong>busca dinâmica (lazy load)</strong>, adotando a mesma lógica já utilizada em outros campos de busca:<!-- -->
+<ul>
+<li class="">O usuário digita parte do nome;</li>
+<li class="">A API retorna apenas as unidades que correspondem à concordância;</li>
+<li class="">O resultado deve ser limitado a <strong>no máximo 20 registros</strong> por requisição.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-ocorrências-identificadas-operador-de-frota"><strong>5. Ocorrências Identificadas Operador de frota</strong><a href="#5-ocorrências-identificadas-operador-de-frota" class="hash-link" aria-label="Direct link to 5-ocorrências-identificadas-operador-de-frota" title="Direct link to 5-ocorrências-identificadas-operador-de-frota" translate="no">​</a></h3>
+<p>Na <strong>FleetOperations.vue</strong> foram identificadas diversas requests durante a renderização, resultando em problemas de <strong>overfetch</strong> e <strong>uso desnecessário de rede</strong>.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/UrTj4b5qECfmTpHS-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-20.png" alt="image.png" class="img_ev3q"></a></p>
+<p>Algumas dessas ocorrências já haviam sido relatadas em outros módulos, como <strong>Médico Regulador</strong> e <strong>TARM</strong>. Um exemplo são as buscas nas rotas <code>user</code> e <code>possible-values</code>.</p>
+<p>Vale destacar que a rota <code>possible-values</code> está sendo substituída pela <code>shared/default-values</code>, que já retorna os valores relacionados ao usuário, evitando requisições redundantes.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="51-ocorrência-1--requests-redundantes-ao-selecionar-a-mesma-ocorrência"><strong>5.1 Ocorrência 1 – Requests redundantes ao selecionar a mesma ocorrência</strong><a href="#51-ocorrência-1--requests-redundantes-ao-selecionar-a-mesma-ocorrência" class="hash-link" aria-label="Direct link to 51-ocorrência-1--requests-redundantes-ao-selecionar-a-mesma-ocorrência" title="Direct link to 51-ocorrência-1--requests-redundantes-ao-selecionar-a-mesma-ocorrência" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página FleetOperations.vue → Tabela de Ocorrências</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Ao selecionar uma ocorrência na tabela, é feita uma requisição para a rota <code>/incident/{id}?include_history=false</code>. No entanto, se a <strong>mesma ocorrência for selecionada mais de uma vez</strong>, novas requests continuam sendo disparadas, gerando <strong>overfetch</strong> e consumo desnecessário de rede.</p>
+<p>Além disso, atualmente a rota retorna um JSON completo com todos os detalhes da ocorrência, muitos dos quais não são necessários para o <strong>Operador de Frota</strong>, resultando em carregamento e processamento excessivo no frontend.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/pGPeYFgADxvgP3lW-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-21.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Requests redundantes ao selecionar a mesma ocorrência mais de uma vez.</li>
+<li class="">Retorno de dados completo, incluindo informações não utilizadas pelo Operador de Frota.</li>
+<li class="">Processamento desnecessário no frontend e impacto negativo no desempenho da tabela de ocorrências.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Implementar controle de seleção no frontend para que a mesma ocorrência não dispare múltiplas requisições.</li>
+<li class="">Criar uma rota dedicada que retorne <strong>apenas os dados básicos necessários</strong> para o Operador de Frota, reduzindo o volume de dados transferidos e melhorando a performance.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="52-ocorrência-2---dados-do-campo-transferir-para"><strong>5.2 Ocorrência 2</strong> <strong>- Dados do campo “Transferir para”</strong><a href="#52-ocorrência-2---dados-do-campo-transferir-para" class="hash-link" aria-label="Direct link to 52-ocorrência-2---dados-do-campo-transferir-para" title="Direct link to 52-ocorrência-2---dados-do-campo-transferir-para" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página FleetOperations.vue → Formulário de Ocorrência → Campo “Transferir para”</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/C0ZLNj8wBsdbo8Ge-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-22.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Rotas envolvidas:</strong><br>
+<!-- -->GET /employee/search?query={termo}</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->O campo <strong>“Transferir para”</strong> atualmente busca dados na rota <code>/possible-values</code>, que <strong>não retorna informações corretas para este caso</strong>. Existe uma rota específica, <code>/employee/search?query=</code>, destinada a fornecer os dados corretos de funcionários conforme o termo digitado pelo usuário.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Dados incorretos sendo retornados pelo campo “Transferir para”.</li>
+<li class="">Uso inadequado da rota <code>/possible-values</code> para buscar informações de funcionários.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Alterar o campo “Transferir para” para consumir a rota <code>/employee/search?query=</code>, garantindo que apenas funcionários correspondentes ao termo digitado sejam retornados.</li>
+<li class="">Implementar <strong>lazy loading</strong> para reduzir o volume de dados transferidos e otimizar a performance.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="53-ocorrência-3---pagina-fleet-occurrence"><strong>5.3 Ocorrência 3</strong> <strong>- Pagina fleet-occurrence</strong><a href="#53-ocorrência-3---pagina-fleet-occurrence" class="hash-link" aria-label="Direct link to 53-ocorrência-3---pagina-fleet-occurrence" title="Direct link to 53-ocorrência-3---pagina-fleet-occurrence" translate="no">​</a></h4>
+<p><strong>Rotas envolvidas:</strong><br>
+<!-- -->GET /dispatch/bff/dispatch-data/{id}<br>
+<!-- -->GET /incident/{id}?include_history=false<br>
+<!-- -->GET /dispatch/incident/{id}</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Durante a renderização da página <strong>FleetOccurrence</strong>, foram identificadas diversas requisições executadas para popular os dados da ocorrência. Algumas delas são <strong>repetidas</strong>, resultando em sobrecarga de rede e processamento desnecessário.</p>
+<p>O problema se agrava ao selecionar uma ocorrência que <strong>já possui veículo despachado</strong>, pois o número de requisições duplicadas aumenta consideravelmente.</p>
+<p>Além disso, ao <strong>selecionar um checklist</strong>, o mesmo comportamento se repete, indicando que há <strong>falta de controle na lógica de carregamento de dados</strong> e ausência de reaproveitamento das informações já obtidas.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/tuImrPX15q5ImKkP-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-23.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Execução de múltiplas requisições redundantes para a mesma ocorrência.</li>
+<li class="">Aumento do número de requests em ocorrências com veículo despachado.</li>
+<li class="">Requisições repetidas também ao selecionar checklists.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Criar uma <strong>rota unificada</strong> para retornar todos os dados necessários à página <strong>FleetOccurrence</strong>, eliminando a necessidade de múltiplas chamadas.</li>
+<li class="">Revisar a <strong>lógica de carregamento e renderização</strong> para evitar requisições repetidas, especialmente ao selecionar ocorrências já carregadas ou clicar em um checklists.</li>
+<li class="">Avaliar a consolidação das rotas <code>/dispatch/bff/dispatch-data/{id}</code> e <code>/dispatch/incident/{id}</code>.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="54-ocorrência-4---falta-de-filtragem-e-uso-de-rotas-redundantes-na-página-managefleet"><strong>5.4 Ocorrência 4</strong> <strong>- Falta de filtragem e uso de rotas redundantes na página ManageFleet</strong><a href="#54-ocorrência-4---falta-de-filtragem-e-uso-de-rotas-redundantes-na-página-managefleet" class="hash-link" aria-label="Direct link to 54-ocorrência-4---falta-de-filtragem-e-uso-de-rotas-redundantes-na-página-managefleet" title="Direct link to 54-ocorrência-4---falta-de-filtragem-e-uso-de-rotas-redundantes-na-página-managefleet" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página ManageFleet.vue</p>
+<p><strong>Rotas envolvidas:</strong><br>
+<!-- -->GET /mobile-unit-type<br>
+<!-- -->GET /mobile-unit-type?active=true<br>
+<!-- -->GET /mobile-unit?active_only=true<br>
+<!-- -->GET /mobile-unit</p>
+<p><strong>Descrição:</strong><br>
+<!-- -->Na página <strong>ManageFleet</strong>, foram identificados problemas relacionados à ausência de filtragem no backend e ao uso de rotas redundantes para carregar informações sobre <strong>unidades móveis</strong>.</p>
+<p>A rota <code>/mobile-unit-type</code> atualmente retorna <strong>todos os tipos de unidade móvel</strong>, e o frontend realiza a filtragem manual para exibir apenas os ativos. Esse comportamento deveria ser tratado diretamente no backend, por meio de um parâmetro, conforme já implementado em outras rotas:</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/Gas4nomlBzJUlFaw-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-24.png" alt="image.png" class="img_ev3q"></a></p>
+<p>Além disso, foram identificadas duas rotas distintas para obtenção de unidades móveis</p>
+<p><strong><a href="https://e-sus-urgencias-api.digitalsysdev.com.br/mobile-unit?active%5C_only=true" target="_blank" rel="noopener noreferrer" class="">https://e-sus-urgencias-api.digitalsysdev.com.br/mobile-unit?active\_only=true</a></strong></p>
+<p><strong><a href="https://e-sus-urgencias-api.digitalsysdev.com.br/mobile-unit" target="_blank" rel="noopener noreferrer" class="">https://e-sus-urgencias-api.digitalsysdev.com.br/mobile-unit</a></strong></p>
+<p>Atualmente ambas são utilizadas, sendo que apenas uma deveria ser suficiente.</p>
+<p>Outro ponto observado é o uso de uma rota que retorna um <strong>objeto extenso com diversos dados desnecessários</strong> apenas para popular o campo de seleção <strong>“Selecione uma unidade móvel”</strong>. Para esse caso, seria suficiente retornar apenas os campos <strong>id</strong> e <strong>nome</strong>, evitando tráfego e processamento excessivo.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Falta de filtragem no backend da rota <code>/mobile-unit-type</code>, obrigando o frontend a tratar registros inativos.</li>
+<li class="">Uso redundante das rotas <code>/mobile-unit</code> e <code>/mobile-unit?active_only=true</code>.</li>
+<li class="">Carregamento excessivo de dados para popular campos simples de seleção.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Ajustar a rota <code>/mobile-unit-type</code> para suportar o parâmetro <code>?active=true</code>, retornando apenas registros ativos.</li>
+<li class="">Consolidar o uso de uma única rota para listagem de unidades móveis, preferencialmente <code>/mobile-unit?active_only=true</code>.</li>
+<li class="">Criar uma rota específica e otimizada para o select <strong>“Selecione uma unidade móvel”</strong>, retornando apenas <code>o necessario</code>.</li>
+<li class="">Eliminar filtragens e tratamentos redundantes no frontend, reduzindo o número de requests e o volume de dados processados.</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="55-ocorrência-5---falta-de-filtragem-e-repetição-de-requisições-na-página-team"><strong>5.5 Ocorrência 5</strong> <strong>- Falta de filtragem e repetição de requisições na página Team</strong><a href="#55-ocorrência-5---falta-de-filtragem-e-repetição-de-requisições-na-página-team" class="hash-link" aria-label="Direct link to 55-ocorrência-5---falta-de-filtragem-e-repetição-de-requisições-na-página-team" title="Direct link to 55-ocorrência-5---falta-de-filtragem-e-repetição-de-requisições-na-página-team" translate="no">​</a></h4>
+<p><strong>Local:</strong><br>
+<!-- -->Componente/página Team.vue</p>
+<p><strong>Rotas envolvidas:</strong><br>
+<!-- -->GET /professional-type<br>
+<!-- -->GET /user<br>
+<!-- -->GET /unallocated<br>
+<!-- -->GET /unallocated?page={n}&amp;page_size={n}<br>
+<!-- -->GET /unallocated?include_self={true|false}</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iJ4UDlsvLUdOPUWx-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="/docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-25.png" alt="image.png" class="img_ev3q"></a><strong>Descrição:</strong><br>
+<!-- -->Na página <strong>Team</strong>, foram identificadas falhas relacionadas à ausência de filtragem no backend e à repetição de requisições para as rotas de <strong>unallocated</strong>.</p>
+<p>A rota <code>/professional-type</code> atualmente retorna todos os tipos de profissionais, e o frontend realiza a filtragem manual para exibir apenas os ativos. Esse comportamento deve ser tratado diretamente no backend, utilizando o parâmetro <code>?active_only=true</code>, conforme já adotado em outras rotas.</p>
+<p>Além disso, a rota <code>/user</code> (getUser) está sendo chamada sem necessidade (é possivel adaptar a logica sem a utilização dessa rota) e deve ser removida da página.</p>
+<p>Também foi observada <strong>repetição de chamadas</strong> nas rotas <code>/unallocated</code>, inclusive com variações de parâmetros (<code>page</code>, <code>include_self</code>), gerando múltiplas requisições redundantes para obter os mesmos dados.</p>
+<p><strong>Problema:</strong></p>
+<ul>
+<li class="">Falta de filtragem de registros ativos na rota <code>/professional-type</code>.</li>
+<li class="">Uso desnecessário da rota <code>/user</code> (getUser).</li>
+<li class="">Requisições duplicadas e redundantes nas rotas <code>/unallocated</code>.</li>
+</ul>
+<p><strong>Solução proposta:</strong></p>
+<ul>
+<li class="">Ajustar a rota <code>/professional-type</code> para suportar o parâmetro <code>?active_only=true</code>, eliminando a necessidade de filtragem no frontend.</li>
+<li class="">Remover a chamada da rota <code>/user</code> (getUser) da página.</li>
+<li class="">Revisar a lógica de carregamento das rotas <code>/unallocated</code> para evitar repetições desnecessárias</li>
+<li class="">Consolidar as chamadas de <code>/unallocated</code> em uma única requisição otimizada, garantindo eficiência e consistência dos dados.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-manual-do-dev/projetos/e-sus-urgencias/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/metodologia-de-administracao-de-dados-mad"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Metodologia de Administração de Dados (MAD)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/solicitando-acesso-as-ferramentas-datasus"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Solicitando acesso às ferramentas (DataSUS)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-objetivo" class="table-of-contents__link toc-highlight"><strong>1. Objetivo</strong></a></li><li><a href="#2-critérios-de-análise" class="table-of-contents__link toc-highlight"><strong>2. Critérios de Análise</strong></a></li><li><a href="#3-ocorrências-identificadas-página-home-tarm" class="table-of-contents__link toc-highlight"><strong>3. Ocorrências Identificadas Página Home (TARM)</strong></a></li><li><a href="#4-ocorrências-identificadas-médico-regulador-mr" class="table-of-contents__link toc-highlight"><strong>4. Ocorrências Identificadas Médico Regulador (MR)</strong></a></li><li><a href="#5-ocorrências-identificadas-operador-de-frota" class="table-of-contents__link toc-highlight"><strong>5. Ocorrências Identificadas Operador de frota</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-preview/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-preview/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

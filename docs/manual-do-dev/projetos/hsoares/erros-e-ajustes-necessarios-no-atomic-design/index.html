@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Erros e Ajustes Necessários no Atomic Design | DigitalSys Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://oedudev.github.io/docs-preview/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://oedudev.github.io/docs-preview/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Erros e Ajustes Necessários no Atomic Design | DigitalSys Docs"><meta data-rh="true" name="description" content="1. Requisições nos componentes"><meta data-rh="true" property="og:description" content="1. Requisições nos componentes"><link data-rh="true" rel="icon" href="/docs-preview/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design"><link data-rh="true" rel="alternate" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design" hreflang="en"><link data-rh="true" rel="alternate" href="https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Erros e Ajustes Necessários no Atomic Design","item":"https://oedudev.github.io/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design"}]}</script><link rel="alternate" type="application/rss+xml" href="/docs-preview/blog/rss.xml" title="DigitalSys Docs RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/docs-preview/blog/atom.xml" title="DigitalSys Docs Atom Feed"><link rel="stylesheet" href="/docs-preview/assets/css/styles.c51ffe61.css">
+<script src="/docs-preview/assets/js/runtime~main.01e36fd0.js" defer="defer"></script>
+<script src="/docs-preview/assets/js/main.8ee1a138.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/docs-preview/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs-preview/"><div class="navbar__logo"><img src="/docs-preview/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docs-preview/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">My Site</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs-preview/docs/base-de-conhecimento/onboarding/boas-praticas/boas-praticas-de-codigo">Tutorial</a><a class="navbar__item navbar__link" href="/docs-preview/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs-preview/docs/base-de-conhecimento/onboarding/boas-praticas/boas-praticas-de-codigo"><span title="base-de-conhecimento" class="categoryLinkLabel_W154">base-de-conhecimento</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-preview/docs/intro"><span title="Tutorial Intro" class="linkLabel_WmDU">Tutorial Intro</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs-preview/docs/manual-do-dev/ai-agents/manual-bots"><span title="manual-do-dev" class="categoryLinkLabel_W154">manual-do-dev</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/ai-agents/manual-bots"><span title="ai-agents" class="categoryLinkLabel_W154">ai-agents</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/dev-guide/backend-db/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus"><span title="dev-guide" class="categoryLinkLabel_W154">dev-guide</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/analytics/analytics-dashboard"><span title="projetos" class="categoryLinkLabel_W154">projetos</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/analytics/analytics-dashboard"><span title="analytics" class="categoryLinkLabel_W154">analytics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast/banco-de-dados-Q3y"><span title="closecast" class="categoryLinkLabel_W154">closecast</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast-funcional/banco-de-dados-Q3y"><span title="closecast-funcional" class="categoryLinkLabel_W154">closecast-funcional</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/closecast-visao/manifesto-do-produto-closecast"><span title="closecast-visao" class="categoryLinkLabel_W154">closecast-visao</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/dip/callback"><span title="dip" class="categoryLinkLabel_W154">dip</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/dsrecruiter/bdd-candidato"><span title="dsrecruiter" class="categoryLinkLabel_W154">dsrecruiter</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/e-sus-urgencias/atualizar-ambiente-do-e-sus-datasus"><span title="e-sus-urgencias" class="categoryLinkLabel_W154">e-sus-urgencias</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/gda/bdd-app-aluno"><span title="gda" class="categoryLinkLabel_W154">gda</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/casos-de-uso"><span title="hsoares" class="categoryLinkLabel_W154">hsoares</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/casos-de-uso"><span title="Casos de Uso" class="linkLabel_WmDU">Casos de Uso</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design"><span title="Erros e Ajustes Necessários no Atomic Design" class="linkLabel_WmDU">Erros e Ajustes Necessários no Atomic Design</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/fluxo-do-usuario-figma"><span title="Fluxo do Usuário - Figma" class="linkLabel_WmDU">Fluxo do Usuário - Figma</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/integracao-porto-seguro"><span title="Integração Porto Seguro" class="linkLabel_WmDU">Integração Porto Seguro</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/introducao-ao-atomic-design-no-hsoares"><span title="Introdução ao Atomic Design no Hsoares" class="linkLabel_WmDU">Introdução ao Atomic Design no Hsoares</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/melhorias-no-pdf-de-ofertas"><span title="Melhorias no PDF de Ofertas" class="linkLabel_WmDU">Melhorias no PDF de Ofertas</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/novos-links-para-acesso-ao-hsoares"><span title="Novos links para acesso ao Hsoares" class="linkLabel_WmDU">Novos links para acesso ao Hsoares</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/propostas-pj-e-comerciais"><span title="Propostas PJ e Comerciais" class="linkLabel_WmDU">Propostas PJ e Comerciais</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/requisitos-tecnicos"><span title="Requisitos técnicos" class="linkLabel_WmDU">Requisitos técnicos</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-4 menu__list-item"><a class="menu__link" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/too-seguros-credenciais-de-acesso-homologacao"><span title="Too Seguros - Credenciais de Acesso Homologação" class="linkLabel_WmDU">Too Seguros - Credenciais de Acesso Homologação</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/statis/acompanhamento-incrementos"><span title="statis" class="categoryLinkLabel_W154">statis</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/surge/documentacao-de-atualizacao-de-ambiente"><span title="surge" class="categoryLinkLabel_W154">surge</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/surge-metaverso/documentacao-de-atualizacao-de-ambiente"><span title="surge-metaverso" class="categoryLinkLabel_W154">surge-metaverso</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/projetos/upluxo/bbd-tela-qr-code-informacoes-do-hospital"><span title="upluxo" class="categoryLinkLabel_W154">upluxo</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/qa/processos/escopo"><span title="qa" class="categoryLinkLabel_W154">qa</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs-preview/docs/manual-do-dev/troubleshooting/frontend-build/sveltekit-erro-de-build-no-docker-adapter-mismatch"><span title="troubleshooting" class="categoryLinkLabel_W154">troubleshooting</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/docs-preview/docs/category/tutorial---basics"><span title="Tutorial - Basics" class="categoryLinkLabel_W154">Tutorial - Basics</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Basics&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/docs-preview/docs/manual-do-devops/agentes-ia/arquitetura"><span title="manual-do-devops" class="categoryLinkLabel_W154">manual-do-devops</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/docs-preview/docs/category/tutorial---extras"><span title="Tutorial - Extras" class="categoryLinkLabel_W154">Tutorial - Extras</span></a><button aria-label="Expand sidebar category &#x27;Tutorial - Extras&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs-preview/docs/boas-praticas-limpo"><span title="Boas Práticas de Código" class="linkLabel_WmDU">Boas Práticas de Código</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/docs-preview/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">manual-do-dev</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">projetos</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">hsoares</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Erros e Ajustes Necessários no Atomic Design</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Erros e Ajustes Necessários no Atomic Design</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-requisições-nos-componentes"><strong>1. Requisições nos componentes</strong><a href="#1-requisições-nos-componentes" class="hash-link" aria-label="Direct link to 1-requisições-nos-componentes" title="Direct link to 1-requisições-nos-componentes" translate="no">​</a></h2>
+<p><strong>Problema:</strong> Atualmente algumas requisições à API estão sendo feitas diretamente dentro de componentes. Isso fere o princípio de separação de responsabilidades do Atomic Design.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Torna os componentes menos reutilizáveis, já que ficam acoplados a regras de negócio.</li>
+<li class="">Dificulta testes, manutenção e evolução do projeto.</li>
+<li class="">Quebra a hierarquia de responsabilidades esperada.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Centralizar todas as requisições na Página.</li>
+<li class="">A Página deve buscar/enviar dados para a API e repassar os resultados via props para o Template e componentes filhos.</li>
+<li class="">Os componentes (organismos, moléculas e átomos) devem apenas exibir dados recebidos ou disparar eventos que a Página irá tratar.</li>
+</ul>
+<p>Componentes Identificados com Requisições:</p>
+<p><strong>moleculas:</strong></p>
+<ul>
+<li class=""><code>evolution-history.vue</code></li>
+<li class=""><code>fire-insurance-card.vue</code></li>
+<li class=""><code>policy-link.vue</code></li>
+</ul>
+<p><strong>templates:</strong></p>
+<ul>
+<li class=""><code>contract.vue</code></li>
+<li class=""><code>fire-insurance.vue</code></li>
+</ul>
+<p><strong>Prioridade:</strong> Alta — afeta diretamente a reutilização e manutenibilidade dos componentes.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-ajustes-necessários-para-conformidade-com-o-atomic-design"><strong>2.</strong> <strong>Ajustes Necessários para Conformidade com o Atomic Design</strong><a href="#2-ajustes-necessários-para-conformidade-com-o-atomic-design" class="hash-link" aria-label="Direct link to 2-ajustes-necessários-para-conformidade-com-o-atomic-design" title="Direct link to 2-ajustes-necessários-para-conformidade-com-o-atomic-design" translate="no">​</a></h2>
+<p>&lt;u&gt;<em><strong>Importante:</strong></em>&lt;/u&gt;&lt;u&gt; &lt;/u&gt;Todos os componentes devem ser refatorados conforme os princípios do <strong>Atomic Design</strong>. Nesta documentação estamos apontando casos de <strong>componentes duplicados</strong>. Sempre que um átomo envolver mais de um elemento (por exemplo, um <code>input</code> com <code>label</code> e <code>errorMessage</code>), deve-se avaliar corretamente a hierarquia e construir o componente na camada adequada, seguindo a documentação de padrões definida.</p>
+<p>Link para duvidas do atomic design: <a href="https://ajuda.digitalsys.com.br/books/projetos/page/introducao-ao-atomic-design-no-hsoares" target="_blank" rel="noopener noreferrer" class="">Introdução ao Atomic D... | Ajuda DigitalSys</a></p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="21-duplicação-de-campos-de-input"><strong>2.1 Duplicação de campos de input</strong><a href="#21-duplicação-de-campos-de-input" class="hash-link" aria-label="Direct link to 21-duplicação-de-campos-de-input" title="Direct link to 21-duplicação-de-campos-de-input" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente existem dois componentes responsáveis por renderizar campos de input com label, spinner e mensagem de erro. Apesar de possuírem praticamente a mesma estrutura, eles apresentam pequenas diferenças na implementação (ex.: suporte ao <code>v-model</code>). Essa duplicação fere o princípio de <strong>reutilização e consistência</strong> esperado pelo Atomic Design.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código aumenta o esforço de manutenção.</li>
+<li class="">Alterações futuras precisam ser replicadas em ambos os componentes.</li>
+<li class="">Risco de inconsistência de comportamento entre os dois.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Criar <strong>um único componente unificado</strong> (<code>FieldInput.vue</code>) que atenda tanto ao uso simples quanto ao uso com <code>v-model</code>.</li>
+<li class="">Padronizar para que todos os campos utilizem <code>modelValue</code> e <code>update:modelValue</code>, mantendo compatibilidade com o Vue.</li>
+<li class="">Garantir que estilos e comportamentos (label, required, spinner, error message) sejam centralizados e consistentes.</li>
+<li class="">Substituir gradualmente os componentes duplicados pelo novo componente unificado.</li>
+</ul>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>atoms/input-form.vue</code></li>
+<li class=""><code>atoms/input-form-fire-coverage.vue</code></li>
+<li class=""><code>atoms/input-search.vue</code></li>
+</ul>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Alta — impacta diretamente na manutenibilidade, consistência e evolução do design system.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/Y87Q67XsJrIZGO55-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/Y87Q67XsJrIZGO55-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/aqbUTzdR2oVkHZwd-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/aqbUTzdR2oVkHZwd-image.png" alt="image.png" class="img_ev3q"></a></p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-duplicação-de-componentes-de-login"><strong>2.2 Duplicação de Componentes de Login</strong><a href="#22-duplicação-de-componentes-de-login" class="hash-link" aria-label="Direct link to 22-duplicação-de-componentes-de-login" title="Direct link to 22-duplicação-de-componentes-de-login" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente existem dois componentes distintos para lidar com inputs de login:</p>
+<ul>
+<li class="">Um componente para campos de texto simples (<code>input-login</code>).</li>
+<li class="">Um componente específico para senha com botão de exibir/ocultar (<code>input-password</code>).</li>
+</ul>
+<p>Ambos possuem a mesma base estrutural (label, input, estilização e binding com <code>v-model</code>), mas estão duplicados em arquivos diferentes, o que gera redundância de código e manutenção desnecessária.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código aumenta esforço de manutenção.</li>
+<li class="">Alterações de estilo, acessibilidade ou comportamento precisam ser replicadas em ambos os componentes.</li>
+<li class="">Risco de inconsistência visual ou funcional entre os dois.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Criar um <strong>único componente unificado (</strong><code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;InputLogin.vue&amp;lt;/strong&gt;</code><strong>)</strong> que consiga atender tanto inputs simples quanto inputs de senha.</li>
+<li class="">Utilizar a prop <code>type</code> para decidir o comportamento:<!-- -->
+<ul>
+<li class=""><code>type !== &#x27;password&#x27;</code> → renderiza input padrão.</li>
+<li class=""><code>type === &#x27;password&#x27;</code> → renderiza input com botão para alternar visibilidade.</li>
+</ul>
+</li>
+<li class="">Manter suporte ao <code>v-model</code> (<code>modelValue</code> + <code>update:modelValue</code>) para garantir compatibilidade com formulários.</li>
+<li class="">Centralizar estilos e comportamento para evitar duplicações.</li>
+</ul>
+<p>&lt;u&gt;<strong>Importante:</strong>&lt;/u&gt;&lt;u&gt; Definir os valores aceitos para &lt;/u&gt;&lt;u&gt;<code>type</code>&lt;/u&gt;&lt;u&gt; dentro de um&lt;/u&gt;&lt;u&gt; <strong>ENUM (</strong>&lt;/u&gt;&lt;u&gt;<strong><code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code editor-theme-underline&quot;&gt;INPUT_TYPES&amp;lt;/strong&gt;</code></strong>&lt;/u&gt;&lt;u&gt;<strong>)</strong>&lt;/u&gt;&lt;u&gt;, garantindo padronização no uso.&lt;/u&gt;</p>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>atoms/input-login.vue</code></li>
+<li class=""><code>atoms/input-password.vue</code></li>
+</ul>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média-Alta — impacta diretamente a consistência do design system e a manutenibilidade futura.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/oH0nREjhKzVYzPUk-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/oH0nREjhKzVYzPUk-image.png" alt="image.png" class="img_ev3q"></a></p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="24-duplicação-de-card-tenants"><strong>2.4 Duplicação de card tenants</strong><a href="#24-duplicação-de-card-tenants" class="hash-link" aria-label="Direct link to 24-duplicação-de-card-tenants" title="Direct link to 24-duplicação-de-card-tenants" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente existem dois componentes distintos para representar cartões de tenants (inquilinos/segurados). Apesar de compartilharem praticamente toda a estrutura (estilo, comportamento de seleção, botão de remoção e exibição do nome), eles diferem apenas em pequenos detalhes de texto e rótulos (“Inquilino” x “Segurado”). Isso gera código duplicado e fere o princípio de reutilização esperado pelo Atomic Design.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Aumento do esforço de manutenção, já que qualquer alteração precisa ser replicada em ambos os componentes.</li>
+<li class="">Risco de inconsistência visual ou funcional (ex.: diferença em estilos, textos ou eventos).</li>
+<li class="">Redução na clareza do design system, já que dois componentes diferentes cumprem a mesma função.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Criar um único componente unificado (<code>TenantCard.vue</code>) que cubra os diferentes cenários de exibição.</li>
+<li class="">Incluir uma prop <code>role</code> para diferenciar o texto exibido no card (<code>Inquilino</code>, <code>Segurado</code>, <code>Sócio</code>).</li>
+<li class="">Manter a lógica de clique e remoção no mesmo componente, evitando duplicidade.</li>
+<li class="">Substituir gradualmente os dois componentes duplicados pelo novo componente unificado.</li>
+</ul>
+<p>&lt;u&gt;<strong>Importante:</strong> &lt;/u&gt;&lt;u&gt;Centralizar os valores aceitos em um &lt;/u&gt;&lt;u&gt;<strong>ENUM (</strong>&lt;/u&gt;&lt;u&gt;<strong><code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code editor-theme-underline&quot;&gt;TENANT_ROLES&amp;lt;/strong&gt;</code></strong>&lt;/u&gt;&lt;u&gt;<strong>)</strong>&lt;/u&gt;&lt;u&gt; para garantir padronização e prevenir uso incorreto.&lt;/u&gt;</p>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>atoms/card-tenants.vue</code></li>
+<li class=""><code>atoms/card-tenants-fire.vue</code></li>
+</ul>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FRwivif5G5XhnMuO-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/FRwivif5G5XhnMuO-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média — afeta diretamente a consistência visual e a manutenibilidade futura, mas não bloqueia a evolução imediata de outras funcionalidades.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="25-duplicação-de-botões"><strong>2.5 Duplicação de botões</strong><a href="#25-duplicação-de-botões" class="hash-link" aria-label="Direct link to 25-duplicação-de-botões" title="Direct link to 25-duplicação-de-botões" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente existem múltiplos componentes (ou implementações isoladas) para botões, variando apenas em cor, ícone (esquerda/direita) ou texto. Isso gera duplicação de código e dificulta a manutenção e evolução do design system, além de comprometer a consistência visual.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Aumento do esforço de manutenção, pois qualquer ajuste de estilo precisa ser replicado em diferentes botões.</li>
+<li class="">Maior risco de inconsistência visual (diferenças de cor, padding, espaçamento ou tipografia).</li>
+<li class="">Dificulta a padronização de acessibilidade (aria-labels, estados disabled, foco).</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Criar um único componente unificado que atenda a todos os cenários de botão.</li>
+<li class="">O componente deve receber <strong>props configuráveis</strong>, como:</li>
+<li class=""><code>variant</code> → define o padrão de cor (ex.: <code>&quot;primary&quot;</code>, <code>&quot;secondary&quot;</code>, <code>&quot;success&quot;</code>, <code>&quot;danger&quot;</code>).</li>
+<li class=""><code>icon</code> → caminho para o ícone.</li>
+<li class=""><code>iconPosition</code> → define posição do ícone (<code>&quot;left&quot;</code> ou <code>&quot;right&quot;</code>).</li>
+<li class=""><code>disabled</code> → estado desabilitado.</li>
+<li class=""><code>fullWidth</code> → para botões que ocupam a largura total.</li>
+</ul>
+<p><strong>Componentes/Implementações Identificados com Duplicação:</strong></p>
+<ul>
+<li class="">Botão <strong>Entrar</strong></li>
+<li class="">Botão <strong>Começar a proposta</strong></li>
+<li class="">Botão <strong>Finalizar</strong></li>
+<li class="">Botão <strong>Enviar proposta</strong></li>
+<li class="">Botões de navegação (<strong>Voltar / Próximo</strong>)</li>
+<li class="">Botões de ação rápida (<strong>Pesquisar / Limpar</strong>)</li>
+</ul>
+<p>&lt;u&gt;<strong>Importante:</strong>&lt;/u&gt;&lt;u&gt; Podem existir mais botões com o mesmo estilo dos citados a cima&lt;/u&gt;</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/iIUuH8s3vpY8IdkV-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/iIUuH8s3vpY8IdkV-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Alta — impacta diretamente a consistência visual, a manutenibilidade e a escalabilidade do design system.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="26-duplicação-de-modais-de-confirmação"><strong>2.6 Duplicação de Modais de Confirmação</strong><a href="#26-duplicação-de-modais-de-confirmação" class="hash-link" aria-label="Direct link to 26-duplicação-de-modais-de-confirmação" title="Direct link to 26-duplicação-de-modais-de-confirmação" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Existem múltiplos componentes quase idênticos para confirmação de envio (proposta/contrato). Eles repetem estrutura, HTML e lógica, alterando apenas alguns textos, classes e handlers.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código (mais difícil de manter).</li>
+<li class="">Se for necessário mudar layout, tipografia ou acessibilidade, a alteração deve ser feita em todos os lugares.</li>
+<li class="">Crescimento desnecessário da base de componentes.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong><br>
+<!-- -->Unificar em <strong>um único componente</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;ConfirmationModal.vue&amp;lt;/strong&gt;</code>**, parametrizado por <code>props</code>:</p>
+<ul>
+<li class=""><code>title</code> → título principal (<code>PROPOSTA ENVIADA!</code>, <code>CONTRATO ENVIADO!</code>).</li>
+<li class=""><code>message</code> → mensagem principal de sucesso.</li>
+<li class=""><code>buttonText</code> → texto do botão de ação.</li>
+<li class=""><code>onClose</code> → função a ser chamada ao fechar (ou <code>emit(&quot;close&quot;)</code>).</li>
+<li class=""><code>onAction</code> → função a ser chamada ao clicar no botão principal.</li>
+<li class=""><code>variant</code> (opcional) → para aplicar estilos diferentes se necessário (<code>&quot;proposal&quot;</code>, <code>&quot;contract&quot;</code>).</li>
+</ul>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>atoms/sent-contract.vue</code></li>
+<li class=""><code>atoms/sent-proposal.vue</code></li>
+</ul>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ENLIedDRiXpWKrrU-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/ENLIedDRiXpWKrrU-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média/Alta — reduz duplicação de código e facilita a criação de novos modais de confirmação no futuro</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="27-duplicação-de-selects"><strong>2.7 Duplicação de Selects</strong><a href="#27-duplicação-de-selects" class="hash-link" aria-label="Direct link to 27-duplicação-de-selects" title="Direct link to 27-duplicação-de-selects" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Existem múltiplos componentes <code>&amp;lt;select&gt;</code> praticamente idênticos, variando apenas no label inicial e no conjunto de opções.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código CSS e HTML.</li>
+<li class="">Alterações de estilo ou comportamento precisam ser replicadas em todos os arquivos.</li>
+<li class="">Maior dificuldade de manutenção e evolução.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong><br>
+<!-- -->Criar um <strong>componente único</strong> <code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;BaseSelect.vue&amp;lt;/strong&gt;</code>** (apenas uma sugestão de nome) que recebe via <code>props</code>:</p>
+<ul>
+<li class=""><code>modelValue</code> → valor selecionado (com <code>v-model</code>).</li>
+<li class=""><code>placeholder</code> → primeira opção exibida (ex.: <code>&quot;Status&quot;</code>, <code>&quot;Finalidade&quot;</code>, <code>&quot;Produto&quot;</code>).</li>
+<li class=""><code>options</code> → Array de objetos <code>{ label, value }</code>.</li>
+<li class=""><code>width</code>, <code>height</code> (opcional) → caso precise customizar dimensões.</li>
+</ul>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>atoms/select-product.vue</code></li>
+<li class=""><code>atoms/select-purpose.vue</code></li>
+<li class=""><code>atoms/select-status.vue</code></li>
+<li class=""><code>atoms/select.vue</code></li>
+<li class=""><code>atoms/select-search-type.vue</code></li>
+</ul>
+<p>&lt;u&gt;<strong>Importante</strong>&lt;/u&gt;<strong>:</strong> O componente <code>atoms/select.vue</code> está sendo classificado como um átomo, mas, na prática, ele não deveria estar nessa camada. Isso porque ele não é apenas um <code>&amp;lt;select&gt;</code> isolado (átomo), e sim a composição de elementos:</p>
+<ul>
+<li class="">um componente de <strong>select</strong> (átomo)</li>
+<li class="">uma <strong>label</strong> (átomo)</li>
+</ul>
+<p>Portanto, de acordo com os princípios do Atomic Design, esse componente deve ser tratado como uma <strong>molécula</strong>.<br>
+<!-- -->A recomendação é que ele seja ajustado para utilizar o novo componente atômico <code>BaseSelect.vue</code>, garantindo assim consistência na hierarquia e reutilização correta dos átomos.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/zYd4kmcHncwY3Z0A-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/zYd4kmcHncwY3Z0A-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/bSMfY860OxM6OIHm-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/bSMfY860OxM6OIHm-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Alta — reduz 5 componentes para apenas um, melhora consistência e facilita manutenção.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="28-construção-de-formulario"><strong>2.8 Construção de formulario</strong><a href="#28-construção-de-formulario" class="hash-link" aria-label="Direct link to 28-construção-de-formulario" title="Direct link to 28-construção-de-formulario" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Na construção do formulário <code>molecules/form-contract-offer.vue</code>, foram utilizados diretamente os componentes <strong>Field</strong> do <code>vee-validate</code>. Isso cria inconsistência com a abordagem definida no design system.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">O formulário deixa de seguir os padrões estabelecidos no projeto.</li>
+<li class="">Dificulta a reutilização e padronização dos componentes.</li>
+<li class="">Aumenta a chance de divergências visuais e funcionais entre diferentes formulários.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Substituir o uso direto de <strong>Field</strong> pelos novos <strong>Selects padronizados</strong> criados no item <strong>2.7</strong>.</li>
+<li class="">Garantir que todos os inputs e selects utilizados nos formulários sigam a hierarquia do Atomic Design.</li>
+<li class="">Manter a validação integrada ao <code>vee-validate</code>, mas acoplada aos componentes do design system.</li>
+</ul>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/PEPiHyGYCo45tLFL-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/PEPiHyGYCo45tLFL-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média — impacta a consistência e padronização dos formulários no sistema.</p>
+<h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="29-duplicação-de-componentes-de-tenants"><strong>2.9</strong> <strong>Duplicação de Componentes de Tenants</strong><a href="#29-duplicação-de-componentes-de-tenants" class="hash-link" aria-label="Direct link to 29-duplicação-de-componentes-de-tenants" title="Direct link to 29-duplicação-de-componentes-de-tenants" translate="no">​</a></h5>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente existem dois componentes quase idênticos para lidar com a listagem e adição de tenants:</p>
+<ul>
+<li class=""><code>molecules/tenants.vue</code></li>
+<li class=""><code>molecules/tenants-fire.vue</code></li>
+</ul>
+<p>A estrutura e regras de negócio são praticamente as mesmas, variando apenas em detalhes de nomenclatura (<code>Inquilino</code>/<code>Segurado</code>), imports (<code>card-tenants.vue</code> / <code>card-tenants-fire.vue</code>) e utilitários específicos (<code>formSection</code> / <code>formSectionInsuranceFire</code>). Essa duplicação gera redundância e complexidade desnecessária.</p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código aumenta esforço de manutenção.</li>
+<li class="">Alterações de layout, regras ou validação precisam ser replicadas manualmente em ambos.</li>
+<li class="">Risco de inconsistência entre os fluxos de cadastro.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Criar um único componente unificado que receba via <strong>props</strong> os elementos variáveis:<!-- -->
+<ul>
+<li class=""><code>labelCard</code></li>
+<li class="">Componente de Card (<code>CardTenants</code> ou <code>CardTenantsFire</code>).</li>
+<li class="">Função <code>useFormSections</code> específica.</li>
+</ul>
+</li>
+<li class="">Centralizar toda a lógica de adição, exclusão, banners e botões em um único lugar.</li>
+<li class="">Substituir gradualmente os dois componentes duplicados pelo novo componente genérico.</li>
+</ul>
+<p><strong>Componentes Identificados com Duplicação:</strong></p>
+<ul>
+<li class=""><code>tenants.vue</code></li>
+<li class=""><code>tenants-fire.vue</code></li>
+</ul>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/uh6c9Mh9XwJs2jnH-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/uh6c9Mh9XwJs2jnH-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média — duplicação extensa com impacto direto na manutenibilidade.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-componentes-não-utilizados"><strong>3.</strong> <strong>Componentes não utilizados</strong><a href="#3-componentes-não-utilizados" class="hash-link" aria-label="Direct link to 3-componentes-não-utilizados" title="Direct link to 3-componentes-não-utilizados" translate="no">​</a></h2>
+<p><strong>Problema:</strong> Atualmente, há componentes no projeto que não estão sendo utilizados. Caso não exista previsão de uso futuro, esses componentes devem ser removidos a fim de manter o projeto mais limpo, organizado e fácil de manter.</p>
+<p>São esses:</p>
+<ul>
+<li class=""><code>molecules/side-bar.vue</code></li>
+<li class=""><code>atoms/logo.vue</code></li>
+<li class=""><code>molecules/form-locador.vue</code></li>
+<li class=""><code>organisms/events-tab.vue</code></li>
+<li class=""><code>organisms/payment-tab.vue</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-componentes-com-problema-de-hierarquia"><strong>4.</strong> <strong>Componentes com problema de hierarquia</strong><a href="#4-componentes-com-problema-de-hierarquia" class="hash-link" aria-label="Direct link to 4-componentes-com-problema-de-hierarquia" title="Direct link to 4-componentes-com-problema-de-hierarquia" translate="no">​</a></h2>
+<p>Alguns componentes não estão alinhados com a hierarquia definida pelo <strong>Atomic Design</strong>. Essa inconsistência dificulta a manutenção, a padronização e a correta reutilização dentro do projeto.</p>
+<p><strong>Importante:</strong> Parte dos componentes listados abaixo pode já estar contemplada nas correções sugeridas na seção <strong>2. Ajustes Necessários para Conformidade com o Atomic Design</strong>. A hierarquia final deve ser revisada após a refatoração geral.</p>
+<p><strong>Identificação de Problemas:</strong></p>
+<ul>
+<li class=""><strong>Átomos (Atoms):</strong>
+<ul>
+<li class=""><code>button-login.vue</code></li>
+</ul>
+</li>
+<li class=""><strong>Moléculas (Molecules):</strong>
+<ul>
+<li class=""><code>pagination.vue</code></li>
+<li class=""><code>payment-selector.vue</code></li>
+<li class=""><code>policy-link.vue</code></li>
+<li class=""><code>proposal-details.vue</code></li>
+<li class=""><code>purchase-modal.vue</code></li>
+<li class=""><code>offers-card.vue</code></li>
+<li class=""><code>offer-summary.vue</code></li>
+<li class=""><code>offer-details-card.vue</code></li>
+<li class=""><code>insurance-card.vue</code></li>
+<li class=""><code>installment-selector.vue</code></li>
+<li class=""><code>fire-insurance-card.vue</code></li>
+<li class=""><code>evolution-history.vue</code></li>
+</ul>
+</li>
+<li class=""><strong>Organismos (Organisms):</strong>
+<ul>
+<li class=""><code>company-tab.vue</code></li>
+<li class=""><code>contract-tab.vue</code></li>
+<li class=""><code>coverages-tab.vue</code></li>
+<li class=""><code>tenants-tab.vue</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Revisar a composição de cada componente e reclassificá-los de acordo com sua responsabilidade no sistema:<!-- -->
+<ul>
+<li class="">Átomos → Elementos básicos e indivisíveis.</li>
+<li class="">Moléculas → Combinações simples de átomos.</li>
+<li class="">Organismos → Conjuntos mais complexos, geralmente com múltiplas moléculas e/ou lógica de negócio.</li>
+<li class="">Templates → Estrutura de layout que organiza organismos sem conter lógica de negócio.</li>
+</ul>
+</li>
+<li class="">Criar documentação clara para orientar futuros desenvolvimentos e evitar que novos componentes sejam criados com hierarquia incorreta.</li>
+</ul>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Média-Alta — Impacta diretamente a clareza da arquitetura do design system e a escalabilidade do projeto.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-pages-com-construção-de-html-fora-do-atomic-design"><strong>5. Pages com Construção de HTML fora do Atomic Design</strong><a href="#5-pages-com-construção-de-html-fora-do-atomic-design" class="hash-link" aria-label="Direct link to 5-pages-com-construção-de-html-fora-do-atomic-design" title="Direct link to 5-pages-com-construção-de-html-fora-do-atomic-design" translate="no">​</a></h3>
+<p><strong>Problema:</strong><br>
+<!-- -->Algumas páginas estão sendo construídas com <strong>HTML e estilização diretamente dentro do componente de página</strong>, em vez de compor a interface reutilizando átomos, moléculas, organismos e templates definidos no design system.</p>
+<p>Um exemplo é a <strong><code>&amp;lt;strong class=&quot;editor-theme-bold editor-theme-code&quot;&gt;pages/reset-password.vue&amp;lt;/strong&gt;</code></strong>, onde toda a estrutura de layout, containers, estilização e até elementos como <code>img</code>, <code>divs</code> e <code>form</code> estão definidos diretamente no arquivo da página.</p>
+<p>Esse tipo de implementação <strong>fere o princípio de separação de responsabilidades do Atomic Design</strong>, pois:</p>
+<ul>
+<li class="">Páginas devem apenas <strong>orquestrar templates e organismos</strong>, sem conter lógica de layout detalhada ou marcação extensiva.</li>
+<li class="">A repetição de HTML e CSS diretamente nas páginas dificulta a reutilização de estilos e componentes.</li>
+<li class="">Torna o projeto menos escalável e mais difícil de manter.</li>
+</ul>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Duplicação de código de layout entre diferentes páginas.</li>
+<li class="">Quebra de consistência visual, já que cada página pode implementar estilos próprios.</li>
+<li class="">Dificuldade de evoluir ou aplicar mudanças globais de design.</li>
+</ul>
+<p><strong>Páginas que precisam de correção:</strong></p>
+<ul>
+<li class=""><code>contratar</code></li>
+<li class=""><code>pagamento</code></li>
+<li class=""><code>password-reset-request</code></li>
+<li class=""><code>produtos</code></li>
+<li class=""><code>proposal-info</code></li>
+<li class=""><code>propostas</code></li>
+<li class=""><code>propostas-grupo</code></li>
+<li class=""><code>reset-password</code></li>
+<li class=""><code>sobr</code></li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Extrair o layout e elementos visuais da página para componentes apropriados:<!-- -->
+<ul>
+<li class="">Criar um <strong>Template</strong> que centralize o layout comum (logo, container centralizado, estilos responsivos, etc.).</li>
+<li class="">Utilizar <strong>moléculas e organismos</strong> já existentes no lugar de HTML cru.</li>
+<li class="">Garantir que a <strong>page</strong> apenas orquestre:<!-- -->
+<ul>
+<li class="">Importa o Template.</li>
+<li class="">Passa props e dados necessários.</li>
+<li class="">Lida com a lógica de submissão e comunicação com a API.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Prioridade:</strong><br>
+<!-- -->Alta — impacta diretamente na arquitetura do projeto, manutenção futura e escalabilidade do design system.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-padronização-de-textos-com-utils"><strong>6. Padronização de Textos com Utils</strong><a href="#6-padronização-de-textos-com-utils" class="hash-link" aria-label="Direct link to 6-padronização-de-textos-com-utils" title="Direct link to 6-padronização-de-textos-com-utils" translate="no">​</a></h3>
+<p><strong>Problema:</strong><br>
+<!-- -->Atualmente alguns textos estão sendo escritos diretamente dentro dos componentes, como no exemplo abaixo:</p>
+<p>Isso fere o princípio de centralização de mensagens e dificulta a padronização.</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HpoiMQ8FBa6i5vWM-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/HpoiMQ8FBa6i5vWM-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p>Outros exemplos que precisam seguir a mesma correção:</p>
+<p><a href="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hy4txXT46WgmvoX9-image.png" target="_blank" rel="noopener noreferrer" class=""><img decoding="async" loading="lazy" src="https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/scaled-1680-/hy4txXT46WgmvoX9-image.png" alt="image.png" class="img_ev3q"></a></p>
+<p><strong>Impacto:</strong></p>
+<ul>
+<li class="">Risco de textos diferentes para a mesma situação.</li>
+<li class="">Dificuldade de internacionalização (i18n).</li>
+<li class="">Aumento de duplicação de código.</li>
+</ul>
+<p><strong>Correção Recomendada:</strong></p>
+<ul>
+<li class="">Centralizar todos os textos em <strong>utils</strong> (ou constantes, enums e objetos de mensagens).</li>
+<li class="">Utilizar sempre <strong>enums e constantes</strong> definidas, evitando textos hardcoded nos componentes.</li>
+<li class="">Garantir que qualquer ajuste futuro em mensagens seja feito em apenas um ponto.</li>
+</ul>
+<p><em><strong>Importante:</strong></em><br>
+<!-- -->&lt;u&gt;<strong>Esse problema ocorre em diversos componentes do sistema e deve ser corrigido gradualmente, em conjunto com os demais ajustes já descritos nos pontos anteriores.</strong>&lt;/u&gt;</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/02-manual-do-dev/projetos/hsoares/erros-e-ajustes-necessarios-no-atomic-design.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/casos-de-uso"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Casos de Uso</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs-preview/docs/manual-do-dev/projetos/hsoares/fluxo-do-usuario-figma"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Fluxo do Usuário - Figma</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-requisições-nos-componentes" class="table-of-contents__link toc-highlight"><strong>1. Requisições nos componentes</strong></a></li><li><a href="#2-ajustes-necessários-para-conformidade-com-o-atomic-design" class="table-of-contents__link toc-highlight"><strong>2.</strong> <strong>Ajustes Necessários para Conformidade com o Atomic Design</strong></a></li><li><a href="#3-componentes-não-utilizados" class="table-of-contents__link toc-highlight"><strong>3.</strong> <strong>Componentes não utilizados</strong></a></li><li><a href="#4-componentes-com-problema-de-hierarquia" class="table-of-contents__link toc-highlight"><strong>4.</strong> <strong>Componentes com problema de hierarquia</strong></a><ul><li><a href="#5-pages-com-construção-de-html-fora-do-atomic-design" class="table-of-contents__link toc-highlight"><strong>5. Pages com Construção de HTML fora do Atomic Design</strong></a></li><li><a href="#6-padronização-de-textos-com-utils" class="table-of-contents__link toc-highlight"><strong>6. Padronização de Textos com Utils</strong></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-preview/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs-preview/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
