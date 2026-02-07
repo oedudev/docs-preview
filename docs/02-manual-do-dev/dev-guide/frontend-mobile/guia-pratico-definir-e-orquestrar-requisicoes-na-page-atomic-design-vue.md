@@ -61,7 +61,7 @@ No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por 
 
 **defineEmits(\["update:query", "search"\]):** No Vue 3 (com &lt;script setup&gt;), defineEmits é usado para declarar os eventos que o componente pode emitir para o pai.
 
- <colgroup><col></col><col></col></colgroup>   Evento
+ &lt;colgroup>&lt;col>&lt;/col>&lt;col>&lt;/col>&lt;/colgroup>   Evento
 
   Função
 

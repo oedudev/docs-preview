@@ -28,9 +28,9 @@ Após clonar o repositório, para o backend copie todos os arquivos da pasta bac
 Em seguida troque o nome da branch e realize o push para essa branch (atualmente o padrão de branch está sendo "feat/sprint-&lt;número da sprint&gt;"
 
 ```bash
-git checkout -b <nome-da-branch>
+git checkout -b &lt;nome-da-branch>
 git add .
-git commit -m "<descrição>"
+git commit -m "&lt;descrição>"
 git push
 ```
 
@@ -39,10 +39,10 @@ Para executar os jobs de deploy você também deverá fazer o push incluindo a t
 As tags são as seguintes:
 
 ```markdown
-- Desenvolvimento: dev-<hash do commit>
-- Staging: hom-<hash do commit>
-- Treinamento: v.<versão>
-- Produção: v.<versão>
+- Desenvolvimento: dev-&lt;hash do commit>
+- Staging: hom-&lt;hash do commit>
+- Treinamento: v.&lt;versão>
+- Produção: v.&lt;versão>
 ```
 
 Exemplo de push para cada ambiente:

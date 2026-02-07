@@ -15,7 +15,7 @@ Para que seja possível gerenciar o projeto no ambiente do DataSUS são necessá
 
 [![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/uXcAbu2AxfJoTCN9-image.png)
 
-- <u>**Usuário nunca teve acesso**</u>
+- &lt;u>**Usuário nunca teve acesso**&lt;/u>
 
 Neste caso o acesso ao e-mail (@saude.gov.br) será solciitado em conjunto.  
 Para este caso a rota para solicitar acesso é **"Login" &gt; "Solicitar Login de Novo Usuário"**. Como nunca houve nenhuma solicitação de um acesso novo por nossa parte **possivelmente** você não poderá pedir por conta própria. Se for o caso você deverá pedir para alguém interno do DataSUS pedir este acesso.

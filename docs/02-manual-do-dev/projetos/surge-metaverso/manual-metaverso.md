@@ -4,11 +4,11 @@
 **Link para o Manual do Metaverso:** [Link do Drive](https://drive.google.com/drive/u/0/folders/1Iih5J7d6LAY6B84IYKh-WDcnM76Vc87P)  
 **(Acessar com o e-mail @digitalsys.com)**
 
-# <u>**ADMINISTRADOR**</u>
+# &lt;u>**ADMINISTRADOR**&lt;/u>
 
 Para acessar o sistema, basta clicar no seguinte link e fazer o login com as credenciais correspondentes:
 
-[<u>https://metaverso-dev.digitalsys.app/backoffice/admin</u>](https://metaverso-dev.digitalsys.app/backoffice/admin)
+[&lt;u>https://metaverso-dev.digitalsys.app/backoffice/admin&lt;/u>](https://metaverso-dev.digitalsys.app/backoffice/admin)
 
 Deste modo, será apresentado a parte interna do sistema, contendo todas as funcionalidades necessárias para criar e visualizar **Cursos, Especialidades, Histórico de E-mails, Pontos de vista** de diferentes câmeras, **Procedimentos, Profissionais e Usuários** cadastrados. Além disso, será possível ter acesso aos detalhes de ações realizadas recentemente, contendo data e horário, responsável pela atualização e alterações feitas.
 
@@ -101,11 +101,11 @@ Para remover um item, dois caminhos podem ser seguidos, seja seguindo o fluxo an
 
 ![](/docs-preview/img/manual-metaverso-8.png)
 
-# <u>**SISTEMA DE CURSOS**</u>
+# &lt;u>**SISTEMA DE CURSOS**&lt;/u>
 
 Para acessar o sistema, basta clicar no seguinte link e fazer o login com as credenciais correspondentes:
 
-[<u>https://metaverso-dev.digitalsys.app/buscar-treinamentos</u>](https://metaverso-dev.digitalsys.app/buscar-treinamentos)
+[&lt;u>https://metaverso-dev.digitalsys.app/buscar-treinamentos&lt;/u>](https://metaverso-dev.digitalsys.app/buscar-treinamentos)
 
  Assim, o sistema será apresentado para o usuário e será possível acessar as funcionalidades do projeto. 
 

@@ -1,7 +1,7 @@
 
 # BDD Recrutador
 
-<u>**Funcionalidade: Obter informações sobre a plataforma**</u>
+&lt;u>**Funcionalidade: Obter informações sobre a plataforma**&lt;/u>
 
 Como recrutador
 
@@ -9,7 +9,7 @@ Quero obter informações sobre a plataforma de recrutamento
 
 Para entender seu funcionamento
 
-<u>**Cenário: Navegar pelo sistema na parte externa**</u>
+&lt;u>**Cenário: Navegar pelo sistema na parte externa**&lt;/u>
 
 **Dado** que estou no site da plataforma como recrutador
 
@@ -17,7 +17,7 @@ Para entender seu funcionamento
 
 **Então** serão exibidos as informações correspondentes
 
-<u>**Funcionalidade: Realizar cadastro**</u>
+&lt;u>**Funcionalidade: Realizar cadastro**&lt;/u>
 
 Como recrutador
 
@@ -25,7 +25,7 @@ Quero realizar meu cadastro na plataforma
 
 Para ter acesso a parte interna do sistema
 
-<u>**Cenário:**</u>
+&lt;u>**Cenário:**&lt;/u>
 
 **Dado** que estou no site da plataforma como recrutador
 
@@ -33,7 +33,7 @@ Para ter acesso a parte interna do sistema
 
 **Então** será exibida a tela de cadastro para que eu consiga realizar tal ação
 
-<u>**Funcionalidade: Criar novos testes**</u>
+&lt;u>**Funcionalidade: Criar novos testes**&lt;/u>
 
 Como recrutador
 
@@ -41,7 +41,7 @@ Quero criar novos testes
 
 Para serem adicionados nas vagas que vou publicar
 
-<u>**Cenário:**</u>
+&lt;u>**Cenário:**&lt;/u>
 
 **Dado** que estou logado
 
@@ -49,7 +49,7 @@ Para serem adicionados nas vagas que vou publicar
 
 **Então** poderei editar suas informações ou excluí-lo
 
-<u>**Cenário:**</u>
+&lt;u>**Cenário:**&lt;/u>
 
 **Dado** que estou logado
 
@@ -57,7 +57,7 @@ Para serem adicionados nas vagas que vou publicar
 
 **Então** poderei completar os campos para criação do teste e salvá-lo
 
-<u>**Funcionalidade: Acessar todos os candidatos de uma vaga**</u>
+&lt;u>**Funcionalidade: Acessar todos os candidatos de uma vaga**&lt;/u>
 
 Como recrutador
 
@@ -65,7 +65,7 @@ Quero ter acesso a todos os candidatos de uma vaga
 
 Então poderei ter acesso a suas informações
 
-<u>**Cenário:**</u>
+&lt;u>**Cenário:**&lt;/u>
 
 **Dado** que estou vendo a listagem de candidatos de uma determinada vaga
 
@@ -73,7 +73,7 @@ Então poderei ter acesso a suas informações
 
 **Então** poderei ver as informações de cada um com mais detalhes
 
-<u>**Funcionalidade: Excluir conta**</u>
+&lt;u>**Funcionalidade: Excluir conta**&lt;/u>
 
 Como recrutador
 
@@ -81,7 +81,7 @@ Quero excluir minha conta
 
 Para não ter mais acesso ao sistema e descadastrar meus dados
 
-<u>**Cenário:**</u>
+&lt;u>**Cenário:**&lt;/u>
 
 **Dado** que estou logada no sistema
 

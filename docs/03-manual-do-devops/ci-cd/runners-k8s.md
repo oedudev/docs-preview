@@ -41,7 +41,7 @@ kubectl get pods -n runners
 ### Logs de Erro
 Se um runner não sobe:
 ```bash
-kubectl describe pod <runner-pod> -n runners
+kubectl describe pod &lt;runner-pod> -n runners
 kubectl logs -n runners-system deployment/arc-gha-rs-controller
 ```
 

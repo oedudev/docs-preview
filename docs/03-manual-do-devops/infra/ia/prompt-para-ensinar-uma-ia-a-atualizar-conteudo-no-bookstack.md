@@ -17,8 +17,8 @@ Sua tarefa é interagir com uma instância específica do BookStack para atualiz
 **Autenticação na API:**
 
 *   **Método:** Autenticação baseada em Token.
-*   **Cabeçalho HTTP Necessário:** `Authorization: Token <SEU_TOKEN_ID>:<SEU_TOKEN_SECRET>`
-*   **⚠️ Nota de Segurança Importante:** Os valores `<SEU_TOKEN_ID>` e `<SEU_TOKEN_SECRET>` são placeholders. Em uma implementação real, estes tokens NUNCA devem ser codificados diretamente no prompt ou no código. Eles devem ser fornecidos de forma segura à IA no momento da execução (por exemplo, através de variáveis de ambiente ou um sistema de gerenciamento de segredos).
+*   **Cabeçalho HTTP Necessário:** `Authorization: Token &lt;SEU_TOKEN_ID>:&lt;SEU_TOKEN_SECRET>`
+*   **⚠️ Nota de Segurança Importante:** Os valores `&lt;SEU_TOKEN_ID>` e `&lt;SEU_TOKEN_SECRET>` são placeholders. Em uma implementação real, estes tokens NUNCA devem ser codificados diretamente no prompt ou no código. Eles devem ser fornecidos de forma segura à IA no momento da execução (por exemplo, através de variáveis de ambiente ou um sistema de gerenciamento de segredos).
 
 **Fluxo Geral para Atualizar uma Página no BookStack:**
 
@@ -36,7 +36,7 @@ Sua tarefa é interagir com uma instância específica do BookStack para atualiz
 3.  **Atualizar a Página:**
     *   Endpoint: `PUT {URL_BASE}/api/pages/{page_id}`
     *   Método HTTP: `PUT`
-    *   Cabeçalhos: `Content-Type: application/json`, `Authorization: Token <SEU_TOKEN_ID>:<SEU_TOKEN_SECRET>`
+    *   Cabeçalhos: `Content-Type: application/json`, `Authorization: Token &lt;SEU_TOKEN_ID>:&lt;SEU_TOKEN_SECRET>`
     *   Corpo da Requisição (JSON). Campos comuns para atualização:
         *   `book_id` (integer, opcional): ID do livro ao qual a página pertence. Mude apenas se for mover a página.
         *   `name` (string, opcional): Novo nome para a página.
@@ -61,7 +61,7 @@ Sua tarefa é interagir com uma instância específica do BookStack para atualiz
 2.  **Atualizar o Livro:**
     *   Endpoint: `PUT {URL_BASE}/api/books/{book_id}`
     *   Método HTTP: `PUT`
-    *   Cabeçalhos: `Content-Type: application/json`, `Authorization: Token <SEU_TOKEN_ID>:<SEU_TOKEN_SECRET>`
+    *   Cabeçalhos: `Content-Type: application/json`, `Authorization: Token &lt;SEU_TOKEN_ID>:&lt;SEU_TOKEN_SECRET>`
     *   Corpo da Requisição (JSON). Campos comuns para atualização:
         *   `name` (string): Novo nome para o livro.
         *   `description` (string): Nova descrição para o livro.
@@ -81,8 +81,8 @@ Sua tarefa é interagir com uma instância específica do BookStack para atualiz
 import requests
 import json
 
-TOKEN_ID = "<SEU_TOKEN_ID>"  # Substituir de forma segura
-TOKEN_SECRET = "<SEU_TOKEN_SECRET>"  # Substituir de forma segura
+TOKEN_ID = "&lt;SEU_TOKEN_ID>"  # Substituir de forma segura
+TOKEN_SECRET = "&lt;SEU_TOKEN_SECRET>"  # Substituir de forma segura
 BASE_URL = "https://ajuda.digitalsys.com.br"
 PAGE_ID_TO_UPDATE = 57  # Exemplo de ID da página
 

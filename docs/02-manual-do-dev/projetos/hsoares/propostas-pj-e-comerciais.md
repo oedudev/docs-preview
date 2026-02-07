@@ -45,7 +45,7 @@ Acessando [https://dev.portoseguro.com.br/api-portal/content/apis-porto](https:/
 
 Apos fazer alguns testes no Postman com as credenciais (client id e client secret) e ler o seguinte trecho na documentaçao do "Porto Seguro Residencial" :
 
-`1. Para obter o token, cada parceiro deve possuir suas próprias credenciais: **Client ID e Client Secret**. 2. Essas credenciais são geradas através da criação de uma APP no [Portal do Desenvolvedor](<https://dev.portoseguro.com.br/api-portal/myapps/new>). 3. A concessão de token a partir dessas credenciais só estará disponível após **aprovação da APP pela Porto Seguro**`
+`1. Para obter o token, cada parceiro deve possuir suas próprias credenciais: **Client ID e Client Secret**. 2. Essas credenciais são geradas através da criação de uma APP no [Portal do Desenvolvedor](&lt;https://dev.portoseguro.com.br/api-portal/myapps/new>). 3. A concessão de token a partir dessas credenciais só estará disponível após **aprovação da APP pela Porto Seguro**`
 
 Cheguei a conclusao que nao temos acesso a esse produto pois nao foi marcado na hora de criar um novo app no portal de desenvoldor da porto
 

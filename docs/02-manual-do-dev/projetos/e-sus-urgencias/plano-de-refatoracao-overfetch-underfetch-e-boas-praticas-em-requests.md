@@ -26,7 +26,7 @@ network da homePage
 
 #### **Requests UserID**
 
-#### **3.1 Ocorrência 1 – Recuperação de** `user_id`**
+#### **3.1 Ocorrência 1 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
 
 **Local:** Função
 
@@ -50,7 +50,7 @@ network da homePage
 - Utilizar a rota `/shared/possible-values` para incluir o retorno do nome do usuário e id autenticado.
 - Dessa forma, evitamos múltiplas requests e eliminamos a necessidade de buscar todos os usuários apenas para identificar o logado.
 
-#### **3.2 Ocorrência 2 – Variável** `userId` **não utilizada**
+#### **3.2 Ocorrência 2 – Variável** `&lt;strong class="editor-theme-bold editor-theme-code">userId&lt;/strong>` **não utilizada**
 
 **Local:** Função:
 
@@ -69,7 +69,7 @@ network da homePage
 
 - Remover a request e a variável, já que o valor não é utilizado.
 
-#### **3.3 Ocorrência 3 – Recuperação de** `user_id`**
+#### **3.3 Ocorrência 3 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
 
 **Local:** Função (composables/usePhoneSystemService.ts):
 
@@ -88,7 +88,7 @@ network da homePage
 
 - Remover a request, no backend existe uma função para pegar o id do usuario pelo token da request.
 
-<u>obs: Essa ocorrência ira existir em todos as paginas que utilizam o componente </u><u>**callSystem**</u><u> pode ser resolvida posteriormente</u>
+&lt;u>obs: Essa ocorrência ira existir em todos as paginas que utilizam o componente &lt;/u>&lt;u>**callSystem**&lt;/u>&lt;u> pode ser resolvida posteriormente&lt;/u>
 
 #### **Requests User**
 
@@ -111,7 +111,7 @@ network da homePage
 - Reutilizar a solução implementada via `/shared/possible-values`, retornando diretamente o nome do usuário autenticado.
 - Assim, elimina-se a necessidade dessa chamada extra.
 
-#### **3.5 Ocorrência 5 – Request e Processamento de usuários em** `fetchOptions`**
+#### **3.5 Ocorrência 5 – Request e Processamento de usuários em** `&lt;strong class="editor-theme-bold editor-theme-code">fetchOptions&lt;/strong>`**
 
 **Local:** Função `fetchOptions` processo/request utilizado para popular o campo ***Enviar para***
 
@@ -224,7 +224,7 @@ network da homePage
 - Remover os campos `employee` e `open_incident` do retorno da rota.
 - Garantir que a rota entregue **somente os elementos realmente utilizados** para popular a página.
 
-obs: a remoção de employee deve ser feita depois da implementação/correção da <u>**Ocorrência 2**</u>
+obs: a remoção de employee deve ser feita depois da implementação/correção da &lt;u>**Ocorrência 2**&lt;/u>
 
 #### **3.9 Ocorrência 9 – Problema com Requests repetidas**
 
@@ -243,7 +243,7 @@ obs: a remoção de employee deve ser feita depois da implementação/correção
 - **Requisições duplicadas** aumentam o consumo de rede e tornam a navegação mais lenta.
 - O frontend perde eficiência ao não reutilizar os dados já disponíveis no estado da página.
 
-**Obs: Esse comportamento já foi apontado como um problema recorrente na documentação** [**Documentação Front-End... | Ajuda DigitalSys**](https://ajuda.digitalsys.com.br/books/manual-do-desenvolvedor/page/documentacao-front-end-atomic-design) <u>**2. Requisições nos componentes.**</u>
+**Obs: Esse comportamento já foi apontado como um problema recorrente na documentação** [**Documentação Front-End... | Ajuda DigitalSys**](https://ajuda.digitalsys.com.br/books/manual-do-desenvolvedor/page/documentacao-front-end-atomic-design) &lt;u>**2. Requisições nos componentes.**&lt;/u>
 
 **Solução proposta:**
 
@@ -306,7 +306,7 @@ Na **RegulationMenu** foram identificadas diversas requests durante a renderiza�
 
 #### **Requests UserID**
 
-#### **4.1 Ocorrência 1 – Recuperação de** `user_id`**
+#### **4.1 Ocorrência 1 – Recuperação de** `&lt;strong class="editor-theme-bold editor-theme-code">user_id&lt;/strong>`**
 
 **Local:** Função
 
@@ -353,7 +353,7 @@ Aplicar a mesma estratégia de correção definida para as ocorrências anterior
 **Obs:**  
 Esta ocorrência não exige uma nova solução técnica, mas sim a **aplicação da mesma refatoração já descrita nas Ocorrências 2 e 4**. Ambas as requisições tem a mesma correção da **Ocorrência 2 e Ocorrência 4 do médico regulador.**
 
-#### **4.3 Ocorrência 3 – Requisições desnecessárias** `/user/{id}` **e** `/employee/user_id/{id}`**
+#### **4.3 Ocorrência 3 – Requisições desnecessárias** `&lt;strong class="editor-theme-bold editor-theme-code">/user/{id}&lt;/strong>` **e** `&lt;strong class="editor-theme-bold editor-theme-code">/employee/user_id/{id}&lt;/strong>`**
 
 **Local:**  
 Pontos do sistema Médico Regulador onde são feitas consultas individuais ao usuário logado.

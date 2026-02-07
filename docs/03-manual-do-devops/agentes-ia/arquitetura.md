@@ -25,7 +25,7 @@ Os agentes não são mais Droplets isolados. Eles são **Deployments Kubernetes*
 3.  **Configuração e Segredos:**
     *   Nenhuma credencial fica hardcoded no Git.
     *   Todas as variáveis sensíveis (`GITHUB_TOKEN`, `LINEAR_API_KEY`, Tokens do Gateway) vêm do **HashiCorp Vault**.
-    *   O **External Secrets Operator (ESO)** sincroniza esses segredos para Secrets nativos do K8s (`<agente>-env`), que são injetados no Pod via `envFrom`.
+    *   O **External Secrets Operator (ESO)** sincroniza esses segredos para Secrets nativos do K8s (`&lt;agente>-env`), que são injetados no Pod via `envFrom`.
 
 ## Estrutura do Repositório (`agents`)
 
@@ -46,10 +46,10 @@ agents/
 
 1.  **Atualização de Código/Ferramentas:**
     *   Push no `agents/base/Dockerfile` -> GitHub Actions builda nova imagem -> `registry.digitalocean.com/...:latest`.
-    *   Para aplicar: `kubectl rollout restart deployment/<agente> -n bots`.
+    *   Para aplicar: `kubectl rollout restart deployment/&lt;agente> -n bots`.
 
 2.  **Atualização de Configuração:**
-    *   Alterar `.yaml` no repo `agents` -> `kubectl apply -f agents/<agente>/k8s/`.
+    *   Alterar `.yaml` no repo `agents` -> `kubectl apply -f agents/&lt;agente>/k8s/`.
 
 3.  **Atualização de Segredos:**
-    *   Editar no Vault (`kv/agents/<agente>`) -> ESO sincroniza em 1 min -> Restart do Pod (se necessário para ler nova ENV).
+    *   Editar no Vault (`kv/agents/&lt;agente>`) -> ESO sincroniza em 1 min -> Restart do Pod (se necessário para ler nova ENV).
