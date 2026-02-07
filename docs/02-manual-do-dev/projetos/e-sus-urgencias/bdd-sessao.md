@@ -1,7 +1,7 @@
 
 # BDD Sessão
 
-<u>**Funcionalidade: Obter e manter tokens de sessão**</u>
+&lt;u>**Funcionalidade: Obter e manter tokens de sessão**&lt;/u>
 
 Como um usuário
 

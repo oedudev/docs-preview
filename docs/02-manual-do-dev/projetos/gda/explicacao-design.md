@@ -9,8 +9,8 @@ O sistema GDA adota uma paleta de cores e tipografia cuidadosamente selecionadas
 
 ##### **Paleta Oficial de Cores:**
 
-- Laranja (#DC5915): Representa energia e vitalidade. [![image.png](/img/explicacao-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/6e6gi8jpJARn4wSs-image.png)
-- Azul (#1C242C): Evoca confiança e serenidade. [![image.png](/img/explicacao-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/uK7M9zo1PpPKSGbY-image.png)
+- Laranja (#DC5915): Representa energia e vitalidade. [![image.png](assets/explicacao-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/6e6gi8jpJARn4wSs-image.png)
+- Azul (#1C242C): Evoca confiança e serenidade. [![image.png](assets/explicacao-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2024-12/uK7M9zo1PpPKSGbY-image.png)
 
 Essas cores devem ser usadas com parcimônia em botões, cabeçalhos e elementos-chave.
 

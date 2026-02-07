@@ -32,4 +32,4 @@ Então verei o resultado da análise "Regressão Linear Simples"
 
 ##### Segue um print de como deve ser criados os card no testlink.
 
-[![image.png](/img/template-para-caso-de-teste-testlink-qa-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-12/dWJB8aEwpmoFtlm1-image.png)
+[![image.png](assets/template-para-caso-de-teste-testlink-qa-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-12/dWJB8aEwpmoFtlm1-image.png)

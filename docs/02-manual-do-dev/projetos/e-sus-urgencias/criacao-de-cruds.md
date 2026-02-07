@@ -102,22 +102,22 @@ import { CreateTeamDTO } from './dto/team.dto';
 export class TeamService {
   constructor(
     @InjectRepository(Team)
-    private teamRepository: Repository<Team>,
+    private teamRepository: Repository&lt;Team>,
   ) {}
 
   // Create
-  async create(createTeamDto: CreateTeamDTO): Promise<Team> {
+  async create(createTeamDto: CreateTeamDTO): Promise&lt;Team> {
     const team = this.teamRepository.create(createTeamDto);
     return this.teamRepository.save(team);
   }
 
   // Retrieve
-  async findAll(): Promise<Team[]> {
+  async findAll(): Promise&lt;Team[]> {
     return this.teamRepository.find();
   }
 
   // Update
-  async update(id: number, updateTeamDto: CreateTeamDTO): Promise<Team> {
+  async update(id: number, updateTeamDto: CreateTeamDTO): Promise&lt;Team> {
     const team = await this.teamRepository.findOne({ where: { id } });
     if (!team) {
       throw new Error('Equipe não encontrada');
@@ -127,7 +127,7 @@ export class TeamService {
   }
 
   // Delete
-  async delete(id: number): Promise<Team> {
+  async delete(id: number): Promise&lt;Team> {
     const team = await this.teamRepository.findOne({ where: { id } });
     if (!team) {
       throw new Error('Equipe não encontrada');
@@ -152,12 +152,12 @@ export class TeamController {
   constructor(private readonly teamService: TeamService) {}
 
   @Post()
-  async create(@Body() createTeamDto: CreateTeamDTO): Promise<Team> {
+  async create(@Body() createTeamDto: CreateTeamDTO): Promise&lt;Team> {
     return this.teamService.create(createTeamDto);
   }
 
   @Get()
-  async findAll(): Promise<Team[]> {
+  async findAll(): Promise&lt;Team[]> {
     return this.teamService.findAll();
   }
 
@@ -165,12 +165,12 @@ export class TeamController {
   async update(
     @Param('id') id: number,
     @Body() updateTeamDto: CreateTeamDTO
-  ): Promise<Team> {
+  ): Promise&lt;Team> {
     return this.teamService.update(id, updateTeamDto);
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: number): Promise<Team> {
+  async delete(@Param('id') id: number): Promise&lt;Team> {
     return this.teamService.delete(id);
   }
 }
@@ -233,12 +233,12 @@ import { TeamModule } from './team/team.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: <type>,
-      host: process.env.DB_HOST || <host>,
+      type: &lt;type>,
+      host: process.env.DB_HOST || &lt;host>,
       port: parseInt(process.env.DB_PORT) || ,
-      username: process.env.DB_USER || <username>,
+      username: process.env.DB_USER || &lt;username>,
       password: process.env.DB_PASSWORD || ,
-      database: process.env.DB_NAME || <databaseName>,
+      database: process.env.DB_NAME || &lt;databaseName>,
       entities: [Item, Ambulance, Profile, CallSource, CallType, JobTitle, Occurrence, Team],
       synchronize: true,
       autoLoadEntities: true,

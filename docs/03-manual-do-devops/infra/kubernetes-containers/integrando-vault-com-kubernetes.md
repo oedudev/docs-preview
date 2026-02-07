@@ -30,23 +30,23 @@ Dito isso, as etapas são:
 
 ```bash
 ## 2. Criar um arquivo de policy com a nomenclatura "nome-da-policy.hcl" e estutura abaixo
-  path "kv/data/apps/<ambiente>//*" {
+  path "kv/data/apps/&lt;ambiente>//*" {
     capabilities = ["read", "list"]
   }
-  path "kv/metadata/apps/<ambiente>//*" {
+  path "kv/metadata/apps/&lt;ambiente>//*" {
     capabilities = ["list"]
   }
 ```
 
 ```bash
 ## 3. Aplicar a policy
-  vault policy write <nome-da-policy> <nome-da-policy>.hcl
+  vault policy write &lt;nome-da-policy> &lt;nome-da-policy>.hcl
 ```
 
 ```bash
 ## 4. Criar role
-  vault write auth/approle/role/<nome-da-role> \
-    token_policies="<nome-da-policy>" \
+  vault write auth/approle/role/&lt;nome-da-role> \
+    token_policies="&lt;nome-da-policy>" \
     token_ttl=1h \
     token_max_ttl=4h
 ```
@@ -55,61 +55,61 @@ Obs.: note que &lt;nome-da-policy&gt; foi definido na etapa 3
 
 ```bash
 ## 5. Obtenha o valor de Role ID e Secret ID para utilizar no passo 6
-  vault read auth/approle/role/<nome-da-role>/role-id           ## OBTÉM O ROLE ID
-  vault write -f auth/approle/role/<nome-da-role>/secret-id.    ## OBTÉM O SECRET ID
+  vault read auth/approle/role/&lt;nome-da-role>/role-id           ## OBTÉM O ROLE ID
+  vault write -f auth/approle/role/&lt;nome-da-role>/secret-id.    ## OBTÉM O SECRET ID
 
 ```
 
 ```bash
 ## 6. Criar o secret no namespace. O exemplo abaixo foi gerado via kubectl, porém pode ser feito com outra ferramenta que te permita criar um secret
 
-kubectl create secret generic <nome-do-secret> \
-  -n <namespace> \
-  --from-literal=roleId=<ROLE_ID> \
-  --from-literal=secretId=<SECRET_ID>
+kubectl create secret generic &lt;nome-do-secret> \
+  -n &lt;namespace> \
+  --from-literal=roleId=&lt;ROLE_ID> \
+  --from-literal=secretId=&lt;SECRET_ID>
 ```
 
 ```bash
-## 7. Crie um arquivo de SecretStore (<nome-do-arquivo>.yml), com a estrutura abaixo
+## 7. Crie um arquivo de SecretStore (&lt;nome-do-arquivo>.yml), com a estrutura abaixo
 apiVersion: external-secrets.io/v1
 kind: ClusterSecretStore
 metadata:
-  name: <nome da store>
+  name: &lt;nome da store>
 spec:
   provider:
     vault:
-      server: <URL do vault>
+      server: &lt;URL do vault>
       path: kv
       version: v2
       auth:
         appRole:
           path: approle
           roleRef:
-            name: <nome-do-secret>
+            name: &lt;nome-do-secret>
             key: roleId
           secretRef:
-            name: <nome-do-secret>
+            name: &lt;nome-do-secret>
             key: secretId
 ```
 
 ```bash
 ## 8. Aplique esse SecretStore no seu cluster
-kubectl apply -f <nome-do-arquivo>.yaml
+kubectl apply -f &lt;nome-do-arquivo>.yaml
 ```
 
 ```bash
-## 9. Crie o arquivo de ExternalSecret (<nome-do-arquivo>.yml)
+## 9. Crie o arquivo de ExternalSecret (&lt;nome-do-arquivo>.yml)
 apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: esus-api-secret
-  namespace: <namespace a aplicar>
+  namespace: &lt;namespace a aplicar>
 spec:
   secretStoreRef:
-    name: <nome da store>  # 👈 exatamente o nome SecretStore, da etapa 7
+    name: &lt;nome da store>  # 👈 exatamente o nome SecretStore, da etapa 7
     kind: SecretStore
   target:
-    name: <nome da secret que será criado p/ salvar as informacoes>
+    name: &lt;nome da secret que será criado p/ salvar as informacoes>
     creationPolicy: Owner
   dataFrom:
     - extract:
@@ -118,7 +118,7 @@ spec:
 
 ```bash
 ## 10. Aplique o arquivo de ExternalSecret
-kubectl apply -f <nome do arquivo>
+kubectl apply -f &lt;nome do arquivo>
 ```
 
 Agora é possível utilizar o secret no deploy do kubernetes, conforme exemplo abaixo:

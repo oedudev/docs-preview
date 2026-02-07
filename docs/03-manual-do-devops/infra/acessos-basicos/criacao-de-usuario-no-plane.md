@@ -10,14 +10,14 @@ updated_at: 2025-06-09T18:26:54.000000Z
 
 1. No link do [Plane](https://plane.digitalsys.com.br/digitalsys/), abra a área de configurações do Workspace, conforme rotas abaixo:
 
-[![Captura de Tela 2025-06-09 às 15.14.27.png](/img/criacao-de-usuario-no-plane-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/scaled-1680-/FiVAZaK37KSvLzSH-captura-de-tela-2025-06-09-as-15-14-27.png)
+[![Captura de Tela 2025-06-09 às 15.14.27.png](assets/criacao-de-usuario-no-plane-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/scaled-1680-/FiVAZaK37KSvLzSH-captura-de-tela-2025-06-09-as-15-14-27.png)
 
 2\. Em seguida, vá em Members &gt; Add Member:
 
-[![Captura de Tela 2025-06-09 às 15.18.48.png](/img/criacao-de-usuario-no-plane-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/scaled-1680-/ioi9NPDh4spzuf66-captura-de-tela-2025-06-09-as-15-18-48.png)
+[![Captura de Tela 2025-06-09 às 15.18.48.png](assets/criacao-de-usuario-no-plane-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/scaled-1680-/ioi9NPDh4spzuf66-captura-de-tela-2025-06-09-as-15-18-48.png)
 
 3\. Neste novo modal, preencha o e-mail DigitalSys do usuário e clique em "Send invitations":  
-[![image.png](/img/criacao-de-usuario-no-plane-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/mPQV5S82TcLdp0e0-image.png)
+[![image.png](assets/criacao-de-usuario-no-plane-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-06/mPQV5S82TcLdp0e0-image.png)
 
 4. Neste momento o colaborador deve ter recebido um e-mail para que ele possa entrar no Plane (lembre-se que o acesso só é possível via VPN). 
 

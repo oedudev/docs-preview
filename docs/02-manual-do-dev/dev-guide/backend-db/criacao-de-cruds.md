@@ -21,7 +21,7 @@ nest --version
 
 Em caso de sucesso, a versão atual do NestCLI deve aparecer:  
   
-[![image.png](/img/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
+[![image.png](assets/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
 
 Após isso, dentro do repositório do projeto, navege, utilizando o terminal, até o diretório /backend. Uma vez dentro desse diretório, utilize os seguintes comando para criação do **Module**, **Service**, e **Controller**.
 
@@ -44,11 +44,11 @@ nest generate controller /team
 Ao inserir cada comando, será solicitado em qual projeto queremos criar esse novo módulo. Nesse caso, selecionaremos "api"
 
   
-[![image.png](/img/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
+[![image.png](assets/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
 
 Feito isso, teremos a seguinte estrutura dentro de /backend/apps/api/src  
   
-[![image.png](/img/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
+[![image.png](assets/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
 
 Note que uma pasta **/team** foi criada dentro de **/src**, bem como nosso service, controller e module.
 
@@ -58,7 +58,7 @@ Por fim, teremos a seguinte estrutura dentro de **/team**:
 
 **OBS:** Arquivos com a extensão **.spec** são arquivos de teste. Eles são gerados automaticamente pelo CLI do nestJS. Vamos apagá-los, por momento. Podemos recriá-los manualmente, futuramente, caso presisemos.
 
-[![image.png](/img/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
+[![image.png](assets/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
 
 ##### - Definições da Entidade e DTOs
 
@@ -102,22 +102,22 @@ import { CreateTeamDTO } from './dto/team.dto';
 export class TeamService {
   constructor(
     @InjectRepository(Team)
-    private teamRepository: Repository<Team>,
+    private teamRepository: Repository&lt;Team>,
   ) {}
 
   // Create
-  async create(createTeamDto: CreateTeamDTO): Promise<Team> {
+  async create(createTeamDto: CreateTeamDTO): Promise&lt;Team> {
     const team = this.teamRepository.create(createTeamDto);
     return this.teamRepository.save(team);
   }
 
   // Retrieve
-  async findAll(): Promise<Team[]> {
+  async findAll(): Promise&lt;Team[]> {
     return this.teamRepository.find();
   }
 
   // Update
-  async update(id: number, updateTeamDto: CreateTeamDTO): Promise<Team> {
+  async update(id: number, updateTeamDto: CreateTeamDTO): Promise&lt;Team> {
     const team = await this.teamRepository.findOne({ where: { id } });
     if (!team) {
       throw new Error('Equipe não encontrada');
@@ -127,7 +127,7 @@ export class TeamService {
   }
 
   // Delete
-  async delete(id: number): Promise<Team> {
+  async delete(id: number): Promise&lt;Team> {
     const team = await this.teamRepository.findOne({ where: { id } });
     if (!team) {
       throw new Error('Equipe não encontrada');
@@ -152,12 +152,12 @@ export class TeamController {
   constructor(private readonly teamService: TeamService) {}
 
   @Post()
-  async create(@Body() createTeamDto: CreateTeamDTO): Promise<Team> {
+  async create(@Body() createTeamDto: CreateTeamDTO): Promise&lt;Team> {
     return this.teamService.create(createTeamDto);
   }
 
   @Get()
-  async findAll(): Promise<Team[]> {
+  async findAll(): Promise&lt;Team[]> {
     return this.teamService.findAll();
   }
 
@@ -165,12 +165,12 @@ export class TeamController {
   async update(
     @Param('id') id: number,
     @Body() updateTeamDto: CreateTeamDTO
-  ): Promise<Team> {
+  ): Promise&lt;Team> {
     return this.teamService.update(id, updateTeamDto);
   }
 
   @Delete(':id')
-  async delete(@Param('id') id: number): Promise<Team> {
+  async delete(@Param('id') id: number): Promise&lt;Team> {
     return this.teamService.delete(id);
   }
 }
@@ -233,12 +233,12 @@ import { TeamModule } from './team/team.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: <type>,
-      host: process.env.DB_HOST || <host>,
+      type: &lt;type>,
+      host: process.env.DB_HOST || &lt;host>,
       port: parseInt(process.env.DB_PORT) || ,
-      username: process.env.DB_USER || <username>,
+      username: process.env.DB_USER || &lt;username>,
       password: process.env.DB_PASSWORD || ,
-      database: process.env.DB_NAME || <databaseName>,
+      database: process.env.DB_NAME || &lt;databaseName>,
       entities: [Item, Ambulance, Profile, CallSource, CallType, JobTitle, Occurrence, Team],
       synchronize: true,
       autoLoadEntities: true,
@@ -263,11 +263,11 @@ Finalmente, podemos buildar nosso projeto e testar nossos endpoints:
 
 **POST:**
 
-[![image.png](/img/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
+[![image.png](assets/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
   
 **GET:**
 
-[![image.png](/img/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
+[![image.png](assets/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
 
 ##### - Swagger e ducumentação
 

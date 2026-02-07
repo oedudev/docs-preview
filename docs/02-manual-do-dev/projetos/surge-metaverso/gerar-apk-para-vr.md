@@ -7,19 +7,19 @@ Este guia fornece um passo a passo detalhado para configurar um ambiente de dese
 
 Baixe e instale a **Unreal Engine 5.5** pelo **Epic Games Launcher**, garantindo que a opção de suporte para Android esteja habilitada durante a instalação.
 
-![](/img/gerar-apk-para-vr-1.png)
+![](assets/gerar-apk-para-vr-1.png)
 
 ### **2 - Instalar o Android Studio (Ladybug 2024.2.1)**
 
-Baixe e instale o **Android Studio versão Ladybug 2024.2.1** no link oficial:[ <u>Download Android Studio</u>](https://developer.android.com/studio/archive)
+Baixe e instale o **Android Studio versão Ladybug 2024.2.1** no link oficial:[ &lt;u>Download Android Studio&lt;/u>](https://developer.android.com/studio/archive)
 
 Durante a instalação, certifique-se de incluir o SDK do Android.
 
-![](/img/gerar-apk-para-vr-2.png)
+![](assets/gerar-apk-para-vr-2.png)
 
 ### **3 - Instalar o Java SE Development Kit (JDK 17.0.6)**
 
-A Unreal Engine requer o JDK para compilar projetos para Android. Faça o download e instale a versão **Java SE Development Kit 17.0.6** pelo link:[ <u>Download JDK 17.0.6</u>](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+A Unreal Engine requer o JDK para compilar projetos para Android. Faça o download e instale a versão **Java SE Development Kit 17.0.6** pelo link:[ &lt;u>Download JDK 17.0.6&lt;/u>](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
 ### **4 - Configurar o Android SDK e NDK**
 
@@ -27,32 +27,32 @@ Após instalar o Android Studio:
 
 1. Abra o **Android Studio** e vá até **More Actions &gt; SDK Manager**
 
-![](/img/gerar-apk-para-vr-3.png)
+![](assets/gerar-apk-para-vr-3.png)
 
 2. Na aba **SDK Platforms**, instale a versão Android 12L.
 
-![](/img/gerar-apk-para-vr-4.png)
+![](assets/gerar-apk-para-vr-4.png)
 
 3. Na aba **SDK Tools**, instale:
 4. - Android SDK Build Tools
 
-![](/img/gerar-apk-para-vr-5.png)
+![](assets/gerar-apk-para-vr-5.png)
 
 - Android NDK 
 
-![](/img/gerar-apk-para-vr-6.png)
+![](assets/gerar-apk-para-vr-6.png)
 
 - Android SDK Command-line Tools
 
-![](/img/gerar-apk-para-vr-7.png)
+![](assets/gerar-apk-para-vr-7.png)
 
 - CMake (versão compatível)
 
-![](/img/gerar-apk-para-vr-8.png)
+![](assets/gerar-apk-para-vr-8.png)
 
 - Últimas configurações
 
-![](/img/gerar-apk-para-vr-9.png)
+![](assets/gerar-apk-para-vr-9.png)
 
 ### **5 - Configurar a Unreal Engine para Desenvolvimento Android**
 
@@ -60,7 +60,7 @@ Após instalar o Android Studio:
 2. Navegue até **Platforms &gt; Android** e configure as opções:
 3. - Defina o **Minimum SDK Version** e **Target SDK Version** para 32
 
-![](/img/gerar-apk-para-vr-10.png)
+![](assets/gerar-apk-para-vr-10.png)
 
 3. Navegue até **Platforms &gt; Android SDK** e configure as opções:
 4. - Configure o **SDK** **e o NDK Path** apontando para os diretórios corretos dentro do Android Studio.
@@ -68,7 +68,7 @@ Após instalar o Android Studio:
     - Configure o **SDK API Level** para matchndk.
     - Configure o **NDK API Level** para android-32.
 
-![](/img/gerar-apk-para-vr-11.png)
+![](assets/gerar-apk-para-vr-11.png)
 
 ### **6 - Configurar gerar APK**
 
@@ -76,7 +76,7 @@ Após instalar o Android Studio:
 2. - Selecione a opção envio.
     - Selecione a opção **ASTC**.
 
-![](/img/gerar-apk-para-vr-12.png)
+![](assets/gerar-apk-para-vr-12.png)
 
 ### **7 - Gerar APK**
 
@@ -87,8 +87,8 @@ Agora seu ambiente está configurado para desenvolver e exportar projetos VR na 
 
 ### **8 - Help Links**
 
-[<u>https://www.youtube.com/watch?v=mZ0yHY3X6OQ</u>](https://www.youtube.com/watch?v=mZ0yHY3X6OQ)
+[&lt;u>https://www.youtube.com/watch?v=mZ0yHY3X6OQ&lt;/u>](https://www.youtube.com/watch?v=mZ0yHY3X6OQ)
 
-[<u>https://dev.epicgames.com/documentation/en-us/unreal-engine/set-up-android-sdk-ndk-and-android-studio-using-turnkey-for-unreal-engine</u>](https://dev.epicgames.com/documentation/en-us/unreal-engine/set-up-android-sdk-ndk-and-android-studio-using-turnkey-for-unreal-engine)
+[&lt;u>https://dev.epicgames.com/documentation/en-us/unreal-engine/set-up-android-sdk-ndk-and-android-studio-using-turnkey-for-unreal-engine&lt;/u>](https://dev.epicgames.com/documentation/en-us/unreal-engine/set-up-android-sdk-ndk-and-android-studio-using-turnkey-for-unreal-engine)
 
-[<u>https://dev.epicgames.com/community/learning/tutorials/PYP7/unreal-engine-5-5-x-for-meta-quest-vr</u>](https://dev.epicgames.com/community/learning/tutorials/PYP7/unreal-engine-5-5-x-for-meta-quest-vr)
+[&lt;u>https://dev.epicgames.com/community/learning/tutorials/PYP7/unreal-engine-5-5-x-for-meta-quest-vr&lt;/u>](https://dev.epicgames.com/community/learning/tutorials/PYP7/unreal-engine-5-5-x-for-meta-quest-vr)

@@ -109,25 +109,25 @@ Com o DIP, todo esse processo de cotação, análise e retorno das propostas ser
 
 **Repo:** Responsável por interagir com o banco de dados. Contendo a lógica da persistência desses dados. Ex:
 
-![](/img/documentacao-dip-1.png)
+![](assets/documentacao-dip-1.png)
 
 **Service:** Responsável pela aplicação das transformações necessárias para a manipulação dos dados. Ex:
 
-![](/img/documentacao-dip-2.png)
+![](assets/documentacao-dip-2.png)
 
 **Facade:** Responsável por simplificar a interação com vários componentes, expondo funcionalidades de serviços sem expor detalhes internos. Ex:
 
-![](/img/documentacao-dip-3.png)
+![](assets/documentacao-dip-3.png)
 
 **Resolvers:** Invoca o Facede para atender as requisições da API, obtendo os dados e, consequentemente, realizando as operações necessárias. Ex:
 
-![](/img/documentacao-dip-4.png)
+![](assets/documentacao-dip-4.png)
 
 ### **Conteinerização**
 
 #### **Dockerfile do Backend**
 
-![](/img/documentacao-dip-5.png)
+![](assets/documentacao-dip-5.png)
 
 O Dockerfile define como a imagem do backend será construída e configurada. Ele segue um processo de duas etapas:
 
@@ -148,7 +148,7 @@ O Dockerfile define como a imagem do backend será construída e configurada. El
 
 #### **Docker-compose.yml**
 
-![](/img/documentacao-dip-6.png)
+![](assets/documentacao-dip-6.png)
 
 O arquivo docker-compose.yml é responsável por orquestrar os containers do backend, frontend e banco de dados.
 

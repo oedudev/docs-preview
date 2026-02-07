@@ -16,7 +16,7 @@ Este guia tem como objetivo ajudar na configuração do SonarCloud em projetos m
 ![](http://plane.digitalsys.com.br/uploads/d548ef5a-76b8-450b-b1c2-c98209a0d886/b128e97b2c8b415e864384c504aacde2-image.png)
 
 - Certifique que em “organization” esteja selecionada a organização da DigitalSys e escolha o repositório que deseja analisar
-- Se estiver configurando para um projeto monorepo, selecione a opção **"**Setup a <u>monorepo</u>**"** e escolha o repositório do seu projeto
+- Se estiver configurando para um projeto monorepo, selecione a opção **"**Setup a &lt;u>monorepo&lt;/u>**"** e escolha o repositório do seu projeto
 
 ![](http://plane.digitalsys.com.br/uploads/d548ef5a-76b8-450b-b1c2-c98209a0d886/2e413270ddaf4ca9b7c941bf03159a6a-image.png)
 
@@ -63,7 +63,7 @@ sonar.organization=digitalsys
 - Caso o projeto analisado seja monorepo, **além do arquivo de propriedades da raiz,** cada módulo deve conter seu próprio `sonar-project.properties`, alterando entre eles o sonar.projectKey para o informado no seu repositório próprio do SonarCloud
 - No arquivo de propriedades do SonarCloud também podem ser definidas algumas configurações, as mais utilizadas são:
 
- <colgroup><col style="width: 262px;"></col><col style="width: 356px;"></col><col style="width: 417px;"></col></colgroup>   **COMANDO**
+ &lt;colgroup>&lt;col style="width: 262px;">&lt;/col>&lt;col style="width: 356px;">&lt;/col>&lt;col style="width: 417px;">&lt;/col>&lt;/colgroup>   **COMANDO**
 
   **DESCRIÇÃO**
 

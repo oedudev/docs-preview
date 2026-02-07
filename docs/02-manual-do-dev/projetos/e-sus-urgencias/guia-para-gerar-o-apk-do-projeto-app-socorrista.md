@@ -27,7 +27,7 @@ Defina as chaves necessárias no arquivo `.env` do projeto
 
 No VS Code, clique na extensão do Ionic localizada na barra lateral.
 
-[![image.png](/img/guia-para-gerar-o-apk-do-projeto-app-socorrista-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/aFwiRTmuV1Y6Tj7a-image.png)
+[![image.png](assets/guia-para-gerar-o-apk-do-projeto-app-socorrista-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/aFwiRTmuV1Y6Tj7a-image.png)
 
 ##### **5. Executar o comando de sincronização do Capacitor**
 
@@ -49,7 +49,7 @@ Na extensão do Ionic, selecione:
 
 **Open in Android Studio**
 
-[![image.png](/img/guia-para-gerar-o-apk-do-projeto-app-socorrista-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/NpIqK3l2CScz8cQa-image.png)
+[![image.png](assets/guia-para-gerar-o-apk-do-projeto-app-socorrista-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/NpIqK3l2CScz8cQa-image.png)
 
 ##### **8. Gerar o APK**
 
@@ -57,7 +57,7 @@ No Android Studio, siga o caminho:
 
 **Menu hambúrguer → Build → Build App → Build APK**
 
-[![image.png](/img/guia-para-gerar-o-apk-do-projeto-app-socorrista-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/rXYc1LtgxMdPXdul-image.png)
+[![image.png](assets/guia-para-gerar-o-apk-do-projeto-app-socorrista-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/rXYc1LtgxMdPXdul-image.png)
 
 ##### **9. Encontrar o APK**
 
@@ -65,10 +65,10 @@ Após a finalização do build, aparecerá um alerta no canto inferior direito i
 Clique em **Locate**.
 
   
-[![image.png](/img/guia-para-gerar-o-apk-do-projeto-app-socorrista-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/QP7Ed5BYL2mYWSWE-image.png)
+[![image.png](assets/guia-para-gerar-o-apk-do-projeto-app-socorrista-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/QP7Ed5BYL2mYWSWE-image.png)
 
 ##### **10. Pronto!**
 
 O APK estará disponível na pasta exibida pelo Android Studio.
 
- [![image.png](/img/guia-para-gerar-o-apk-do-projeto-app-socorrista-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/9UQdpRh05PP5znL0-image.png)
+ [![image.png](assets/guia-para-gerar-o-apk-do-projeto-app-socorrista-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-11/9UQdpRh05PP5znL0-image.png)

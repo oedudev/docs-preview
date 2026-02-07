@@ -19,4 +19,4 @@
 
 **Volumetria compartilhada piloto:**
 
-[![volumetria total.jpeg](/img/documentacao-1.jpeg)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/LA3imCDIXj0xdvAH-volumetria-total.jpeg)
+[![volumetria total.jpeg](assets/documentacao-1.jpeg)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/LA3imCDIXj0xdvAH-volumetria-total.jpeg)
