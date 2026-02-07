@@ -59,7 +59,7 @@ Se o agente tem memória local importante (repositórios clonados, bases vetoria
 2.  Pare o serviço no Droplet antigo (`systemctl stop openclaw-gateway`).
 3.  Use `tar` via pipe para copiar:
     ```bash
-    ssh root@droplet "tar -C /root/.openclaw -cf - ." | kubectl exec -i pod-name -- tar -C /root/.openclaw -xf -
+    ssh root\@droplet "tar -C /root/.openclaw -cf - ." | kubectl exec -i pod-name -- tar -C /root/.openclaw -xf -
     ```
 4.  Reinicie o Pod para carregar o estado atualizado.
 

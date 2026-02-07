@@ -50,7 +50,7 @@ Props disponíveis:
 
     
 
-[![image.png](assets/documentacao-front-end-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
+[![image.png](/img/documentacao-front-end-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3lJ5VZG3hGTlab9p-image.png)
 
 #### **1.2 Componente: Button model 1**
 
@@ -83,7 +83,7 @@ Componente de Botão que pode ser configurado via props para se adequar a difere
 
     
 
-[![image.png](assets/documentacao-front-end-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
+[![image.png](/img/documentacao-front-end-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/jleCTabRZF2eJ9XW-image.png)
 
 #### **2. Requisições nos componentes**
 

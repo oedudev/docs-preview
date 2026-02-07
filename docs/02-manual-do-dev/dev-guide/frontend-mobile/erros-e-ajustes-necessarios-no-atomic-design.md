@@ -65,9 +65,9 @@ Atualmente existem dois componentes responsáveis por renderizar campos de input
 **Prioridade:**  
 Alta — impacta diretamente na manutenibilidade, consistência e evolução do design system.
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/Y87Q67XsJrIZGO55-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/Y87Q67XsJrIZGO55-image.png)
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/aqbUTzdR2oVkHZwd-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/aqbUTzdR2oVkHZwd-image.png)
 
 ##### **2.2 Duplicação de Componentes de Login**
 
@@ -87,14 +87,14 @@ Ambos possuem a mesma base estrutural (label, input, estilização e binding com
 
 **Correção Recomendada:**
 
-- Criar um **único componente unificado (**`<strong class="editor-theme-bold editor-theme-code">InputLogin.vue</strong>`**)** que consiga atender tanto inputs simples quanto inputs de senha.
+- Criar um **único componente unificado (**`InputLogin.vue`**)** que consiga atender tanto inputs simples quanto inputs de senha.
 - Utilizar a prop `type` para decidir o comportamento:
     - `type !== 'password'` → renderiza input padrão.
     - `type === 'password'` → renderiza input com botão para alternar visibilidade.
 - Manter suporte ao `v-model` (`modelValue` + `update:modelValue`) para garantir compatibilidade com formulários.
 - Centralizar estilos e comportamento para evitar duplicações.
 
-<u>**Importante:**</u><u> Definir os valores aceitos para </u><u>`type`</u><u> dentro de um</u><u> **ENUM (**</u><u>**`<strong class="editor-theme-bold editor-theme-code editor-theme-underline">INPUT_TYPES</strong>`**</u><u>**)**</u><u>, garantindo padronização no uso.</u>
+<u>**Importante:**</u><u> Definir os valores aceitos para </u><u>`type`</u><u> dentro de um</u><u> **ENUM (**</u><u>**`INPUT_TYPES`**</u><u>**)**</u><u>, garantindo padronização no uso.</u>
 
 **Componentes Identificados com Duplicação:**
 
@@ -104,7 +104,7 @@ Ambos possuem a mesma base estrutural (label, input, estilização e binding com
 **Prioridade:**  
 Média-Alta — impacta diretamente a consistência do design system e a manutenibilidade futura.
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/oH0nREjhKzVYzPUk-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/oH0nREjhKzVYzPUk-image.png)
 
 ##### **2.4 Duplicação de card tenants**
 
@@ -124,14 +124,14 @@ Atualmente existem dois componentes distintos para representar cartões de tenan
 - Manter a lógica de clique e remoção no mesmo componente, evitando duplicidade.
 - Substituir gradualmente os dois componentes duplicados pelo novo componente unificado.
 
-<u>**Importante:** </u><u>Centralizar os valores aceitos em um </u><u>**ENUM (**</u><u>**`<strong class="editor-theme-bold editor-theme-code editor-theme-underline">TENANT_ROLES</strong>`**</u><u>**)**</u><u> para garantir padronização e prevenir uso incorreto.</u>
+<u>**Importante:** </u><u>Centralizar os valores aceitos em um </u><u>**ENUM (**</u><u>**`TENANT_ROLES`**</u><u>**)**</u><u> para garantir padronização e prevenir uso incorreto.</u>
 
 **Componentes Identificados com Duplicação:**
 
 - `atoms/card-tenants.vue`
 - `atoms/card-tenants-fire.vue`
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FRwivif5G5XhnMuO-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FRwivif5G5XhnMuO-image.png)
 
 **Prioridade:**  
 Média — afeta diretamente a consistência visual e a manutenibilidade futura, mas não bloqueia a evolução imediata de outras funcionalidades.
@@ -168,7 +168,7 @@ Atualmente existem múltiplos componentes (ou implementações isoladas) para bo
 
 <u>**Importante:**</u><u> Podem existir mais botões com o mesmo estilo dos citados a cima</u>
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/iIUuH8s3vpY8IdkV-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/iIUuH8s3vpY8IdkV-image.png)
 
 **Prioridade:**  
 Alta — impacta diretamente a consistência visual, a manutenibilidade e a escalabilidade do design system.
@@ -185,7 +185,7 @@ Existem múltiplos componentes quase idênticos para confirmação de envio (pro
 - Crescimento desnecessário da base de componentes.
 
 **Correção Recomendada:**  
-Unificar em **um único componente** `<strong class="editor-theme-bold editor-theme-code">ConfirmationModal.vue</strong>`**, parametrizado por `props`:
+Unificar em **um único componente** `ConfirmationModal.vue`**, parametrizado por `props`:
 
 - `title` → título principal (`PROPOSTA ENVIADA!`, `CONTRATO ENVIADO!`).
 - `message` → mensagem principal de sucesso.
@@ -199,7 +199,7 @@ Unificar em **um único componente** `<strong class="editor-theme-bold editor-th
 - `atoms/sent-contract.vue`
 - `atoms/sent-proposal.vue`
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ENLIedDRiXpWKrrU-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ENLIedDRiXpWKrrU-image.png)
 
 **Prioridade:**  
 Média/Alta — reduz duplicação de código e facilita a criação de novos modais de confirmação no futuro
@@ -216,7 +216,7 @@ Existem múltiplos componentes `<select>` praticamente idênticos, variando apen
 - Maior dificuldade de manutenção e evolução.
 
 **Correção Recomendada:**  
-Criar um **componente único** `<strong class="editor-theme-bold editor-theme-code">BaseSelect.vue</strong>`** (apenas uma sugestão de nome) que recebe via `props`:
+Criar um **componente único** `BaseSelect.vue`** (apenas uma sugestão de nome) que recebe via `props`:
 
 - `modelValue` → valor selecionado (com `v-model`).
 - `placeholder` → primeira opção exibida (ex.: `"Status"`, `"Finalidade"`, `"Produto"`).
@@ -239,9 +239,9 @@ Criar um **componente único** `<strong class="editor-theme-bold editor-theme-co
 Portanto, de acordo com os princípios do Atomic Design, esse componente deve ser tratado como uma **molécula**.  
 A recomendação é que ele seja ajustado para utilizar o novo componente atômico `BaseSelect.vue`, garantindo assim consistência na hierarquia e reutilização correta dos átomos.
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/zYd4kmcHncwY3Z0A-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/zYd4kmcHncwY3Z0A-image.png)
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/bSMfY860OxM6OIHm-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/bSMfY860OxM6OIHm-image.png)
 
 **Prioridade:**  
 Alta — reduz 5 componentes para apenas um, melhora consistência e facilita manutenção.
@@ -263,7 +263,7 @@ Na construção do formulário `molecules/form-contract-offer.vue`, foram utiliz
 - Garantir que todos os inputs e selects utilizados nos formulários sigam a hierarquia do Atomic Design.
 - Manter a validação integrada ao `vee-validate`, mas acoplada aos componentes do design system.
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/PEPiHyGYCo45tLFL-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/PEPiHyGYCo45tLFL-image.png)
 
 **Prioridade:**  
 Média — impacta a consistência e padronização dos formulários no sistema.
@@ -298,7 +298,7 @@ A estrutura e regras de negócio são praticamente as mesmas, variando apenas em
 - `tenants.vue`
 - `tenants-fire.vue`
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/uh6c9Mh9XwJs2jnH-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/uh6c9Mh9XwJs2jnH-image.png)
 
 **Prioridade:**  
 Média — duplicação extensa com impacto direto na manutenibilidade.
@@ -361,7 +361,7 @@ Média-Alta — Impacta diretamente a clareza da arquitetura do design system e 
 **Problema:**  
 Algumas páginas estão sendo construídas com **HTML e estilização diretamente dentro do componente de página**, em vez de compor a interface reutilizando átomos, moléculas, organismos e templates definidos no design system.
 
-Um exemplo é a **`<strong class="editor-theme-bold editor-theme-code">pages/reset-password.vue</strong>`**, onde toda a estrutura de layout, containers, estilização e até elementos como `img`, `divs` e `form` estão definidos diretamente no arquivo da página.
+Um exemplo é a **`pages/reset-password.vue`**, onde toda a estrutura de layout, containers, estilização e até elementos como `img`, `divs` e `form` estão definidos diretamente no arquivo da página.
 
 Esse tipo de implementação **fere o princípio de separação de responsabilidades do Atomic Design**, pois:
 
@@ -407,11 +407,11 @@ Atualmente alguns textos estão sendo escritos diretamente dentro dos componente
 
 Isso fere o princípio de centralização de mensagens e dificulta a padronização.
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HpoiMQ8FBa6i5vWM-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HpoiMQ8FBa6i5vWM-image.png)
 
 Outros exemplos que precisam seguir a mesma correção:
 
-[![image.png](assets/erros-e-ajustes-necessarios-no-atomic-design-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hy4txXT46WgmvoX9-image.png)
+[![image.png](/img/erros-e-ajustes-necessarios-no-atomic-design-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hy4txXT46WgmvoX9-image.png)
 
 **Impacto:**
 

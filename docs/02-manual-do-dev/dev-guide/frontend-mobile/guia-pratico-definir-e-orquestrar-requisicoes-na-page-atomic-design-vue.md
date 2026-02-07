@@ -47,17 +47,17 @@ Button.vue -&gt; Atom
 
 **UsersPage:** Aqui fica a responsabilidade de buscar os dados na API e controlar estado**.**
 
-![](assets/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-1.png)
+![](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-1.png)
 
-No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por componentes ou elementos. Então vamos utilizar para emitir eventos para o componente filho.
+No Vue, o símbolo \@ é atalho para v-on, usado para ouvir eventos emitidos por componentes ou elementos. Então vamos utilizar para emitir eventos para o componente filho.
 
-**@update:query="query = $event"**: O filho emite update:query quando o input muda. O pai atualiza a variável query com $event (novo valor).
+**\@update:query="query = $event"**: O filho emite update:query quando o input muda. O pai atualiza a variável query com $event (novo valor).
 
-**@search=”fetchUsers”**: O filho emite search (por exemplo, quando o usuário clica em um botão). O pai executa fetchUsers para atualizar a lista.
+**\@search=”fetchUsers”**: O filho emite search (por exemplo, quando o usuário clica em um botão). O pai executa fetchUsers para atualizar a lista.
 
 **UserTemplate:** Recebe props da Page e emite eventos para a Page e usa SearchField, que é uma molécula, passando query e repassando eventos.
 
-[![image.png](assets/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/BnErKoKpFdPTpBOA-image.png)
+[![image.png](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/BnErKoKpFdPTpBOA-image.png)
 
 **defineEmits(\["update:query", "search"\]):** No Vue 3 (com &lt;script setup&gt;), defineEmits é usado para declarar os eventos que o componente pode emitir para o pai.
 
@@ -77,17 +77,17 @@ No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por 
 
 **SearchField:** recebe modelValue e reemite update:modelValue/search.
 
-[![image.png](assets/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/YPvcbCi1l4BAvgDB-image.png)
+[![image.png](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/YPvcbCi1l4BAvgDB-image.png)
 
 **Input/Button:** somente UI e eventos nativos.
 
-[![image.png](assets/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/gtuW8P8PFbZB1zu0-image.png)
+[![image.png](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/gtuW8P8PFbZB1zu0-image.png)
 
 #### 3. Fluxo de ponta a ponta (do clique até os dados)
 
 Podemos observar na imagem que os eventos sempre sobem até o componente Page, enquanto os dados têm sua origem na própria Page e descem para os demais componentes.
 
-[![image.png](assets/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/M1RmVi6xP5XBhyFK-image.png)
+[![image.png](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/M1RmVi6xP5XBhyFK-image.png)
 
 **Regra de ouro:**
 

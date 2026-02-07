@@ -30,5 +30,5 @@
 - O sistema deve suportar **renovação automática** (assinatura recorrente)?
 - Haverá **multa e juros** em caso de atraso, e isso deve ser calculado automaticamente?  
       
-    [![image.png](assets/fluxo-de-pagamento-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/CXDcKkGEw4Vyv0OC-image.png)
+    [![image.png](/img/fluxo-de-pagamento-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/CXDcKkGEw4Vyv0OC-image.png)
 

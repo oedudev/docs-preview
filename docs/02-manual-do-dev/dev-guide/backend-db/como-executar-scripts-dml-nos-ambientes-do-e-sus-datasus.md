@@ -13,7 +13,7 @@ Em todo o processo você precisará **obrigatoriamente** estar com a VPN ligada.
 **1.** Entre no **Rancher**, abra o **pod de backend** do ambiente que você deseja atualizar e clique nos três pontinhos → **Execute Shell**.
 
   
-[![image.png](assets/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2026-01/PgginvfmbwMNKaLt-image.png)
+[![image.png](/img/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2026-01/PgginvfmbwMNKaLt-image.png)
 
 **OBS:** lembrando que o banco de dados do ambiente de desenvolvimento e homologação são os mesmos!
 
@@ -50,7 +50,7 @@ Caso o comando falhe, verifique quais variáveis de ambiente (as importantes sã
 **6.** Já dentro do banco de dados, execute os scripts que foram informados pela equipe de DB do DataSUS como sendo um script DML, provavelmente vai estar assim (o script DML seria o código comentado), ou então será o script todo, isso será informado por eles:
 
   
-[![image.png](assets/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2026-01/4Gv3UQH77i4OpgSr-image.png)
+[![image.png](/img/como-executar-scripts-dml-nos-ambientes-do-e-sus-datasus-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2026-01/4Gv3UQH77i4OpgSr-image.png)
 
 Execute esse script no banco de dados.
 

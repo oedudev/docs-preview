@@ -87,14 +87,14 @@ Ambos possuem a mesma base estrutural (label, input, estilização e binding com
 
 **Correção Recomendada:**
 
-- Criar um **único componente unificado (**`<strong class="editor-theme-bold editor-theme-code">InputLogin.vue</strong>`**)** que consiga atender tanto inputs simples quanto inputs de senha.
+- Criar um **único componente unificado (**`InputLogin.vue`**)** que consiga atender tanto inputs simples quanto inputs de senha.
 - Utilizar a prop `type` para decidir o comportamento:
     - `type !== 'password'` → renderiza input padrão.
     - `type === 'password'` → renderiza input com botão para alternar visibilidade.
 - Manter suporte ao `v-model` (`modelValue` + `update:modelValue`) para garantir compatibilidade com formulários.
 - Centralizar estilos e comportamento para evitar duplicações.
 
-<u>**Importante:**</u><u> Definir os valores aceitos para </u><u>`type`</u><u> dentro de um</u><u> **ENUM (**</u><u>**`<strong class="editor-theme-bold editor-theme-code editor-theme-underline">INPUT_TYPES</strong>`**</u><u>**)**</u><u>, garantindo padronização no uso.</u>
+<u>**Importante:**</u><u> Definir os valores aceitos para </u><u>`type`</u><u> dentro de um</u><u> **ENUM (**</u><u>**`INPUT_TYPES`**</u><u>**)**</u><u>, garantindo padronização no uso.</u>
 
 **Componentes Identificados com Duplicação:**
 
@@ -124,7 +124,7 @@ Atualmente existem dois componentes distintos para representar cartões de tenan
 - Manter a lógica de clique e remoção no mesmo componente, evitando duplicidade.
 - Substituir gradualmente os dois componentes duplicados pelo novo componente unificado.
 
-<u>**Importante:** </u><u>Centralizar os valores aceitos em um </u><u>**ENUM (**</u><u>**`<strong class="editor-theme-bold editor-theme-code editor-theme-underline">TENANT_ROLES</strong>`**</u><u>**)**</u><u> para garantir padronização e prevenir uso incorreto.</u>
+<u>**Importante:** </u><u>Centralizar os valores aceitos em um </u><u>**ENUM (**</u><u>**`TENANT_ROLES`**</u><u>**)**</u><u> para garantir padronização e prevenir uso incorreto.</u>
 
 **Componentes Identificados com Duplicação:**
 
@@ -185,7 +185,7 @@ Existem múltiplos componentes quase idênticos para confirmação de envio (pro
 - Crescimento desnecessário da base de componentes.
 
 **Correção Recomendada:**  
-Unificar em **um único componente** `<strong class="editor-theme-bold editor-theme-code">ConfirmationModal.vue</strong>`**, parametrizado por `props`:
+Unificar em **um único componente** `ConfirmationModal.vue`**, parametrizado por `props`:
 
 - `title` → título principal (`PROPOSTA ENVIADA!`, `CONTRATO ENVIADO!`).
 - `message` → mensagem principal de sucesso.
@@ -216,7 +216,7 @@ Existem múltiplos componentes `<select>` praticamente idênticos, variando apen
 - Maior dificuldade de manutenção e evolução.
 
 **Correção Recomendada:**  
-Criar um **componente único** `<strong class="editor-theme-bold editor-theme-code">BaseSelect.vue</strong>`** (apenas uma sugestão de nome) que recebe via `props`:
+Criar um **componente único** `BaseSelect.vue`** (apenas uma sugestão de nome) que recebe via `props`:
 
 - `modelValue` → valor selecionado (com `v-model`).
 - `placeholder` → primeira opção exibida (ex.: `"Status"`, `"Finalidade"`, `"Produto"`).
@@ -361,7 +361,7 @@ Média-Alta — Impacta diretamente a clareza da arquitetura do design system e 
 **Problema:**  
 Algumas páginas estão sendo construídas com **HTML e estilização diretamente dentro do componente de página**, em vez de compor a interface reutilizando átomos, moléculas, organismos e templates definidos no design system.
 
-Um exemplo é a **`<strong class="editor-theme-bold editor-theme-code">pages/reset-password.vue</strong>`**, onde toda a estrutura de layout, containers, estilização e até elementos como `img`, `divs` e `form` estão definidos diretamente no arquivo da página.
+Um exemplo é a **`pages/reset-password.vue`**, onde toda a estrutura de layout, containers, estilização e até elementos como `img`, `divs` e `form` estão definidos diretamente no arquivo da página.
 
 Esse tipo de implementação **fere o princípio de separação de responsabilidades do Atomic Design**, pois:
 

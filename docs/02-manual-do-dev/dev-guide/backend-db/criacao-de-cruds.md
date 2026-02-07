@@ -10,7 +10,7 @@ O nestJS fornece um CLI (command-line interface) que facilita o scaffolding de u
 Primeiramente, precisamos instalar o Nest CLI. Para isso, podemos executar o seguinte comando:
 
 ```bash
-$ npm install -g @nestjs/cli
+$ npm install -g \@nestjs/cli
 ```
 
 Após a instalação, podemos verificar se a instalação foi bem sucedida com o seguinte comando:
@@ -21,7 +21,7 @@ nest --version
 
 Em caso de sucesso, a versão atual do NestCLI deve aparecer:  
   
-[![image.png](assets/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
+[![image.png](/img/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
 
 Após isso, dentro do repositório do projeto, navege, utilizando o terminal, até o diretório /backend. Uma vez dentro desse diretório, utilize os seguintes comando para criação do **Module**, **Service**, e **Controller**.
 
@@ -44,11 +44,11 @@ nest generate controller /team
 Ao inserir cada comando, será solicitado em qual projeto queremos criar esse novo módulo. Nesse caso, selecionaremos "api"
 
   
-[![image.png](assets/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
+[![image.png](/img/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
 
 Feito isso, teremos a seguinte estrutura dentro de /backend/apps/api/src  
   
-[![image.png](assets/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
+[![image.png](/img/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
 
 Note que uma pasta **/team** foi criada dentro de **/src**, bem como nosso service, controller e module.
 
@@ -58,7 +58,7 @@ Por fim, teremos a seguinte estrutura dentro de **/team**:
 
 **OBS:** Arquivos com a extensão **.spec** são arquivos de teste. Eles são gerados automaticamente pelo CLI do nestJS. Vamos apagá-los, por momento. Podemos recriá-los manualmente, futuramente, caso presisemos.
 
-[![image.png](assets/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
+[![image.png](/img/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
 
 ##### - Definições da Entidade e DTOs
 
@@ -67,17 +67,17 @@ Primeiramente, devemos declarar quais atributos nossa entidade terá. Para isso,
 ```javascript
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+\@Entity()
 export class Team {
-  @PrimaryGeneratedColumn()
+  \@PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  \@Column()
   name: string;
 }
 ```
 
-Atente-se que o NestJS é "database agnostic", ou seja, ele não possui um ORM padrão. No projeto do E-SUS Urgências, estamos utilizando o **TypeORM**. Podemos dizer que essa classe é uma entidade usando o decorator **@Entity()**. Aqui estamos apenas declarando 2 campos básicos, **id** e **name**. Cada atributo é precedido por um decorator para definir o comportamento daquele atributo. Para mais informações sobre os decorators, visite: https://typeorm.io/entities  
+Atente-se que o NestJS é "database agnostic", ou seja, ele não possui um ORM padrão. No projeto do E-SUS Urgências, estamos utilizando o **TypeORM**. Podemos dizer que essa classe é uma entidade usando o decorator **\@Entity()**. Aqui estamos apenas declarando 2 campos básicos, **id** e **name**. Cada atributo é precedido por um decorator para definir o comportamento daquele atributo. Para mais informações sobre os decorators, visite: https://typeorm.io/entities  
   
 Ademais, vamos criar o seguinte DTO dentro de **team.dto.ts:**
 
@@ -92,16 +92,16 @@ export class CreateTeamDto {
 Agora, podemos começar a definir os nossos services, para tal, dentro de **team.service.ts**, podemos adicionar o seguinte:
 
 ```javascript
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
+import { Injectable } from '\@nestjs/common';
+import { InjectRepository } from '\@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Team } from './entities/team.entity';
 import { CreateTeamDTO } from './dto/team.dto';
 
-@Injectable()
+\@Injectable()
 export class TeamService {
   constructor(
-    @InjectRepository(Team)
+    \@InjectRepository(Team)
     private teamRepository: Repository<Team>,
   ) {}
 
@@ -142,35 +142,35 @@ export class TeamService {
 Da mesma forma, podemos definir nossos endpoints em **team.controller.ts**:
 
 ```javascript
-import { Controller, Post, Body, Get, Put, Delete, Param } from '@nestjs/common';
+import { Controller, Post, Body, Get, Put, Delete, Param } from '\@nestjs/common';
 import { TeamService } from './team.service';
 import { CreateTeamDTO } from './dto/team.dto';
 import { Team } from './entities/team.entity';
 
-@Controller('team')
+\@Controller('team')
 export class TeamController {
   constructor(private readonly teamService: TeamService) {}
 
-  @Post()
-  async create(@Body() createTeamDto: CreateTeamDTO): Promise<Team> {
+  \@Post()
+  async create(\@Body() createTeamDto: CreateTeamDTO): Promise<Team> {
     return this.teamService.create(createTeamDto);
   }
 
-  @Get()
+  \@Get()
   async findAll(): Promise<Team[]> {
     return this.teamService.findAll();
   }
 
-  @Put(':id')
+  \@Put(':id')
   async update(
-    @Param('id') id: number,
-    @Body() updateTeamDto: CreateTeamDTO
+    \@Param('id') id: number,
+    \@Body() updateTeamDto: CreateTeamDTO
   ): Promise<Team> {
     return this.teamService.update(id, updateTeamDto);
   }
 
-  @Delete(':id')
-  async delete(@Param('id') id: number): Promise<Team> {
+  \@Delete(':id')
+  async delete(\@Param('id') id: number): Promise<Team> {
     return this.teamService.delete(id);
   }
 }
@@ -191,13 +191,13 @@ Assim, teremos as seguintes rotas:
 Por fim, devemos integrar nosso novo módulo "team" com nosso módulo de aplicação principal, além de injetar as dependências que nosso service solicita (no nosso caso, o repositório). Para tal, dentro de **team.module.ts** vamos adicionar o seguinte:
 
 ```javascript
-import { Module } from '@nestjs/common';
+import { Module } from '\@nestjs/common';
 import { TeamService } from './team.service';
 import { TeamController } from './team.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule } from '\@nestjs/typeorm';
 import { Team } from './entities/team.entity';
 
-@Module({
+\@Module({
   imports: [TypeOrmModule.forFeature([Team])],
   providers: [TeamService],
   controllers: [TeamController]
@@ -210,8 +210,8 @@ Por fim, dentro de **/src/app.module.ts** devemos adicionar nossa entidade dentr
 Teremos:
 
 ```javascript
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from '\@nestjs/common';
+import { TypeOrmModule } from '\@nestjs/typeorm';
 import { ItemsModule } from './items/items.module';
 import { KafkaService } from './kafka/kafka.service';
 import { Item } from './items/entities/item.entity';
@@ -230,7 +230,7 @@ import { JobTitleModule } from './job_title/job_title.module';
 import { OccurrenceModule } from './occurrence/occurrence.module';
 import { TeamModule } from './team/team.module';
 
-@Module({
+\@Module({
   imports: [
     TypeOrmModule.forRoot({
       type: <type>,
@@ -263,11 +263,11 @@ Finalmente, podemos buildar nosso projeto e testar nossos endpoints:
 
 **POST:**
 
-[![image.png](assets/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
+[![image.png](/img/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
   
 **GET:**
 
-[![image.png](assets/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
+[![image.png](/img/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
 
 ##### - Swagger e ducumentação
 

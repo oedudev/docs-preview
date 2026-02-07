@@ -35,7 +35,7 @@ spec:
     Use `scp` para baixar do Droplet para sua máquina local (buffer) e `kubectl cp` para enviar para o Pod de restore.
     ```bash
     # Droplet -> Local
-    scp -r root@droplet:/var/lib/docker/volumes/n8n_data/_data/* ./temp_data/
+    scp -r root\@droplet:/var/lib/docker/volumes/n8n_data/_data/* ./temp_data/
     
     # Local -> K8s PVC
     kubectl cp ./temp_data/ tools/restore:/data/

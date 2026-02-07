@@ -12,7 +12,7 @@ Os agentes não são mais Droplets isolados. Eles são **Deployments Kubernetes*
     *   Todos os agentes usam a mesma imagem Docker: `registry.digitalocean.com/digitalsys/openclaw-agent:latest`.
     *   Esta imagem é baseada em `node:22-bookworm` e contém:
         *   `openclaw` (Core)
-        *   `@google/gemini-cli` (LLM)
+        *   `\@google/gemini-cli` (LLM)
         *   `gh` (GitHub CLI)
         *   `ffmpeg`, `python3`, `jq`, `curl`
     *   **Build:** O build é automático via GitHub Actions no repositório `agents` sempre que a pasta `base/` é alterada.

@@ -31,17 +31,17 @@ Ao tentar criar um orçamento com um CPNJ referenciando Pessoa Juridica, retorna
 
 com a messagem que o locatario não pode ser uma pessoa Juridica
 
-[![image.png](assets/propostas-pj-e-comerciais-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/kGjqxfonDK1uQdoI-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/kGjqxfonDK1uQdoI-image.png)
 
 Na tentativa de inverter, enviar o CNPJ no campo do cotador e o CPF no campo do locatario, retorna 400, somente pode ser atribuido CPF para o cotador.
 
-[![image.png](assets/propostas-pj-e-comerciais-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/qKAaDmJeF8CCsE8v-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/qKAaDmJeF8CCsE8v-image.png)
 
 ##### **Procurando outros produtos na Porto**
 
 Acessando [https://dev.portoseguro.com.br/api-portal/content/apis-porto](https://dev.portoseguro.com.br/api-portal/content/apis-porto) e constatando que usamos o produto "Fiança Locaticia" que pelos teste nao é possivel utilizar dados de PJ, encontrei um produto parecido "Porto Seguro Residencial", que tem como publico alvo PF e PJ ([https://dev.portoseguro.com.br/api-portal/content/porto-seguro-residencial](https://dev.portoseguro.com.br/api-portal/content/porto-seguro-residencial)).
 
-[![image.png](assets/propostas-pj-e-comerciais-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/lj8RY0pcnNDEoYAB-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/lj8RY0pcnNDEoYAB-image.png)
 
 Apos fazer alguns testes no Postman com as credenciais (client id e client secret) e ler o seguinte trecho na documentaçao do "Porto Seguro Residencial" :
 
@@ -49,7 +49,7 @@ Apos fazer alguns testes no Postman com as credenciais (client id e client secre
 
 Cheguei a conclusao que nao temos acesso a esse produto pois nao foi marcado na hora de criar um novo app no portal de desenvoldor da porto
 
-[![image.png](assets/propostas-pj-e-comerciais-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/Up7mPF0pF7BuSkcU-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/Up7mPF0pF7BuSkcU-image.png)
 
 ## Too Seguros
 
@@ -59,7 +59,7 @@ Cheguei a conclusao que nao temos acesso a esse produto pois nao foi marcado na 
 
 Quando é criado uma proposta na too, criando como Comercial, cria sem problemas, porem não existe nenhum campo para informar se é do tipo PJ ou para informar o cnpj
 
-[![image.png](assets/propostas-pj-e-comerciais-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/Qeo0yaF3mPkTEsp4-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/Qeo0yaF3mPkTEsp4-image.png)
 
 Analisando a documentação notei que a diferenciaçao de propostas entre PF e PJ só ocorre no seguinte endpoint:
 
@@ -75,11 +75,11 @@ Que seria o passo 7 da documentaçao, e atualmente não chegamos a integrar nos 
 
 Dada a documentação de fiança locaticia da tokio fiz uma serie de testes com passando pessoa juridica (residencial ou nao) na requisição, houve a tentativa de todos os codigos de tipo de imovel, e em todas as tentivas retornaram a mesma mensagem de erro
 
-[![image.png](assets/propostas-pj-e-comerciais-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/T09qIOW2SEwdW1Hx-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/T09qIOW2SEwdW1Hx-image.png)
 
 Analisando todas as opções dos campos na documentação foi descrito que a opção de pessoa Juridica para tpPessoa ainda não estava disponivel, o que condiz com os resultados dos testes no Postman
 
-[![image.png](assets/propostas-pj-e-comerciais-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/YflWylVDA7o3JsFk-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/YflWylVDA7o3JsFk-image.png)
 
 Como não consegui acesso a mais documentaçoes e um portal de desenvolvedor da Tokio para mais informações cheguei a conclusão de que no momento nao é possivel criar propostas para PJ.
 
@@ -87,7 +87,7 @@ Como não consegui acesso a mais documentaçoes e um portal de desenvolvedor da 
 
 Em requisições para propostas comerciais e pessoas fisicas a api retorna 412 pedindo o campo `empresaConstituida` no payload, porem na documentação fornecida não existe nenhum registro de onde seria definido nem quais valores este campo aceita.
 
-[![image.png](assets/propostas-pj-e-comerciais-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/GH4d0skiYGFshbjH-image.png)
+[![image.png](/img/propostas-pj-e-comerciais-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-05/GH4d0skiYGFshbjH-image.png)
 
 ## Conclusão
 

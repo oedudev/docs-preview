@@ -21,7 +21,7 @@ O arquivo de configuração "stryker.config.json" está contido na raiz do proje
 
 ```json
 {
-  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "$schema": "./node_modules/\@stryker-mutator/core/schema/stryker-schema.json",
   "_comment": "This config was generated using 'stryker init'. Please take a look at: https://stryker-mutator.io/docs/stryker-js/configuration/ for more information.",
   "packageManager": "npm",
   "reporters": [
@@ -57,7 +57,7 @@ npx stryker run
 
 Após a execução, o stryker gerará um relatório no diretório '/reports', na raíz do projeto. podemos visualizá-lo, por exemplo na forma de HTML:  
   
-[![image.png](assets/testes-de-mutacao-stryker-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-02/kZ6CIsoXnZqrAeTm-image.png)
+[![image.png](/img/testes-de-mutacao-stryker-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-02/kZ6CIsoXnZqrAeTm-image.png)
 
 Aqui podemos ver, por exemplo, nosso score de mutação simplificado:
 
@@ -72,6 +72,6 @@ N - Mutantes não mortos.
 
 Também podemos ver, especificamente, quais mutantes foram mortos e quais sobreviveram:
 
-[![image.png](assets/testes-de-mutacao-stryker-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-02/h6N5OyTF12EqfORr-image.png)
+[![image.png](/img/testes-de-mutacao-stryker-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-02/h6N5OyTF12EqfORr-image.png)
 
 ####   

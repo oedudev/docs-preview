@@ -30,8 +30,8 @@ Onde cada usuário é composto pelo seu nome no padrão &lt;nome.sobrenome&gt;, 
 
 obs: Cada usuário é separado por linha:
 
-`nome1.sobrenome1, nome1.sobrenome1@digitalsys.com.br`  
-`nome2.sobrenome2, nome2.sobrenome2@digitalsys.com.br`
+`nome1.sobrenome1, nome1.sobrenome1\@digitalsys.com.br`  
+`nome2.sobrenome2, nome2.sobrenome2\@digitalsys.com.br`
 
 ##### **Realizando o envio do código QR e arquivo "*****.tar*****" para o usuário:**
 

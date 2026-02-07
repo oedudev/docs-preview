@@ -25,7 +25,7 @@
 #### 3. **Uso de CSS**
 
 - **CSS modular:** Prefira o uso de CSS Modules ou SCSS, principalmente em projetos NextJS.
-- **Tailwind CSS:** Para projetos que utilizam Tailwind, agrupe classes quando possível e use o `@apply` para evitar redundâncias.
+- **Tailwind CSS:** Para projetos que utilizam Tailwind, agrupe classes quando possível e use o `\@apply` para evitar redundâncias.
 - **Estilos Globais:** Evite o uso de estilos globais extensivos, a não ser que sejam realmente necessários (ex: reset.css, normalize.css).
 
 #### 4. **Boas Práticas de Vue/React**
@@ -38,7 +38,7 @@
 
 - **Lazy loading:** Utilize o lazy loading para componentes e imagens pesadas.
 - **Code splitting:** Aproveite o suporte nativo de code splitting para otimizar o carregamento das páginas.
-- **Imagem otimizada:** Use o componente `<nuxt-img>` (NuxtJS) ou o `<Image />` do Next.js para servir imagens otimizadas.
+- **Imagem otimizada:** Use o componente `<nuxt-img>` (NuxtJS) ou o `` do Next.js para servir imagens otimizadas.
 
 #### 6. **Boas Práticas de SEO**
 
@@ -51,7 +51,7 @@
 #### 7. **Validação e Segurança**
 
 - **Sanitização de Inputs:** Sempre sanitize os inputs do usuário para evitar XSS (Cross-Site Scripting).
-- **Autenticação:** Utilize soluções como o `@nuxt/auth` (Nuxt) ou `next-auth` (Next.js) para gerenciar autenticação de forma segura.
+- **Autenticação:** Utilize soluções como o `\@nuxt/auth` (Nuxt) ou `next-auth` (Next.js) para gerenciar autenticação de forma segura.
 - **CSRF e CORS:** Certifique-se de configurar corretamente as políticas de segurança de Cross-Site Request Forgery (CSRF) e Cross-Origin Resource Sharing (CORS).
 
 #### 8. **Boas Práticas de Testes**

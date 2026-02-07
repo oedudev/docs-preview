@@ -2,7 +2,7 @@
 # Manual Metaverso
 
 **Link para o Manual do Metaverso:** [Link do Drive](https://drive.google.com/drive/u/0/folders/1Iih5J7d6LAY6B84IYKh-WDcnM76Vc87P)  
-**(Acessar com o e-mail @digitalsys.com)**
+**(Acessar com o e-mail \@digitalsys.com)**
 
 # <u>**ADMINISTRADOR**</u>
 
