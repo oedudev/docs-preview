@@ -586,7 +586,7 @@ Componente/página FleetOperations.vue → Formulário de Ocorrência → Campo 
 [![image.png](pathname:///docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-22.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/C0ZLNj8wBsdbo8Ge-image.png)
 
 **Rotas envolvidas:**  
-GET /employee/search?query={termo}
+GET /employee/search?query=\{termo\}
 
 **Descrição:**  
 O campo **“Transferir para”** atualmente busca dados na rota `/possible-values`, que **não retorna informações corretas para este caso**. Existe uma rota específica, `/employee/search?query=`, destinada a fornecer os dados corretos de funcionários conforme o termo digitado pelo usuário.
@@ -604,9 +604,9 @@ O campo **“Transferir para”** atualmente busca dados na rota `/possible-valu
 #### **5.3 Ocorrência 3** **- Pagina fleet-occurrence**
 
 **Rotas envolvidas:**  
-GET /dispatch/bff/dispatch-data/{id}  
-GET /incident/{id}?include\_history=false  
-GET /dispatch/incident/{id}
+GET /dispatch/bff/dispatch-data/\{id\}  
+GET /incident/\{id\}?include\_history=false  
+GET /dispatch/incident/\{id\}
 
 **Descrição:**  
 Durante a renderização da página **FleetOccurrence**, foram identificadas diversas requisições executadas para popular os dados da ocorrência. Algumas delas são **repetidas**, resultando em sobrecarga de rede e processamento desnecessário.
@@ -679,8 +679,8 @@ Componente/página Team.vue
 GET /professional-type  
 GET /user  
 GET /unallocated  
-GET /unallocated?page={n}&amp;page\_size={n}  
-GET /unallocated?include\_self={true|false}
+GET /unallocated?page=\{n\}&amp;page\_size=\{n\}  
+GET /unallocated?include\_self=\{true|false\}
 
 [![image.png](pathname:///docs-preview/img/plano-de-refatoracao-overfetch-underfetch-e-boas-praticas-em-requests-25.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/iJ4UDlsvLUdOPUWx-image.png)**Descrição:**  
 Na página **Team**, foram identificadas falhas relacionadas à ausência de filtragem no backend e à repetição de requisições para as rotas de **unallocated**.

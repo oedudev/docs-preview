@@ -29,6 +29,6 @@
 
  **Exemplos**: 
 
- | Dashboard | Destino | }  
+ | Dashboard | Destino | \}  
  | Resultados - Hospitais Parceiros | Resultados - Hospitais Parceiros |  
  | Resultados - Parceiros de Produção| Resultados - Parceiros de Produção|
