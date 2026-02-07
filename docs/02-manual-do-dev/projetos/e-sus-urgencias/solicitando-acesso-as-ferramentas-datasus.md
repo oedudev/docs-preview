@@ -13,14 +13,14 @@ Para que seja possível gerenciar o projeto no ambiente do DataSUS são necessá
 
 ### **1. CITSmart**
 
-[![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/uXcAbu2AxfJoTCN9-image.png)
+[![image.png](pathname:///docs-preview/img/solicitando-acesso-as-ferramentas-datasus-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/uXcAbu2AxfJoTCN9-image.png)
 
 - &lt;u>**Usuário nunca teve acesso**&lt;/u>
 
 Neste caso o acesso ao e-mail (@saude.gov.br) será solciitado em conjunto.  
 Para este caso a rota para solicitar acesso é **"Login" &gt; "Solicitar Login de Novo Usuário"**. Como nunca houve nenhuma solicitação de um acesso novo por nossa parte **possivelmente** você não poderá pedir por conta própria. Se for o caso você deverá pedir para alguém interno do DataSUS pedir este acesso.
 
-[![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/WGONNKGLlMTvg9jX-image.png)
+[![image.png](pathname:///docs-preview/img/solicitando-acesso-as-ferramentas-datasus-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/WGONNKGLlMTvg9jX-image.png)
 
 Contatos que podem te auxiliar, caso seja necessário algum superior:
 
@@ -34,7 +34,7 @@ A rota para solicitar o acesso a VPN vai depender da situação do colaborador. 
 
 - Caso você tinha acesso e perdeu deve seguir a rota **"VPN" &gt; "Reativar acesso VPN"**  
     Neste caso você deve informar o usuário que deve ser reativido a liberação do acesso na descrição do ticket.  
-    [![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-6.png)  ](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/5s7dskhDMKN7c74t-image.png)[![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/5KHFftLO1wbm2iyR-image.png)
+    [![image.png](pathname:///docs-preview/img/solicitando-acesso-as-ferramentas-datasus-6.png)  ](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/5s7dskhDMKN7c74t-image.png)[![image.png](pathname:///docs-preview/img/solicitando-acesso-as-ferramentas-datasus-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/5KHFftLO1wbm2iyR-image.png)
 - Caso você nunca teve acesso você deve seguir a rota **"VPN" &gt; "Criar VPN para a estação de trabalho"**  
     Para este caso você deve informar o nome de um superior interno do DataSUS.  
     Atualmente nossos contatos internos são:  
@@ -42,7 +42,7 @@ A rota para solicitar o acesso a VPN vai depender da situação do colaborador. 
     \- Paula Carvalho de Freitas (paula.freitas@saude.gov.br)  
     **Alinhe previamente via Teams com a pessoa que irá colocar como contato!**
 
-[![image.png](/docs-preview/img/solicitando-acesso-as-ferramentas-datasus-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/VD7bgVkGOcifYdaT-image.png)
+[![image.png](pathname:///docs-preview/img/solicitando-acesso-as-ferramentas-datasus-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/VD7bgVkGOcifYdaT-image.png)
 
 ##### **LEMBRETES:** 
 

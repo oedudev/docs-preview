@@ -21,9 +21,9 @@ Controlador de entrada (Ingress Controller) baseado no NGINX, responsável por g
 
 Caso exista algum firewall configurado (exemplo: Hashi Vaulticorp está disponível apenas para acesso via VPN ou dentro do cluster do Kubernetes) você deve liberar o acesso desse cluster também. Abaixo segue um exemplo de liberação:
 
-[![image.png](/docs-preview/img/configuracao-de-novos-clusters-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/KHPYHd8pBd8O94SB-image.png)
+[![image.png](pathname:///docs-preview/img/configuracao-de-novos-clusters-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/KHPYHd8pBd8O94SB-image.png)
 
-[![image.png](/docs-preview/img/configuracao-de-novos-clusters-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/DD6wOONsIZIshiCq-image.png)  
+[![image.png](pathname:///docs-preview/img/configuracao-de-novos-clusters-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/DD6wOONsIZIshiCq-image.png)  
 Busque pelo cluster que você quer configurar e permita o acesso.
 
 #### **2. Container Registry**
@@ -32,9 +32,9 @@ Por fim você deve liberar o acesso do seu(s) banco de dado(s) ao cluster també
 
 Siga a rota abaixo para liberar o acesso:
 
-[![image.png](/docs-preview/img/configuracao-de-novos-clusters-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/8BLdtf6DwFlDqOv1-image.png)
+[![image.png](pathname:///docs-preview/img/configuracao-de-novos-clusters-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/8BLdtf6DwFlDqOv1-image.png)
 
-[![image.png](/docs-preview/img/configuracao-de-novos-clusters-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/9EJK8He67VOMqDQy-image.png)
+[![image.png](pathname:///docs-preview/img/configuracao-de-novos-clusters-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/9EJK8He67VOMqDQy-image.png)
 
 Busque pelo cluster que você quer configurar e permita o acesso.
 

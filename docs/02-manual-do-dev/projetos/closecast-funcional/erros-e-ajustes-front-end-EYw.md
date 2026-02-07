@@ -24,27 +24,27 @@ Vamos ver um exemplo de como criar atomos de texto para o sistema
 
 A seguir, apresentamos como pode ser organizada a árvore de arquivos de componentes de texto no projeto. É importante destacar que, sempre que surgir um novo estilo de título ou parágrafo no sistema, não devemos criar automaticamente um novo átomo. Antes disso, deve-se avaliar se um componente de texto existente (como um título ou parágrafo) pode ser estendido ou configurado para contemplar esse novo estilo.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/R1kSKUVNwo3L43qB-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/R1kSKUVNwo3L43qB-image.png)
 
 ##### **Heading (Títulos)**
 
 A seguir, temos um exemplo de como um componente de título pode ser criado para oferecer flexibilidade e padronização. Esse componente representa títulos e subtítulos, permitindo o controle de **nível semântico** (`h1`, `h2`, `h3`), **tamanho da fonte**, **variação tipográfica** e **estilos especiais** (como o uso de gradiente).
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/kgWIIUUlAT83wyQD-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/kgWIIUUlAT83wyQD-image.png)
 
 Exemplo de uso: 
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/QaphVPoRMyS7dp9t-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/QaphVPoRMyS7dp9t-image.png)
 
 ##### **Text (Corpo de texto)**
 
 O componente de **corpo de texto** é utilizado para representar descrições, parágrafos, legendas e observações em geral. Ele garante consistência visual na aplicação e possibilita a configuração de propriedades como **tamanho da fonte**, **cor** e **hierarquia de uso**, mantendo o padrão tipográfico definido pelo sistema de design.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3Bq5RZL5pUQKJlRw-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/3Bq5RZL5pUQKJlRw-image.png)
 
 Exemplo de Uso:
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/9SejzTfqMobj6Lcd-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/9SejzTfqMobj6Lcd-image.png)
 
 ##### **Combinações em níveis superiores**
 
@@ -53,7 +53,7 @@ Exemplo de Uso:
 
 ***Observação***: a imagem de logo exibida neste exemplo não foi transformada em um átomo, pois seu uso está restrito a este componente específico. No Atomic Design, apenas elementos que são* **reutilizáveis ou fazem parte da identidade global** *do sistema devem ser promovidos a átomos. Quando o elemento é de uso único, pode ser mantido diretamente no organismo ou página, evitando complexidade desnecessária.**
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hrwnAoPyKLrXTZHt-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hrwnAoPyKLrXTZHt-image.png)
 
 ##### **Boas práticas**
 
@@ -72,7 +72,7 @@ Para mais detalhes, consulte a documentação oficial: [Desenvolvimento FrontE..
 
 Podemos observar essas inconsistências nas imagens abaixo:
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FLDfFDUJQGSVVdV5-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FLDfFDUJQGSVVdV5-image.png)
 
 **Impactos da não utilização do BEM e da padronização inconsistente**
 
@@ -168,7 +168,7 @@ Atualmente, identificamos trechos de código em que valores fixos (strings, núm
 
 Podemos observar alguns exemplos nas imagens abaixo:
 
-[![image.png](/docs-preview/img/erros-e-ajustes-front-end-EYw-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/qL8EwgtRPZKKF2WX-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-front-end-EYw-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/qL8EwgtRPZKKF2WX-image.png)
 
 **Benefícios do uso de enums**
 

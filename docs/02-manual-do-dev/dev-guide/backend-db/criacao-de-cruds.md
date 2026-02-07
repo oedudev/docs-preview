@@ -21,7 +21,7 @@ nest --version
 
 Em caso de sucesso, a versão atual do NestCLI deve aparecer:  
   
-[![image.png](/docs-preview/img/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/6wCm1xTfgv3aa784-image.png)
 
 Após isso, dentro do repositório do projeto, navege, utilizando o terminal, até o diretório /backend. Uma vez dentro desse diretório, utilize os seguintes comando para criação do **Module**, **Service**, e **Controller**.
 
@@ -44,11 +44,11 @@ nest generate controller /team
 Ao inserir cada comando, será solicitado em qual projeto queremos criar esse novo módulo. Nesse caso, selecionaremos "api"
 
   
-[![image.png](/docs-preview/img/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/kLZ9i2KeG3GMS9fO-image.png)
 
 Feito isso, teremos a seguinte estrutura dentro de /backend/apps/api/src  
   
-[![image.png](/docs-preview/img/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/JR054EHAjO3erLc2-image.png)
 
 Note que uma pasta **/team** foi criada dentro de **/src**, bem como nosso service, controller e module.
 
@@ -58,7 +58,7 @@ Por fim, teremos a seguinte estrutura dentro de **/team**:
 
 **OBS:** Arquivos com a extensão **.spec** são arquivos de teste. Eles são gerados automaticamente pelo CLI do nestJS. Vamos apagá-los, por momento. Podemos recriá-los manualmente, futuramente, caso presisemos.
 
-[![image.png](/docs-preview/img/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/7zEoIOcXeWJYnZbF-image.png)
 
 ##### - Definições da Entidade e DTOs
 
@@ -263,11 +263,11 @@ Finalmente, podemos buildar nosso projeto e testar nossos endpoints:
 
 **POST:**
 
-[![image.png](/docs-preview/img/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/ISKTSZ0DVC6gRvw9-image.png)  
   
 **GET:**
 
-[![image.png](/docs-preview/img/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
+[![image.png](pathname:///docs-preview/img/criacao-de-cruds-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-01/yIEszPDBI9NtbFEW-image.png)
 
 ##### - Swagger e ducumentação
 

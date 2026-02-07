@@ -7,7 +7,7 @@ Este guia fornece um passo a passo detalhado para configurar um ambiente de dese
 
 Baixe e instale a **Unreal Engine 5.5** pelo **Epic Games Launcher**, garantindo que a opção de suporte para Android esteja habilitada durante a instalação.
 
-![](/docs-preview/img/gerar-apk-para-vr-1.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-1.png)
 
 ### **2 - Instalar o Android Studio (Ladybug 2024.2.1)**
 
@@ -15,7 +15,7 @@ Baixe e instale o **Android Studio versão Ladybug 2024.2.1** no link oficial:[ 
 
 Durante a instalação, certifique-se de incluir o SDK do Android.
 
-![](/docs-preview/img/gerar-apk-para-vr-2.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-2.png)
 
 ### **3 - Instalar o Java SE Development Kit (JDK 17.0.6)**
 
@@ -27,32 +27,32 @@ Após instalar o Android Studio:
 
 1. Abra o **Android Studio** e vá até **More Actions &gt; SDK Manager**
 
-![](/docs-preview/img/gerar-apk-para-vr-3.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-3.png)
 
 2. Na aba **SDK Platforms**, instale a versão Android 12L.
 
-![](/docs-preview/img/gerar-apk-para-vr-4.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-4.png)
 
 3. Na aba **SDK Tools**, instale:
 4. - Android SDK Build Tools
 
-![](/docs-preview/img/gerar-apk-para-vr-5.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-5.png)
 
 - Android NDK 
 
-![](/docs-preview/img/gerar-apk-para-vr-6.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-6.png)
 
 - Android SDK Command-line Tools
 
-![](/docs-preview/img/gerar-apk-para-vr-7.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-7.png)
 
 - CMake (versão compatível)
 
-![](/docs-preview/img/gerar-apk-para-vr-8.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-8.png)
 
 - Últimas configurações
 
-![](/docs-preview/img/gerar-apk-para-vr-9.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-9.png)
 
 ### **5 - Configurar a Unreal Engine para Desenvolvimento Android**
 
@@ -60,7 +60,7 @@ Após instalar o Android Studio:
 2. Navegue até **Platforms &gt; Android** e configure as opções:
 3. - Defina o **Minimum SDK Version** e **Target SDK Version** para 32
 
-![](/docs-preview/img/gerar-apk-para-vr-10.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-10.png)
 
 3. Navegue até **Platforms &gt; Android SDK** e configure as opções:
 4. - Configure o **SDK** **e o NDK Path** apontando para os diretórios corretos dentro do Android Studio.
@@ -68,7 +68,7 @@ Após instalar o Android Studio:
     - Configure o **SDK API Level** para matchndk.
     - Configure o **NDK API Level** para android-32.
 
-![](/docs-preview/img/gerar-apk-para-vr-11.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-11.png)
 
 ### **6 - Configurar gerar APK**
 
@@ -76,7 +76,7 @@ Após instalar o Android Studio:
 2. - Selecione a opção envio.
     - Selecione a opção **ASTC**.
 
-![](/docs-preview/img/gerar-apk-para-vr-12.png)
+![](pathname:///docs-preview/img/gerar-apk-para-vr-12.png)
 
 ### **7 - Gerar APK**
 

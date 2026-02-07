@@ -3,6 +3,6 @@
 
 - **Diagrama de caso de uso para usuário Criador**
 
-![DiagramaCasoDeUso-CriadorDeConteúdo.png](/docs-preview/img/diagramas-de-caso-de-uso-MqT-1.png)- **Diagrama de caso de uso para usuário fã**
+![DiagramaCasoDeUso-CriadorDeConteúdo.png](pathname:///docs-preview/img/diagramas-de-caso-de-uso-MqT-1.png)- **Diagrama de caso de uso para usuário fã**
 
-##### [![DiagramaCasoDeUso-UsuarioComum.png](/docs-preview/img/diagramas-de-caso-de-uso-MqT-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/xix44ObID2rYyLAe-diagramacasodeuso-usuariocomum.png)
+##### [![DiagramaCasoDeUso-UsuarioComum.png](pathname:///docs-preview/img/diagramas-de-caso-de-uso-MqT-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/xix44ObID2rYyLAe-diagramacasodeuso-usuariocomum.png)

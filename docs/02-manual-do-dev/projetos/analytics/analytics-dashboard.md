@@ -70,4 +70,4 @@
 
 **8. IMPACTO DOS FILTROS** 
 
-[![image.png](/docs-preview/img/analytics-dashboard-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-12/I0ieAyrNdFA8StEL-image.png)
+[![image.png](pathname:///docs-preview/img/analytics-dashboard-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-12/I0ieAyrNdFA8StEL-image.png)

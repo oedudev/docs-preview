@@ -65,9 +65,9 @@ Atualmente existem dois componentes responsáveis por renderizar campos de input
 **Prioridade:**  
 Alta — impacta diretamente na manutenibilidade, consistência e evolução do design system.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/Y87Q67XsJrIZGO55-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-1.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/Y87Q67XsJrIZGO55-image.png)
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/aqbUTzdR2oVkHZwd-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-2.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/aqbUTzdR2oVkHZwd-image.png)
 
 ##### **2.2 Duplicação de Componentes de Login**
 
@@ -104,7 +104,7 @@ Ambos possuem a mesma base estrutural (label, input, estilização e binding com
 **Prioridade:**  
 Média-Alta — impacta diretamente a consistência do design system e a manutenibilidade futura.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/oH0nREjhKzVYzPUk-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-3.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/oH0nREjhKzVYzPUk-image.png)
 
 ##### **2.4 Duplicação de card tenants**
 
@@ -131,7 +131,7 @@ Atualmente existem dois componentes distintos para representar cartões de tenan
 - `atoms/card-tenants.vue`
 - `atoms/card-tenants-fire.vue`
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FRwivif5G5XhnMuO-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-4.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/FRwivif5G5XhnMuO-image.png)
 
 **Prioridade:**  
 Média — afeta diretamente a consistência visual e a manutenibilidade futura, mas não bloqueia a evolução imediata de outras funcionalidades.
@@ -168,7 +168,7 @@ Atualmente existem múltiplos componentes (ou implementações isoladas) para bo
 
 &lt;u>**Importante:**&lt;/u>&lt;u> Podem existir mais botões com o mesmo estilo dos citados a cima&lt;/u>
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/iIUuH8s3vpY8IdkV-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-5.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/iIUuH8s3vpY8IdkV-image.png)
 
 **Prioridade:**  
 Alta — impacta diretamente a consistência visual, a manutenibilidade e a escalabilidade do design system.
@@ -199,7 +199,7 @@ Unificar em **um único componente** `&lt;strong class="editor-theme-bold editor
 - `atoms/sent-contract.vue`
 - `atoms/sent-proposal.vue`
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ENLIedDRiXpWKrrU-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-6.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/ENLIedDRiXpWKrrU-image.png)
 
 **Prioridade:**  
 Média/Alta — reduz duplicação de código e facilita a criação de novos modais de confirmação no futuro
@@ -239,9 +239,9 @@ Criar um **componente único** `&lt;strong class="editor-theme-bold editor-theme
 Portanto, de acordo com os princípios do Atomic Design, esse componente deve ser tratado como uma **molécula**.  
 A recomendação é que ele seja ajustado para utilizar o novo componente atômico `BaseSelect.vue`, garantindo assim consistência na hierarquia e reutilização correta dos átomos.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/zYd4kmcHncwY3Z0A-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-7.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/zYd4kmcHncwY3Z0A-image.png)
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/bSMfY860OxM6OIHm-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/bSMfY860OxM6OIHm-image.png)
 
 **Prioridade:**  
 Alta — reduz 5 componentes para apenas um, melhora consistência e facilita manutenção.
@@ -263,7 +263,7 @@ Na construção do formulário `molecules/form-contract-offer.vue`, foram utiliz
 - Garantir que todos os inputs e selects utilizados nos formulários sigam a hierarquia do Atomic Design.
 - Manter a validação integrada ao `vee-validate`, mas acoplada aos componentes do design system.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/PEPiHyGYCo45tLFL-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-9.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/PEPiHyGYCo45tLFL-image.png)
 
 **Prioridade:**  
 Média — impacta a consistência e padronização dos formulários no sistema.
@@ -298,7 +298,7 @@ A estrutura e regras de negócio são praticamente as mesmas, variando apenas em
 - `tenants.vue`
 - `tenants-fire.vue`
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/uh6c9Mh9XwJs2jnH-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-10.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/uh6c9Mh9XwJs2jnH-image.png)
 
 **Prioridade:**  
 Média — duplicação extensa com impacto direto na manutenibilidade.
@@ -407,11 +407,11 @@ Atualmente alguns textos estão sendo escritos diretamente dentro dos componente
 
 Isso fere o princípio de centralização de mensagens e dificulta a padronização.
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HpoiMQ8FBa6i5vWM-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-11.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/HpoiMQ8FBa6i5vWM-image.png)
 
 Outros exemplos que precisam seguir a mesma correção:
 
-[![image.png](/docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hy4txXT46WgmvoX9-image.png)
+[![image.png](pathname:///docs-preview/img/erros-e-ajustes-necessarios-no-atomic-design-12.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-09/hy4txXT46WgmvoX9-image.png)
 
 **Impacto:**
 
