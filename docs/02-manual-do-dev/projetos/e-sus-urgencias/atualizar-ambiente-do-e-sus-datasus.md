@@ -83,7 +83,7 @@ Caso dê qualquer tipo de problema o ideal é que você cheque os logs, clicando
 
 [![Captura de Tela 2025-10-06 às 17.13.39.png](/img/atualizar-ambiente-do-e-sus-datasus-8.png)](https://ajuda.digitalsys.com.br/uploads/images/gallery/2025-10/scaled-1680-/PmeIJGm4ybDsTIFP-captura-de-tela-2025-10-06-as-17-13-39.png)
 
-\- Se por qualquer outro motivo você encontrar algum erro fora do comum no processo de build, o contato de Infra é o victor.matos\@saude.gov.br (Victor Ferreira de Matos)
+\- Se por qualquer outro motivo você encontrar algum erro fora do comum no processo de build, o contato de Infra é o victor.matos@saude.gov.br (Victor Ferreira de Matos)
 
 - Se por ventura você precisar alterar alguma variável de ambiente, o mesmo deve ser feito no Rancher. As variáveis de ambiente do backend estão em "Secrets" e do frontend em "ConfigMaps". 
 

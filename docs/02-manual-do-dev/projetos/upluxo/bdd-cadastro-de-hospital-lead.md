@@ -8,7 +8,7 @@
  Para indicar o interesse meu interesse em me Hospital Parceiro  
  E submeter meus dados e documentação para análise   
   
-\@CaminhoFeliz  
+@CaminhoFeliz  
 **Cenário:** Criação bem sucedida de Conta para Hospital Lead
 
  **Dado** que eu seja um Hospital Lead  

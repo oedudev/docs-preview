@@ -252,7 +252,7 @@ O exemplo da soma é simples. Como aplicar isso a uma feature mais complexa?
 
 3.  **Escreva o Teste para o Caso Mais Simples (ou um Caso de Borda):**
     *   **Exemplo:** Se você está criando uma função que valida um email:
-        *   Teste 1 (RED): `TestValidaEmail_ComEmailValido` - Chame `ValidaEmail("teste\@exemplo.com")` e espere `true` (ou nenhum erro).
+        *   Teste 1 (RED): `TestValidaEmail_ComEmailValido` - Chame `ValidaEmail("teste@exemplo.com")` e espere `true` (ou nenhum erro).
         *   Implemente o mínimo em `ValidaEmail` para isso passar (GREEN).
         *   Refatore (REFACTOR).
         *   Teste 2 (RED): `TestValidaEmail_ComEmailInvalidoSemArroba` - Chame `ValidaEmail("testeexemplo.com")` e espere `false` (ou um erro específico).
@@ -480,7 +480,7 @@ Para aprofundar seus conhecimentos em TDD, Golang e boas práticas de teste, sel
     *   Descrição: Uma excelente introdução visual e conceitual ao TDD, explicando o ciclo Red-Green-Refactor e os benefícios da prática.
 
 2.  **TDD: Test Driven Development ou Desenvolvimento Guiado por Testes (Medium - Manoel Camillo):**
-    *   Link: [https://medium.com/\@manoelcamillo/tdd-test-driven-development-ou-desenvolvimento-guiado-por-testes-48f52a607694](https://medium.com/\@manoelcamillo/tdd-test-driven-development-ou-desenvolvimento-guiado-por-testes-48f52a607694)
+    *   Link: [https://medium.com/@manoelcamillo/tdd-test-driven-development-ou-desenvolvimento-guiado-por-testes-48f52a607694](https://medium.com/@manoelcamillo/tdd-test-driven-development-ou-desenvolvimento-guiado-por-testes-48f52a607694)
     *   Descrição: Um artigo claro e conciso que aborda os fundamentos do TDD e sua importância no ciclo de desenvolvimento.
 
 3.  **Test-driven development – Wikipédia, a enciclopédia livre:**

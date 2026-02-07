@@ -9,7 +9,7 @@
 
 **Credenciais (Padrão):**
 
-- **Login:** admin\@digitalsys.com.br
+- **Login:** admin@digitalsys.com.br
 - **Senha:** admin
 
 **Prod - Painel Admin:**  

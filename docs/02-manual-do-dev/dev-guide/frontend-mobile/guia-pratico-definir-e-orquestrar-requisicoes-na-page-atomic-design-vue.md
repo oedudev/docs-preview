@@ -49,11 +49,11 @@ Button.vue -&gt; Atom
 
 ![](/img/guia-pratico-definir-e-orquestrar-requisicoes-na-page-atomic-design-vue-1.png)
 
-No Vue, o símbolo \@ é atalho para v-on, usado para ouvir eventos emitidos por componentes ou elementos. Então vamos utilizar para emitir eventos para o componente filho.
+No Vue, o símbolo @ é atalho para v-on, usado para ouvir eventos emitidos por componentes ou elementos. Então vamos utilizar para emitir eventos para o componente filho.
 
-**\@update:query="query = $event"**: O filho emite update:query quando o input muda. O pai atualiza a variável query com $event (novo valor).
+**@update:query="query = $event"**: O filho emite update:query quando o input muda. O pai atualiza a variável query com $event (novo valor).
 
-**\@search=”fetchUsers”**: O filho emite search (por exemplo, quando o usuário clica em um botão). O pai executa fetchUsers para atualizar a lista.
+**@search=”fetchUsers”**: O filho emite search (por exemplo, quando o usuário clica em um botão). O pai executa fetchUsers para atualizar a lista.
 
 **UserTemplate:** Recebe props da Page e emite eventos para a Page e usa SearchField, que é uma molécula, passando query e repassando eventos.
 

@@ -15,6 +15,6 @@
 
 ###   
 ### Credenciais (Dev/Hml)
-- **Login:** admin\@digitalsys.com.br
+- **Login:** admin@digitalsys.com.br
 - **Senha:** admin
 

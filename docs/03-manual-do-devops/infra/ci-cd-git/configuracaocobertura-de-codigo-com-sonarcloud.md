@@ -193,10 +193,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout\@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python 3.12
-        uses: actions/setup-python\@v5
+        uses: actions/setup-python@v5
         with:
           python-version: 3.12
 
@@ -210,7 +210,7 @@ jobs:
           pytest tests --cov=./ --cov-report=xml:reports/coverage.xml
 
       - name: Store test reports
-        uses: actions/upload-artifact\@v4
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: ./reports/coverage.xml
@@ -230,18 +230,18 @@ sonar-scan:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout\@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Download coverage artifact
-        uses: actions/download-artifact\@v4
+        uses: actions/download-artifact@v4
         with:
           name: coverage-report
           path: ./reports/
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action\@master
+        uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -251,7 +251,7 @@ sonar-scan:
 
 Com isso, podemos baixar o relatório utilizando o “actions/download-artifact” e especificando o caminho de destino do arquivo. Nota: **O caminho de** **destino para o relatório deve ser o mesmo especificado no** `sonar-project.properties`
 
-Por fim, podemos usar o módulo do actions do sonarcloud “sonarsource/sonarcloud-github-action\@master” para realizar a análise e enviar o relatório automaticamente. É importante passar como variável o `GITHUB_TOKEN` e o `SONAR_TOKEN`, o Token do SonarCloud foi adicionado as secrets no passo 2., já o Token do GitHub é setado automaticamente pelo próprio GitHub nas secrets do repositório, para acessar uma secret pelo YAML de workflow do Actions basta utilizar `${{ secrets.SECRET_NAME }}`
+Por fim, podemos usar o módulo do actions do sonarcloud “sonarsource/sonarcloud-github-action@master” para realizar a análise e enviar o relatório automaticamente. É importante passar como variável o `GITHUB_TOKEN` e o `SONAR_TOKEN`, o Token do SonarCloud foi adicionado as secrets no passo 2., já o Token do GitHub é setado automaticamente pelo próprio GitHub nas secrets do repositório, para acessar uma secret pelo YAML de workflow do Actions basta utilizar `${{ secrets.SECRET_NAME }}`
 
 Pronto, na próxima vez que for feito um push ou um pull request as análises de código e cobertura de testes deve estar presente no repositório do projeto no SonarCloud
 
@@ -272,10 +272,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout\@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python 3.12
-        uses: actions/setup-python\@v5
+        uses: actions/setup-python@v5
         with:
           python-version: 3.12
 
@@ -289,7 +289,7 @@ jobs:
           pytest tests --cov=./ --cov-report=xml:reports/coverage.xml
 
       - name: Store test reports
-        uses: actions/upload-artifact\@v4
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: ./reports/coverage.xml
@@ -301,18 +301,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout\@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Download coverage artifact
-        uses: actions/download-artifact\@v4
+        uses: actions/download-artifact@v4
         with:
           name: coverage-report
           path: ./reports/
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action\@master
+        uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

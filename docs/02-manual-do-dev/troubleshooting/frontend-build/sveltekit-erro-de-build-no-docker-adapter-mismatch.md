@@ -18,8 +18,8 @@ O código agora verifica a variável de ambiente `USE_NODE_ADAPTER`:
 
 ```javascript
 // svelte.config.js
-import adapterStatic from '\@sveltejs/adapter-static';
-import adapterNode from '\@sveltejs/adapter-node';
+import adapterStatic from '@sveltejs/adapter-static';
+import adapterNode from '@sveltejs/adapter-node';
 
 const useNode = process.env.USE_NODE_ADAPTER === 'true';
 
